@@ -14,15 +14,18 @@ export default async function Home() {
   }
 
   return (
-    <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
+    <div className="p-[2rem] max-w-[800px] my-0 mx-auto">
       <h1>Tutorial Website</h1>
-      <p>Select a tutorial to get started:</p>
+      <p>Select a tutorial to get started</p>
       {mdFiles.length > 0 ? (
-        <ul>
+        <ul className="w-auto">
           {mdFiles.map((file) => (
-            <li key={file}>
-              <Link href={`/tutorial/${file.replace(".md", "")}`}>
-                {file.replace(".md", "")}
+            <li key={file} className="my-2 w-full block bg-gray-200 rounded-full">
+              <Link
+                className="hover:bg-blue-200 p-2 hover:rounded-full block"
+                href={`/tutorial/${file.replace(".md", "")}`}
+              >
+                {file.replace("_", " ").replace(".md", "")}
               </Link>
             </li>
           ))}
