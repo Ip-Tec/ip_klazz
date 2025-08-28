@@ -1,24 +1,36 @@
+// components/Accordion.tsx
 "use client";
-import { useState } from "react";
 
-export default function Accordion({
-  title,
-  children,
-}: {
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
+
+interface AccordionProps {
   title: string;
   children: React.ReactNode;
-}) {
-  const [isOpen, setIsOpen] = useState(false);
+  isOpen: boolean;
+  onToggle: () => void;
+}
 
+export default function Accordion({ title, children, isOpen, onToggle }: AccordionProps) {
   return (
-    <div className="mb-2 border border-gray-300 rounded-md">
+    <div className="mb-4 border border-none rounded-md overflow-hidden">
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left px-4 py-2 bg-gray-100 hover:bg-gray-200 font-semibold"
+        onClick={onToggle}
+        className="w-full flex items-center justify-between px-4 py-3 bg-gray-100 hover:bg-gray-200 transition duration-200"
       >
-        {title}
+        <span className="font-semibold text-left">{title}</span>
+        <ChevronDownIcon
+          className={`h-5 w-5 transform transition-transform duration-300 ${
+            isOpen ? "rotate-180" : "rotate-0"
+          }`}
+        />
       </button>
-      {isOpen && <div className="px-4 py-2 bg-gray-200">{children}</div>}
+      <div
+        className={`px-4 py-2 bg-white transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        {isOpen && <div className="pt-2">{children}</div>}
+      </div>
     </div>
   );
 }
