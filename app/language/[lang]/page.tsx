@@ -1,3 +1,4 @@
+// ./app/language/[lang]/page.tsx
 import { promises as fs } from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -5,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Accordion from "@/components/Accordion";
 import CodeBlock from "@/components/CodeBlock";
+import { extractSections } from "@/lib/markdownUtils";
 
 interface LanguagePageProps {
   params: {
@@ -29,47 +31,39 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
       description?: string;
     };
 
+    const sections = extractSections(content);
     return (
       <div className="p-4 max-w-[900px] mx-auto">
         <h1 className="text-2xl font-bold my-2">
           {title || `${lang.toUpperCase()} Tutorials`}
         </h1>
         {description && <p>{description}</p>}
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          components={{
-            code: CodeBlock,
-            a: ({ href, children }) => (
-              <a
-                href={href}
-                className="text-gray-600 hover:text-gray-200 hover:bg-gray-700 p-2 rounded-md transition duration-200"
-              >
-                {children}
-              </a>
-            ),
-            h1: ({ children }) => (
-              <h1 className="text-xl font-bold my-2">{children}</h1>
-            ),
-            h2: ({ children }) => (
-              <Accordion title={String(children)}>
-                <h2 className="text-md font-bold my-2 bg-gray-200 rounded-md p-2">
-                  {children}
-                </h2>
-              </Accordion>
-            ),
-            h3: ({ children }) => (
-              <h3 className="text-md font-bold my-2">{children}</h3>
-            ),
-            ul: ({ children }) => (
-              <ul className="list-outside ist-inside bg-gray-200 rounded-md p-2">
-                {children}
-              </ul>
-            ),
-            li: ({ children }) => <li className="my-2">{children}</li>,
-          }}
-        >
-          {content}
-        </ReactMarkdown>
+        {sections.map(({ title, content }, index) => (
+          <Accordion key={index} title={title}>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                code: CodeBlock,
+                a: ({ href, children }) => (
+                  <a
+                    href={href}
+                    className="block text-gray-600 hover:text-gray-200 hover:bg-gray-700 p-2 rounded-md transition duration-200"
+                  >
+                    {children}
+                  </a>
+                ),
+                ul: ({ children }) => (
+                  <ul className="block list-outside ist-inside bg-gray-200 rounded-md p-2">
+                    {children}
+                  </ul>
+                ),
+                li: ({ children }) => <li className="block my-2">{children}</li>,
+              }}
+            >
+              {content}
+            </ReactMarkdown>
+          </Accordion>
+        ))}
       </div>
     );
   } catch (error) {

@@ -1,33 +1,40 @@
 import { unified } from "unified";
 import remarkParse from "remark-parse";
-import { visit } from "unist-util-visit";
 import { Node } from "unist";
+import { toMarkdown } from "mdast-util-to-markdown";
 
-function extractSections(markdown: string) {
+interface Section {
+  title: string;
+  content: string;
+}
+
+export function extractSections(markdown: string): Section[] {
   const tree = unified().use(remarkParse).parse(markdown);
-  const sections: { title: string; content: string }[] = [];
+  const sections: Section[] = [];
 
   let currentTitle = "";
-  let currentContent = "";
+  let currentNodes: Node[] = [];
 
-  visit(tree, "heading", (node: Node) => {
-    if ((node as any).depth === 2) {
-      if (currentTitle) {
-        sections.push({ title: currentTitle, content: currentContent });
-        currentContent = "";
+  for (let i = 0; i < tree.children.length; i++) {
+    const node = tree.children[i];
+
+    if (node.type === "heading" && (node as any).depth === 2) {
+      if (currentTitle && currentNodes.length > 0) {
+        const content = toMarkdown({ type: "root", children: currentNodes });
+        sections.push({ title: currentTitle, content });
+        currentNodes = [];
       }
+
       currentTitle = (node as any).children.map((c: any) => c.value).join(" ");
+    } else if (currentTitle) {
+      currentNodes.push(node);
     }
-  });
+  }
 
-  visit(tree, (node: Node) => {
-    if (node.type !== "heading") {
-      currentContent += unified().use(() => () => node).stringify(node) + "\n";
-    }
-  });
-
-  if (currentTitle) {
-    sections.push({ title: currentTitle, content: currentContent });
+  // Push the last section
+  if (currentTitle && currentNodes.length > 0) {
+    const content = toMarkdown({ type: "root", children: currentNodes });
+    sections.push({ title: currentTitle, content });
   }
 
   return sections;

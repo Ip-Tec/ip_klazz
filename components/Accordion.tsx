@@ -18,7 +18,7 @@ export default function Accordion({
       >
         {title}
       </button>
-      {isOpen && <div className="px-4 py-2 bg-white">{children}</div>}
+      {isOpen && <div className="px-4 py-2 bg-gray-200">{children}</div>}
     </div>
   );
 }
