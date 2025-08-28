@@ -31,7 +31,7 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
           {title || `${lang.toUpperCase()} Table Of Contents`}
         </h1>
         {description && <p>{description}</p>}
-        <AccordionList sections={sections} />
+        <AccordionList sections={sections} language={lang} />
       </div>
     );
   } catch {

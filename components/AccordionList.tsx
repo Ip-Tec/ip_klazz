@@ -14,9 +14,10 @@ interface Section {
 
 interface AccordionListProps {
   sections: Section[];
+  language: string;
 }
 
-export default function AccordionList({ sections }: AccordionListProps) {
+export default function AccordionList({ sections, language }: AccordionListProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -34,7 +35,7 @@ export default function AccordionList({ sections }: AccordionListProps) {
               code: CodeBlock,
               a: ({ href, children }) => (
                 <a
-                  href={href}
+                  href={`${language}/${href}`}
                   className="block text-gray-600 hover:text-gray-200 hover:bg-gray-500 p-2 rounded-md transition duration-200"
                 >
                   {children}
