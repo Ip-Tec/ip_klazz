@@ -83,9 +83,3 @@ This project is licensed under the MIT License.
 
 Made with ❤️ by [Ip-Tec](https://github.com/Ip-Tec)
 ```
-
----
-
-You can place this file at the root of your repo as `README.md`. It’ll show up on your GitHub homepage and guide users to your GitHub Pages site.
-
-Want help writing a `CONTRIBUTING.md` or adding badges next?
