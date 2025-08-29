@@ -30,11 +30,7 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
             inline?: boolean;
           }) {
             return (
-              <CodeBlock
-                inline={inline}
-                className={className}
-                {...props}
-              >
+              <CodeBlock inline={inline} className={className} {...props}>
                 {children}
               </CodeBlock>
             );
@@ -52,7 +48,11 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const filenames = await fs.readdir(notesDirectory);
   const mdFiles = filenames.filter((file) => file.endsWith(".md"));
 
-  return mdFiles.map((file) => ({
-    slug: file.replace(".md", ""),
-  }));
+  return mdFiles
+    .filter((file) => file.endsWith(".md"))
+    .map((file) => {
+      const slug = file.replace(".md", "").trim();
+      return slug ? { slug } : null;
+    })
+    .filter((item): item is { slug: string } => item !== null);
 }
