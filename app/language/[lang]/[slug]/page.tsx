@@ -16,7 +16,7 @@ interface TutorialPageProps {
 export default async function TutorialPage({ params }: TutorialPageProps) {
   const { lang, slug } = params;
 
-  const filePath = path.join(process.cwd(), "Note", lang, `${slug}`);
+  const filePath = path.join(process.cwd(), "Note", lang, `${slug}.md`);
   const fileContents = await fs.readFile(filePath, "utf8");
 
   return (
