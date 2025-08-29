@@ -1,7 +1,12 @@
 # Welcome to Klazz
 
 
-# ip_klazz
+## What is Klazz?
+---
+
+Klazz is a lightweight, markdown-driven learning platform for developers and students. It organizes tutorials by language (Markdown files in the Note/ folder) and renders them as clean, readable pages with syntax-highlighted code blocks — ideal for bite-sized lessons, examples, and quick reference.
+
+---
 
 **ip_klazz** is a dynamic, markdown-powered tutorial platform built with [Next.js](https://nextjs.org). It allows users to explore educational content across multiple programming languages and technologies — all rendered beautifully from `.md` files.
 

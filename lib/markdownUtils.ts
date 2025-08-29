@@ -1,7 +1,8 @@
 import { unified } from "unified";
 import remarkParse from "remark-parse";
-import { Node } from "unist";
+import { Parent } from "unist";
 import { toMarkdown } from "mdast-util-to-markdown";
+import { Heading, Text, RootContent } from "mdast";
 
 interface Section {
   title: string;
@@ -9,29 +10,33 @@ interface Section {
 }
 
 export function extractSections(markdown: string): Section[] {
-  const tree = unified().use(remarkParse).parse(markdown);
+  const tree = unified().use(remarkParse).parse(markdown) as Parent;
   const sections: Section[] = [];
 
   let currentTitle = "";
-  let currentNodes: Node[] = [];
+  let currentNodes: RootContent[] = [];
 
-  for (let i = 0; i < tree.children.length; i++) {
-    const node = tree.children[i];
+  for (const node of tree.children) {
+    if (node.type === "heading") {
+      const headingNode = node as Heading;
 
-    if (node.type === "heading" && (node as any).depth === 2) {
-      if (currentTitle && currentNodes.length > 0) {
-        const content = toMarkdown({ type: "root", children: currentNodes });
-        sections.push({ title: currentTitle, content });
-        currentNodes = [];
+      if (headingNode.depth === 2) {
+        if (currentTitle && currentNodes.length > 0) {
+          const content = toMarkdown({ type: "root", children: currentNodes });
+          sections.push({ title: currentTitle, content });
+          currentNodes = [];
+        }
+
+        currentTitle = headingNode.children
+          .filter((child): child is Text => child.type === "text")
+          .map((child) => child.value)
+          .join(" ");
       }
-
-      currentTitle = (node as any).children.map((c: any) => c.value).join(" ");
     } else if (currentTitle) {
-      currentNodes.push(node);
+      currentNodes.push(node as RootContent);
     }
   }
 
-  // Push the last section
   if (currentTitle && currentNodes.length > 0) {
     const content = toMarkdown({ type: "root", children: currentNodes });
     sections.push({ title: currentTitle, content });
