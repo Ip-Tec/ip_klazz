@@ -35,7 +35,7 @@ export default function AccordionList({ sections, language }: AccordionListProps
               code: CodeBlock,
               a: ({ href, children }) => (
                 <a
-                  href={`${language}/${href}`}
+                  href={`${language}/${href && href.replace('.md', '')}`}
                   className="block text-gray-600 hover:text-gray-200 hover:bg-gray-500 p-2 rounded-md transition duration-200"
                 >
                   {children}
