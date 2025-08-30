@@ -47,6 +47,8 @@ export default function AccordionList({ sections, language }: AccordionListProps
                 </ul>
               ),
               li: ({ children }) => <li className="block my-2">{children}</li>,
+              h1: ({children})=> <h1 className="font-bold text-2xl my-4">{children}</h1>,
+              h2: ({children})=> <h2 className="font-bold text-xl my-4">{children}</h2>
             }}
           >
             {content}
