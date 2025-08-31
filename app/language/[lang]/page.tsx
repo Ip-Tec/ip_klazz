@@ -12,8 +12,15 @@ interface LanguagePageProps {
 }
 
 export default async function LanguagePage({ params }: LanguagePageProps) {
-  const { lang } = params;
-  const tocPath = path.join(process.cwd(), "Note", lang, "Table_Of_Contents.md");
+  const resolvedParams = await params;
+  const { lang } = resolvedParams;
+
+  const tocPath = path.join(
+    process.cwd(),
+    "Note",
+    lang,
+    "Table_Of_Contents.md"
+  );
 
   try {
     const fileContents = await fs.readFile(tocPath, "utf8");
@@ -39,8 +46,8 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
       <div className="p-4 max-w-[900px] mx-auto">
         <h1>{lang.toUpperCase()} Tutorials</h1>
         <p>
-          No table of contents found. Please add a &apos;Table_Of_Contents.md&apos; file
-          to the folder.
+          No table of contents found. Please add a
+          &apos;Table_Of_Contents.md&apos; file to the folder.
         </p>
       </div>
     );
