@@ -4,7 +4,7 @@ import path from "path";
 import Image from "next/image";
 
 export default async function Home() {
-  const notesDirectory = path.join(process.cwd(), "Note");
+  const notesDirectory = path.join(process.cwd(), "public", "Note");
   const imageDirectory = path.join(process.cwd(), "public", "image");
 
   const languageFolders = await fs.readdir(notesDirectory, {
@@ -40,7 +40,11 @@ export default async function Home() {
       <h1 className="text-2xl font-bold mt-10 ">Choose a Language</h1>
       <div className="flex flex-wrap gap-4 justify-center items-center mt-4">
         {languages.map((lang, index) => (
-          <Link key={lang} href={`/language/${lang}`} className="hover:scale-105 transition-transform ">
+          <Link
+            key={lang}
+            href={`/language/${lang}`}
+            className="hover:scale-105 transition-transform "
+          >
             <div className=" rounded-lg p-4 w-48 text-center cursor-pointer bg-gray-100">
               <Image
                 src={imagePaths[index]}

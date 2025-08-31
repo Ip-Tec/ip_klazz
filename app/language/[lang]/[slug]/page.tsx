@@ -18,7 +18,13 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
   const { lang, slug } = params;
 
   // Get the file path of the tutorial file
-  const filePath = path.join(process.cwd(), "Note", lang, `${slug}.md`);
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "Note",
+    lang,
+    `${slug}.md`
+  );
   const fileContents = await fs.readFile(filePath, "utf8");
 
   // check if file exists
@@ -67,7 +73,7 @@ export async function generateStaticParams(): Promise<
     // read all files in the language directory
     const files = await fs.readdir(langPath);
     const mdFiles = files.filter((file) => file.endsWith(".md"));
-    
+
     // Loop through each markdown file
     mdFiles.forEach((file) => {
       allParams.push({

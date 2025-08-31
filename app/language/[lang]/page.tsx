@@ -17,6 +17,7 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
 
   const tocPath = path.join(
     process.cwd(),
+    "public",
     "Note",
     lang,
     "Table_Of_Contents.md"
