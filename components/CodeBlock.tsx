@@ -7,6 +7,7 @@ import "highlight.js/styles/github.css";
 
 import { useEffect, useRef } from "react";
 import hljs from "highlight.js";
+import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
 interface CodeBlockProps extends React.HTMLAttributes<HTMLElement> {
   inline?: boolean;
   className?: string;
@@ -21,6 +22,8 @@ export default function CodeBlock({
 }: CodeBlockProps) {
   const [output, setOutput] = useState("");
   const [showOutput, setShowOutput] = useState(false);
+  // State to manage code block visibility (Accordion)
+  const [isOpen, setIsOpen] = useState(true);
 
   const match = /language-(\w+)/.exec(className || "");
   const language = match ? match[1] : "text";
@@ -29,10 +32,18 @@ export default function CodeBlock({
   const codeRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (codeRef.current) {
+    if (isOpen && codeRef.current) {
       hljs.highlightElement(codeRef.current);
     }
-  }, [children]);
+  }, [isOpen, children]);
+
+  // hidden long code blocks and show short code by default
+  useEffect(() => {
+    if (codeRef.current) {
+      const lineCount = codeRef.current.innerText.split("\n").length;
+      setIsOpen(lineCount <= 10); // Show if 10 lines or fewer
+    }
+  }, []);
 
   // The executeCode function is responsible for running the code snippets
   const executeCode = () => {
@@ -86,12 +97,34 @@ export default function CodeBlock({
 
   // Render the code block
   return (
-    <div className="mb-4">
-      <pre className="bg-gray-100 p-4 rounded overflow-auto">
-        <code ref={codeRef} className={className} {...props}>
-          {children}
-        </code>
-      </pre>
+    <div className="mb-4 relative">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="bg-gray-200 text-gray-700 border-none py-2 px-3 rounded cursor-pointer mb-2 absolute -top-4 right-0"
+      >
+        {/* Add icon from Heroicons */}
+        {isOpen ? (
+          <EyeSlashIcon className="h-5 w-5 inline-block mr-1 text-gray-500" />
+        ) : (
+          <EyeIcon className="h-5 w-5 inline-block mr-1 text-gray-500" />
+        )}
+        {/* {isOpen ? "Hide Code" : "Show Code"} */}
+      </button>
+
+      {isOpen && (
+        <div
+          className={`transition-all duration-300 overflow-hidden ${
+            isOpen ? "max-h-[1000px]" : "max-h-0"
+          }`}
+        >
+          <pre className="bg-gray-100 p-4 rounded overflow-auto">
+            <code ref={codeRef} className={className} {...props}>
+              {children}
+            </code>
+          </pre>
+        </div>
+      )}
+
       {(language === "html" || language === "javascript") && (
         <>
           <button

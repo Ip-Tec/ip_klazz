@@ -13,7 +13,7 @@ interface LanguagePageProps {
 
 export default async function LanguagePage({ params }: LanguagePageProps) {
   const { lang } = params;
-  const tocPath = path.join(process.cwd(), "Note", lang, "table_of_contents.md");
+  const tocPath = path.join(process.cwd(), "Note", lang, "Table_Of_Contents.md");
 
   try {
     const fileContents = await fs.readFile(tocPath, "utf8");
