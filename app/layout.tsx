@@ -50,7 +50,7 @@ export default function RootLayout({
             <span className="text-blue-500 font-bold">Tutorial Website</span>
           </Link>
         </nav>
-        <div>{children}</div>
+        <div className="flex w-full h-full min-h-screen items-center justify-center">{children}</div>
       </body>
     </html>
   );
