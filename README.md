@@ -1,7 +1,7 @@
 # Welcome to Klazz
 
-
 ## What is Klazz?
+
 ---
 
 Klazz is a lightweight, markdown-driven learning platform for developers and students. It organizes tutorials by language (Markdown files in the Note/ folder) and renders them as clean, readable pages with syntax-highlighted code blocks — ideal for bite-sized lessons, examples, and quick reference.
@@ -48,14 +48,31 @@ Visit `http://localhost:3000` in your browser to explore the app.
 ## 📦 Folder Structure
 
 ```bash
-Note/
-├── html/
-│   ├── table_of_contents.md
-│   ├── intro.md
-│   └── forms.md
-├── css/
-│   ├── table_of_contents.md
-│   └── animations.md
+├── app/
+│   ├── language/
+│   │   ├── [lang]/
+│   │   │   ├── page.tsx
+│   │   │   ├── layout.tsx
+│   │   │   ├── [slug]
+│   │   │   └── └──  page.tsx
+├── components/
+│   ├── Accordion.tsx
+│   ├── AccordionList.tsx
+│   └── CodeBlock.tsx
+├── lib/
+│   └── markdownUtils.ts
+├── Note/
+│   ├── html/
+│   │   ├── Table_Of_Contents.md
+│   │   ├── intro.md
+│   │   └── forms.md
+│   ├── css/
+│   │   ├── Table_Of_Contents.md
+│   │   └── animations.md
+│   ├── js/
+│   │   ├── Table_Of_Contents.md
+│   │   └── intro.md
+
 ```
 
 Each subfolder represents a language. Tutorials are written in markdown and rendered dynamically.
@@ -69,6 +86,7 @@ This project is deployed using GitHub Pages. You can view the live site at:
 👉 [ip-tec.github.io/ip_klazz](https://ip-tec.github.io/ip_klazz)
 
 To deploy updates:
+
 1. Push changes to the `main` branch.
 2. GitHub Actions will automatically rebuild and deploy the site.
 
@@ -87,4 +105,7 @@ This project is licensed under the MIT License.
 ---
 
 Made with ❤️ by [Ip-Tec](https://github.com/Ip-Tec)
+
+```
+
 ```

@@ -12,9 +12,9 @@ export default function layout({
   return (
     <>
       <nav className="h-p-[1rem] border-b border-gray-300 mb-[2rem] fixed w-full bg-white text-blue-500 overflow-hidden z-50">
-        <Link href="/" className="text-blue-500 text-3xl text-left w-full">
+        <Link href="/" className="text-blue-500 text-3xl text-left w-full inline-block">
           {/* Website logo */}
-          <Image src={Logo} alt="Ip Klazz" className="h-10 w-10 transform scale-[3]" />
+          <Image src={Logo} alt="Ip Klazz" className="h-10 w-10 m-3 hover:scale-200 transform scale-[3]" />
           {/* Only visible on larger screens */}
           <span className="hidden md:block text-2xl">Ip Klazz</span>
           {/* Only visible on smaller screens */}
