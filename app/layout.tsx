@@ -1,7 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
+import InstallPrompt from "@/components/InstallPrompt";
+import IOSInstallHint from "@/components/IOSInstallHint";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,22 +17,26 @@ const geistMono = Geist_Mono({
 });
 
 // add favion, and social media meta tags
+
 export const metadata: Metadata = {
   title: "Ip Klazz - Markdown-Powered Tutorials",
   description:
-    "Klazz is a lightweight, markdown-powered learning platform for developers and students. Explore bite-sized tutorials in HTML, CSS, JavaScript, and more — rendered with syntax highlighting, responsive design, and intuitive navigation.",
+    "Klazz is a lightweight, markdown-powered learning platform for developers and students. Explore bite-sized tutorials in HTML, CSS, JavaScript, and more.",
+  manifest: "/manifest.json",
+  themeColor: "#3b82f6",
   icons: {
     icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Ip Klazz - Markdown-Powered Tutorials",
     description:
-      "Learn HTML, CSS, JavaScript and more with Klazz — a clean, markdown-driven tutorial platform for developers and students.",
-    url: "https://klazz.vercel.app/",
+      "Explore bite-sized tutorials in HTML, CSS, JavaScript, and more — rendered from markdown with syntax highlighting.",
+    url: "https://your-domain.xyz/", // set your live domain
     siteName: "Ip Klazz",
     images: [
       {
-        url: "./android-chrome-192x192.png",
+        url: "/android-chrome-192x192.png",
         width: 1200,
         height: 630,
         alt: "Ip Klazz Logo",
@@ -39,12 +46,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ip Klazz – Markdown-Powered Tutorials",
+    title: "Ip Klazz - Markdown-Powered Tutorials",
     description:
-      "Explore bite-sized tutorials in HTML, CSS, JavaScript and more — beautifully rendered from markdown files.",
-    images: ["./android-chrome-192x192.png"],
-    creator: "@ip_tec", // optional: replace with your actual Twitter handle
+      "Markdown-powered tutorials in HTML, CSS, JavaScript, and more.",
+    images: ["/android-chrome-192x192.png"],
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Ip Klazz",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#3b82f6",
 };
 
 export default function RootLayout({
@@ -57,6 +72,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ServiceWorkerRegister />
+        <InstallPrompt />
+        <IOSInstallHint />
         <nav className="p-[1rem] shadow-2xl mb-[-2rem] fixed w-full bg-gray-200">
           <Link href="/" className="text-decoration-none">
             <span className="text-blue-500 font-bold">Tutorial Website</span>
