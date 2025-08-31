@@ -39,7 +39,7 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
       <div className="p-4 max-w-[900px] mx-auto">
         <h1>{lang.toUpperCase()} Tutorials</h1>
         <p>
-          No table of contents found. Please add a `table_of_contents.md` file
+          No table of contents found. Please add a &apos;Table_Of_Contents.md&apos; file
           to the folder.
         </p>
       </div>
