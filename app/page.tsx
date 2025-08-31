@@ -36,8 +36,8 @@ export default async function Home() {
   );
 
   return (
-    <div className="p-4 my-0 max-w-[900px] mx-auto">
-      <h1 className="text-2xl font-bold mt-10 ">Choose a Language</h1>
+    <div className="p-4 my-0 max-w-[900px] mx-auto flex flex-col h-screen items-center justify-center">
+      <h1 className="text-3xl font-bold mt-10 text-center">Choose a Language</h1>
       <div className="flex flex-wrap gap-4 justify-center items-center mt-4">
         {languages.map((lang, index) => (
           <Link

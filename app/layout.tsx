@@ -15,23 +15,35 @@ const geistMono = Geist_Mono({
 
 // add favion, and social media meta tags
 export const metadata: Metadata = {
-  title: "Ip Klazz",
-  description: "Ip Klazz is a platform for learning and sharing knowledge.",
+  title: "Ip Klazz - Markdown-Powered Tutorials",
+  description:
+    "Klazz is a lightweight, markdown-powered learning platform for developers and students. Explore bite-sized tutorials in HTML, CSS, JavaScript, and more — rendered with syntax highlighting, responsive design, and intuitive navigation.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Ip Klazz",
-    description: "Ip Klazz is a platform for learning and sharing knowledge.",
-    url: "https://ip-tec.github.io/ip_klazz/",
+    title: "Ip Klazz - Markdown-Powered Tutorials",
+    description:
+      "Learn HTML, CSS, JavaScript and more with Klazz — a clean, markdown-driven tutorial platform for developers and students.",
+    url: "https://klazz.vercel.app/",
     siteName: "Ip Klazz",
     images: [
       {
-        url: "https://ip-tec.github.io/ip_klazz/android-chrome-192x192.png",
+        url: "./android-chrome-192x192.png",
         width: 1200,
         height: 630,
+        alt: "Ip Klazz Logo",
       },
     ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ip Klazz – Markdown-Powered Tutorials",
+    description:
+      "Explore bite-sized tutorials in HTML, CSS, JavaScript and more — beautifully rendered from markdown files.",
+    images: ["./android-chrome-192x192.png"],
+    creator: "@ip_tec", // optional: replace with your actual Twitter handle
   },
 };
 
@@ -50,7 +62,7 @@ export default function RootLayout({
             <span className="text-blue-500 font-bold">Tutorial Website</span>
           </Link>
         </nav>
-        <div className="flex w-full h-full min-h-screen items-center justify-center">{children}</div>
+        {children}
       </body>
     </html>
   );

@@ -6,6 +6,47 @@ import { promises as fs } from "fs";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "@/components/CodeBlock";
 
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { lang: string; slug: string };
+}): Promise<Metadata> {
+  const { lang, slug } = params;
+
+  // Format language and topic for display
+  const formattedLang = lang.toUpperCase();
+  const formattedSlug = slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+
+  return {
+    title: `${formattedSlug} - Learn ${formattedLang} | Ip Klazz`,
+    description: `Explore the "${formattedSlug}" tutorial in ${formattedLang} with Ip Klazz — a markdown-powered learning platform for developers and students.`,
+    openGraph: {
+      title: `${formattedSlug} - Learn ${formattedLang} | Ip Klazz`,
+      description: `Explore the "${formattedSlug}" tutorial in ${formattedLang} with Ip Klazz — a markdown-powered learning platform for developers and students.`,
+      url: `https://klazz.vercel.app/tutorial/${lang}/${slug}`,
+      siteName: "Ip Klazz",
+      images: [
+        {
+          url: "https://klazz.vercel.app/android-chrome-192x192.png",
+          width: 1200,
+          height: 630,
+          alt: "Ip Klazz Logo",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${formattedSlug} - Learn ${formattedLang} | Ip Klazz`,
+      description: `Explore the "${formattedSlug}" tutorial in ${formattedLang} with markdown-powered lessons and syntax-highlighted code blocks.`,
+      images: ["https://klazz.vercel.app/android-chrome-192x192.png"],
+    },
+  };
+}
+
 interface TutorialPageProps {
   params: {
     lang: string;
