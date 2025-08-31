@@ -51,6 +51,7 @@ export default async function Home() {
                 alt={lang}
                 width={100}
                 height={100}
+                className="m-2"
               />
               <h2 className="text-lg font-semibold">{lang.toUpperCase()}</h2>
             </div>

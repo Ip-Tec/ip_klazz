@@ -58,7 +58,7 @@ export async function generateStaticParams(): Promise<
   { lang: string; slug: string }[]
 > {
   // Get the directory of the notes
-  const notesDirectory = path.join(process.cwd(), "Note");
+  const notesDirectory = path.join(process.cwd(), "public", "Note");
   const languages = await fs.readdir(notesDirectory);
 
   // Get all language slugs
