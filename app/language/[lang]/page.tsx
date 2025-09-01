@@ -22,6 +22,7 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
     lang,
     "Table_Of_Contents.md"
   );
+console.log("Looking for TOC at:", tocPath);
 
   try {
     const fileContents = await fs.readFile(tocPath, "utf8");
