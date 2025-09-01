@@ -10,7 +10,7 @@ Klazz is a lightweight, markdown-driven learning platform for developers and stu
 
 **ip_klazz** is a dynamic, markdown-powered tutorial platform built with [Next.js](https://nextjs.org). It allows users to explore educational content across multiple programming languages and technologies — all rendered beautifully from `.md` files.
 
-🌐 **Live Site**: [ip-tec.github.io/ip_klazz](https://ip-tec.github.io/ip_klazz)  
+🌐 **Live Site**: [klazz.vercel.app](https://klazz.vercel.app)  
 📁 **Source Code**: [GitHub Repository](https://github.com/Ip-Tec/ip_klazz)
 
 ---
@@ -53,26 +53,32 @@ Visit `http://localhost:3000` in your browser to explore the app.
 │   │   ├── [lang]/
 │   │   │   ├── page.tsx
 │   │   │   ├── layout.tsx
-│   │   │   ├── [slug]
-│   │   │   └── └──  page.tsx
+│   │   │   ├── [slug]/
+│   │   │   │   └── page.tsx
 ├── components/
 │   ├── Accordion.tsx
 │   ├── AccordionList.tsx
 │   └── CodeBlock.tsx
 ├── lib/
 │   └── markdownUtils.ts
-├── Note/
-│   ├── html/
-│   │   ├── Table_Of_Contents.md
-│   │   ├── intro.md
-│   │   └── forms.md
-│   ├── css/
-│   │   ├── Table_Of_Contents.md
-│   │   └── animations.md
-│   ├── js/
-│   │   ├── Table_Of_Contents.md
-│   │   └── intro.md
-
+├── public/
+│   ├── Note/
+│   │   ├── html/
+│   │   │   ├── Table_Of_Contents.md
+│   │   │   ├── intro.md
+│   │   │   └── forms.md
+│   │   ├── css/
+│   │   │   ├── Table_Of_Contents.md
+│   │   │   └── animations.md
+│   │   ├── js/
+│   │   │   ├── Table_Of_Contents.md
+│   │   │   └── intro.md
+│   ├── image/
+│   │   ├── image1.png
+│   │   └── image2.png
+│   ├── favicon.ico
+│   ├── manifest.json
+│   └── android-chrome-192x192.png
 ```
 
 Each subfolder represents a language. Tutorials are written in markdown and rendered dynamically.
