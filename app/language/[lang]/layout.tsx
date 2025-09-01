@@ -10,7 +10,8 @@ export async function generateMetadata({
 }: {
   params: { lang: string };
 }): Promise<Metadata> {
-  const languageName = params.lang.toUpperCase(); // or format as needed
+  const { lang } = await params; 
+  const languageName = lang.toUpperCase(); // or format as needed
 
   return {
     title: `Learn ${languageName} - Ip Klazz`,

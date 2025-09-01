@@ -13,7 +13,7 @@ export async function generateMetadata({
 }: {
   params: { lang: string; slug: string };
 }): Promise<Metadata> {
-  const { lang, slug } = params;
+  const { lang, slug } = await params;
 
   // Format language and topic for display
   const formattedLang = lang.toUpperCase();
