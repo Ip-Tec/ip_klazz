@@ -100,7 +100,7 @@ Feel free to fork the repo, add new tutorials, or improve the UI. Pull requests 
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
