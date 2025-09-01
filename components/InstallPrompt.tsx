@@ -23,13 +23,13 @@ export default function InstallPrompt() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 mx-auto max-w-md p-4 bg-orange-600/80 shadow-lg rounded-lg border">
+    <div className="fixed bottom-4 left-4 right-4 mx-auto max-w-md p-4 bg-orange-500 shadow-lg rounded-lg border border-gray-300">
       <p className="mb-3 text-sm text-gray-100">
         Install Ip Klazz for a faster, app-like experience.
       </p>
       <div className="flex gap-2">
         <button
-          className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-800 cursor-pointer"
+          className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-800 transition"
           onClick={async () => {
             setVisible(false);
             if (!deferred) return;
@@ -41,7 +41,7 @@ export default function InstallPrompt() {
           Install
         </button>
         <button
-          className="px-3 py-2 border rounded hover:bg-gray-200 cursor-pointer"
+          className="px-4 py-2 border border-gray-300 text-gray-700 rounded hover:bg-gray-100 transition"
           onClick={() => setVisible(false)}
         >
           Not now
