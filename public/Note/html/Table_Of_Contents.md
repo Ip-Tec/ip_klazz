@@ -7,7 +7,7 @@ Description: Start here to explore HTML tutorials.
 
 ## Week 1
 
-- [Day 1: Introduction to HTML, Document Structure, Basic Tags](./Accessibility_ARIA_Roles.md)
+- [Day 1: Introduction to HTML, Document Structure, Basic Tags](./Introduction_to_HTML.md)
 - [Day 2: Text Formatting, HTML Attributes, Links and Navigation](./Text_Formatting.md)
 - [Day 3: Images and Multimedia, Lists, Tables](./Image_List_Table.md)
 - [Day 4: Forms and Input Types, Labels and Fieldsets, Form Validation](./Forms.md)
