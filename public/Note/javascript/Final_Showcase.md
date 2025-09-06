@@ -1,6 +1,3 @@
-Perfect! Let’s make **Day 30: Final Project Showcase & Next Steps (Intro to Node.js & Frameworks)** **detailed, practical, and fun**, including **examples, classwork, assignments, and magical/physics analogies**.
-
----
 
 # 📘 Day 30: Final Project Showcase & Next Steps (Intro to Node.js & Frameworks)
 
