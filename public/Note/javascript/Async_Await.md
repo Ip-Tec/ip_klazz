@@ -9,7 +9,7 @@
 * Sometimes, tasks take **time** (e.g., fetching data from the internet).
 * Asynchronous code allows us to **wait for tasks to finish** without freezing the page.
 
-> Analogy: Your wizard can **cast a spell** and **wait for it to complete** while continuing other actions 🧙‍♂️✨
+> Analogy: Your wizard can **cast a spell** and **wait for it to complete** while continuing other actions
 
 ---
 
@@ -75,7 +75,7 @@ async function wizardBattle() {
 wizardBattle();
 ```
 
-> Magic analogy: `await` = **pause time for spell completion**, while the wizard continues planning other spells 🪄
+> Magic analogy: **await** = **pause time for spell completion**, while the wizard continues planning other spells 🪄
 
 ---
 

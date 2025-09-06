@@ -59,7 +59,7 @@ window.addEventListener("load", () => {
 });
 ```
 
-> Magic analogy: `eval()` = **wand casting math spells**, localStorage = **magical memory crystal** ✨
+> Magic analogy: **eval()** = **wand casting math spells**, localStorage = **magical memory crystal** ✨
 
 ---
 

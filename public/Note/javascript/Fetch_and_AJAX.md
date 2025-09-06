@@ -133,7 +133,7 @@ searchSpellBtn.addEventListener("click", async () => {
 1. Use **fetch** to retrieve a list of spells from an API.
 2. Display the spells dynamically on the page.
 3. Handle **errors** if API fails.
-4. Bonus: Use **async/await** instead of `.then()`.
+4. Bonus: Use **async/await** instead of **.then()**.
 
 ---
 

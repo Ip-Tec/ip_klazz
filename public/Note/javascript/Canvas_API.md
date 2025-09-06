@@ -24,7 +24,7 @@ const canvas = document.getElementById("magicCanvas");
 const ctx = canvas.getContext("2d"); // 2D magical drawing context
 ```
 
-> Magic analogy: `ctx` = **wand controlling magical ink** ✨
+> Magic analogy: **ctx** = **wand controlling magical ink** ✨
 
 ---
 
@@ -48,7 +48,7 @@ ctx.fillRect(50, 50, 100, 150); // x, y, width, height
 
 ## **4. Animating Shapes**
 
-* Use **`requestAnimationFrame`** to create smooth motion
+* Use **requestAnimationFrame** to create smooth motion
 * Example: bouncing magical orb
 
 ```javascript

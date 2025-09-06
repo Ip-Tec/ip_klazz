@@ -33,8 +33,8 @@ Example:
 
 ```js
 var city = "Lagos";
-var city = "Abuja"; // Redeclaration allowed
-console.log(city); // Abuja
+var city = "Edo"; // Redeclaration allowed
+console.log(city); // Edo
 ```
 
 ---

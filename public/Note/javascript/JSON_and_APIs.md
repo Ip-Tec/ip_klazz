@@ -152,14 +152,14 @@ const student = { name: "Jane", course: "Computer Science", level: 300 };
 
 1. Fetch users from `https://jsonplaceholder.typicode.com/users` and display their **names and emails**.
 2. Create a JSON object for a **book** (title, author, year, genre, available) → stringify → parse.
-3. Build a function `getTodo()` that fetches from `https://jsonplaceholder.typicode.com/todos/1` and prints title and completed status.
+3. Build a function **getTodo()** that fetches from `https://jsonplaceholder.typicode.com/todos/1` and prints title and completed status.
 4. **Bonus:** Build a small dashboard that fetches **weather + crypto price + a random joke** and prints them.
 
 ---
 ## ✅ Summary
 - JSON is a **lightweight data format** that’s easy to read and write.
-- Use `JSON.stringify()` to convert objects to JSON strings.
-- Use `JSON.parse()` to convert JSON strings back to objects.
+- Use **JSON.stringify()** to convert objects to JSON strings.
+- Use **JSON.parse()** to convert JSON strings back to objects.
 - Fetch API allows you to get data from servers using URLs.
 - APIs are like **magical vending machines** that provide data from anywhere in the world!
 ---

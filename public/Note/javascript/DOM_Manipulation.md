@@ -15,8 +15,8 @@ p.textContent = "I am a magical paragraph!";
 document.body.appendChild(p); // Add it to the page
 ```
 
-> `createElement` = **magic wand** ✨
-> `appendChild` = **places the magic object in the world** 🌍
+> **createElement** = **magic wand** ✨
+> **appendChild** = **places the magic object in the world** 🌍
 
 ---
 
@@ -39,10 +39,10 @@ p.remove(); // disappears magically
 
 ### Key Properties:
 
-1. `parentNode` → go up to the parent
-2. `children` → access child elements
-3. `nextElementSibling` → next element at the same level
-4. `previousElementSibling` → previous element at the same level
+1. **parentNode** → go up to the parent
+2. **children** → access child elements
+3. **nextElementSibling** → next element at the same level
+4. **previousElementSibling** → previous element at the same level
 
 ```javascript
 const list = document.querySelector("ul");
@@ -114,9 +114,9 @@ addBtn.addEventListener("click", () => {
 
 ## 🎯 Classwork
 
-1. Create a `<ul>` list with 3 items. Add a **4th item dynamically**.
-2. Remove the **second item** dynamically using `remove()`.
-3. Traverse a `<ul>` and **log all child items** to the console.
+1. Create a **<ul>** list with 3 items. Add a **4th item dynamically**.
+2. Remove the **second item** dynamically using **remove()**.
+3. Traverse a **<ul>** and **log all child items** to the console.
 
 ---
 
@@ -126,7 +126,7 @@ addBtn.addEventListener("click", () => {
 
    * Add potions dynamically via input and button
    * Remove potions by clicking them
-   * Console log: `"Potion <name> used!"`
+   * Console log: **"Potion <name> used!"**
 2. Create a **Spell Tree**:
 
    * A parent div with multiple spells

@@ -28,7 +28,7 @@ console.log(magicBag); // Set { 'Wand' }
 
 1. No duplicates allowed.
 2. Values can be of **any type**: numbers, strings, objects.
-3. Sets are **iterable**: can use `for...of`.
+3. Sets are **iterable**: can use **for...of**.
 
 ```javascript
 const powers = new Set(["Invisibility", "Teleportation", "Fireball"]);
@@ -153,8 +153,8 @@ spells.forEach(spell => {
 ## 🎯 Classwork
 
 1. Create a Set of 5 numbers, add 2 more, and try adding a duplicate. Print the final Set.
-2. Create a Map of 3 countries with their capitals. Print all key–value pairs using `for...of`.
-3. Convert an array `[1,1,2,2,3,3,4]` to a Set and print unique numbers.
+2. Create a Map of 3 countries with their capitals. Print all key–value pairs using **for...of**.
+3. Convert an array **[1,1,2,2,3,3,4]** to a Set and print unique numbers.
 
 ---
 

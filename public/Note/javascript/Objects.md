@@ -25,10 +25,10 @@ person.greet(); // Hello, I am Peter
 
 ---
 
-## **2. The `this` Keyword**
+## **2. The **this** Keyword**
 
-* `this` refers to the **object that owns the method**.
-* Works differently in arrow functions (they don’t bind their own `this`).
+* **this** refers to the **object that owns the method**.
+* Works differently in arrow functions (they don’t bind their own **this**).
 
 ```js
 let user = {
@@ -89,7 +89,7 @@ dog.speak(); // Bingo is a Dog
 cat.speak(); // Kitty is a Cat
 ```
 
-### Inheritance with `extends`
+### Inheritance with **extends**
 
 ```js
 class Vehicle {
@@ -141,7 +141,7 @@ s1.sayHi(); // Hi, I’m Tunde in grade SS2
 s2.sayHi(); // Hi, I’m Ada in grade SS3
 ```
 
-👉 This saves memory compared to defining `sayHi` inside the constructor.
+👉 This saves memory compared to defining **sayHi** inside the constructor.
 
 ---
 
@@ -178,24 +178,24 @@ acc1.withdraw(200); // Peter withdrew 200. New Balance: 1300
 
 ## **7. Classwork**
 
-1. Create a `Book` constructor with properties: `title`, `author`, and `year`. Add a method `getSummary()` that returns a string.
-2. Rewrite the `Book` constructor using a **class**.
-3. Create a `Teacher` constructor with properties: `name`, `subject`. Add a method using **prototype** that says:
-   `"I am [name], I teach [subject]"`.
+1. Create a **Book** constructor with properties: **title**, **author**, and **year**. Add a method **getSummary()** that returns a string.
+2. Rewrite the **Book** constructor using a **class**.
+3. Create a **Teacher** constructor with properties: **name**, **subject**. Add a method using **prototype** that says:
+   **"I am [name], I teach [subject]"**.
 
 ---
 
 ## **8. Assignment**
 
-1. Write a `Car` class with properties `brand`, `model`, and a method `drive()` that prints: `"Driving [brand] [model]"`.
-2. Create a `Person` constructor with properties `name`, `age`. Add a prototype method `isAdult()` that returns `true` if age ≥ 18, otherwise `false`.
-3. Create a `Shape` base class with a method `area()`. Extend it to make a `Rectangle` class that calculates area (length × width).
+1. Write a **Car** class with properties **brand**, **model**, and a method **drive()** that prints: **"Driving [brand] [model]"**.
+2. Create a **Person** constructor with properties **name**, **age**. Add a prototype method **isAdult()** that returns **true** if age ≥ 18, otherwise **false**.
+3. Create a **Shape** base class with a method **area()**. Extend it to make a **Rectangle** class that calculates area (length × width).
 4. Explain the difference between **constructors, classes, and prototypes** in your own words.
 
 ---
 ## **9. Higher-Order Array Methods (Bonus)**
 
-### **`map()`, `filter()`, `reduce()`**
+### ****map()**, **filter()**, **reduce()****
 These methods can be used on arrays of objects too!
 
 ```js

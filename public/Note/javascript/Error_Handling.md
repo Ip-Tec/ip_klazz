@@ -1,17 +1,17 @@
 
-# 📘 Day 23: Error Handling (`try…catch`, Async Errors)
+# 📘 Day 23: Error Handling (**try…catch**, Async Errors)
 
 ---
 
 ## **1. Introduction to Error Handling**
 
 - Sometimes spells fail, or APIs don’t respond — **errors happen**! ⚡
-- JavaScript provides **`try…catch`** to **handle errors gracefully**.
+- JavaScript provides **try…catch** to **handle errors gracefully**.
 - Helps your code **avoid crashing** — like a **wizard deflecting magical backfires** 🧙‍♂️✨
 
 ---
 
-## **2. Basic `try…catch`**
+## **2. Basic try…catch**
 
 ```javascript
 try {
@@ -32,7 +32,7 @@ Error caught: 💥 Spell misfire!
 🪄 Spell attempt finished, mana recalculated.
 ```
 
-> Magic analogy: **`try` = attempt spell**, **`catch` = block misfires**, **`finally` = always recharge mana** 🔮
+> Magic analogy: **try = attempt spell**, **catch = block misfires**, **finally = always recharge mana**
 
 ---
 
@@ -78,7 +78,7 @@ castSpell
   .catch((error) => console.log("Promise Error:", error));
 ```
 
-### Example: Async/Await with `try…catch`
+### Example: Async/Await with **try…catch**
 
 ```javascript
 async function castMagic() {
@@ -95,7 +95,7 @@ async function castMagic() {
 castMagic();
 ```
 
-> Magic analogy: Async spells = **waiting for magical energy to arrive**, `try…catch` = **deflect energy misfires**
+> Magic analogy: Async spells = **waiting for magical energy to arrive, try…catch = deflect energy misfires**
 
 ---
 
@@ -143,9 +143,9 @@ wizardBattle();
 ## 🎯 Classwork
 
 1. Create a function that **throws an error if mana < 10**.
-2. Wrap it in `try…catch` to handle the error.
-3. Use `finally` to log **“Spell attempt finished”**.
-4. Bonus: Simulate **a Promise-based spell** and handle errors with `.catch()`.
+2. Wrap it in **try…catch** to handle the error.
+3. Use **finally** to log **“Spell attempt finished”**.
+4. Bonus: Simulate **a Promise-based spell** and handle errors with **.catch()**.
 
 ---
 
@@ -155,7 +155,7 @@ wizardBattle();
 
    - Array of spells with random success/failure
    - Handle errors for **low mana** and **failed spells**
-   - Log results using `try…catch…finally`
+   - Log results using **try…catch…finally**
 
 2. Bonus Mini-Project:
 
@@ -168,9 +168,9 @@ wizardBattle();
 💡 **Fun Physics/Magic Angle:**
 
 - Errors = **magical backfires or misfires** 💥
-- `try` = **attempt spell carefully**
-- `catch` = **magical shield to absorb misfires** 🛡️
-- `finally` = **always recharge mana and reset magical state** 🔮
+- **try** = **attempt spell carefully**
+- **catch** = **magical shield to absorb misfires** 🛡️
+- **finally** = **always recharge mana and reset magical state** 🔮
 - Async/Await errors = **quantum uncertainty in spell timing** ⏳
 - Promises = **magical contracts that may succeed or fail** 📜
 - Error handling = **wizard’s reflexes to adapt to magical chaos** 🧙‍♂️

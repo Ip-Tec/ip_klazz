@@ -61,10 +61,10 @@ button.addEventListener("click", doSpell); // remove with removeEventListener
 
 ## **4. Performance Best Practices**
 
-1. **Use `let`/`const` instead of `var`** – block scope avoids leaks
+1. **Use **let**/**const** instead of **var**** – block scope avoids leaks
 2. **Avoid excessive DOM manipulation** – batch updates
 3. **Debounce and throttle events** – avoid too many spell triggers
-4. **Use efficient loops** – prefer `for…of`, `.map`, `.filter` over nested loops
+4. **Use efficient loops** – prefer **for…of**, **.map**, **.filter** over nested loops
 5. **Lazy loading** – load spells (scripts) only when needed
 
 ### Example: Debouncing Spell Cast
@@ -123,7 +123,7 @@ console.log("After removal:", spells);
 
 1. Create a **function that generates spells** and stores them in an array
 2. Remove spells that are **no longer needed**
-3. Practice using `let` and `const` instead of `var`
+3. Practice using **let** and **const** instead of **var**
 4. Bonus: Implement a **debounced spell-casting function**
 
 ---

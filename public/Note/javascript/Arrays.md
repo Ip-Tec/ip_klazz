@@ -25,7 +25,7 @@ console.log(fruits[2]); // Mango
 let numbers = [1, 2, 3, 4, 5];
 ```
 
-### 2. Using the `Array` Constructor
+### 2. Using the **Array** Constructor
 
 ```js
 let cars = new Array("Toyota", "Honda", "BMW");
@@ -118,13 +118,13 @@ fruits.forEach(function(fruit, index) {
 
 ---
 
-## **5. Higher-Order Array Methods (`map`, `filter`, `reduce`)**
+## **5. Higher-Order Array Methods (**map**, **filter**, **reduce**)**
 
 Higher-order methods allow us to **process arrays in powerful ways** without writing manual loops.
 
 ---
 
-### 🔹 `map()` → Transform Each Element
+### 🔹 **map()** → Transform Each Element
 
 Creates a **new array** by applying a function to each element.
 
@@ -136,7 +136,7 @@ console.log(squares); // [1, 4, 9, 16]
 
 ---
 
-### 🔹 `filter()` → Keep Certain Elements
+### 🔹 **filter()** → Keep Certain Elements
 
 Creates a **new array** with only elements that pass a condition.
 
@@ -148,7 +148,7 @@ console.log(adults); // [20, 25, 30]
 
 ---
 
-### 🔹 `reduce()` → Combine Elements into One Value
+### 🔹 **reduce()** → Combine Elements into One Value
 
 Executes a reducer function on each element, returning a **single value**.
 
@@ -191,21 +191,21 @@ console.log("Average Score: " + average);
 
 ## **7. Classwork**
 
-1. Create an array of 5 favorite foods and print each using `forEach()`.
-2. Use `map()` to convert an array of numbers into their cubes.
-3. Use `filter()` to extract numbers greater than 50 from `[10, 45, 67, 89, 34]`.
-4. Use `reduce()` to multiply all numbers in `[2, 3, 4]`.
+1. Create an array of 5 favorite foods and print each using **forEach()**.
+2. Use **map()** to convert an array of numbers into their cubes.
+3. Use **filter()** to extract numbers greater than 50 from **[10, 45, 67, 89, 34]**.
+4. Use **reduce()** to multiply all numbers in **[2, 3, 4]**.
 
 ---
 
 ## **8. Assignment**
 
-1. Create a program that takes an array of names and uses `map()` to return them in uppercase.
-2. Write a function that filters out odd numbers from `[12, 5, 8, 130, 44]`.
-3. Use `reduce()` to find the maximum number in `[3, 67, 15, 89, 45]`.
-4. Combine `filter()`, `map()`, and `reduce()` to:
+1. Create a program that takes an array of names and uses **map()** to return them in uppercase.
+2. Write a function that filters out odd numbers from **[12, 5, 8, 130, 44]**.
+3. Use **reduce()** to find the maximum number in **[3, 67, 15, 89, 45]**.
+4. Combine **filter()**, **map()**, and **reduce()** to:
 
-   * Take `[1, 2, 3, 4, 5, 6, 7, 8, 9]`
+   * Take **[1, 2, 3, 4, 5, 6, 7, 8, 9]**
    * Keep only odd numbers
    * Square them
    * Find the total sum.

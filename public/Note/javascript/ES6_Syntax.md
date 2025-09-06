@@ -9,7 +9,7 @@ Perfect! Let’s make **Day 17: Template Literals, Destructuring, Spread & Rest 
 ## **1. Template Literals**
 
 - Template literals use **backticks (\`)** instead of quotes.
-- They allow **multi-line strings** and **interpolation** (`${}`) — like **casting a string spell** 🪄 that can adapt dynamically.
+- They allow **multi-line strings** and **interpolation** (\`${}\`) — like **casting a string spell** 🪄 that can adapt dynamically.
 
 ### Example:
 
@@ -74,7 +74,7 @@ castSpell(wizard);
 
 ---
 
-## **3. Spread Operator `...`**
+## **3. Spread Operator \`...\`**
 
 - **Spread** expands an array or object into **individual elements** — like **magical duplication of ingredients** 🪄.
 
@@ -98,7 +98,7 @@ console.log(wizard2); // { name: "Merlin", power: "Fire", age: 300 }
 
 ---
 
-## **4. Rest Operator `...`**
+## **4. Rest Operator \`...\`**
 
 - **Rest** gathers remaining elements into **an array** — like **collecting leftover magical ingredients** 🧪.
 

@@ -29,7 +29,7 @@ Prepare the wand
 🔥 Fireball cast!  (after 2 seconds)
 ```
 
-> Magic analogy: `setTimeout` = **delayed spell casting**, event loop = **wizard juggling spells in time** 🪄
+> Magic analogy: **setTimeout** = **delayed spell casting**, event loop = **wizard juggling spells in time** 🪄
 
 ---
 
@@ -136,7 +136,7 @@ chainSpells(spellList);
 
 1. Create a **callback** function that runs after a spell is cast.
 2. Create a **higher-order function** that takes a spell name and returns a function to attack a target.
-3. Schedule 2-3 spells using `setTimeout` and callbacks.
+3. Schedule 2-3 spells using **setTimeout** and callbacks.
 
 ---
 

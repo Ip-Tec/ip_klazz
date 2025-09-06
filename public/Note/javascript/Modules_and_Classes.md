@@ -9,8 +9,8 @@ Perfect! Let’s make **Day 18: Modules (Import & Export), Classes and OOP Basic
 ## **1. Modules in JavaScript**
 
 * Modules allow us to **split code into reusable files** — like **magical scrolls that can be shared across wizards** 🪄.
-* Use `export` to **send functions, objects, or variables** from a file.
-* Use `import` to **bring them into another file**.
+* Use **export** to **send functions, objects, or variables** from a file.
+* Use **import** to **bring them into another file**.
 
 ### Example:
 

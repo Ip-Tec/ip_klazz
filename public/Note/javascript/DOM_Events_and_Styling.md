@@ -19,8 +19,8 @@ title.innerHTML = "Cast your <strong>first spell!</strong>";
 
 **Difference:**
 
-* `textContent` → plain text
-* `innerHTML` → can include **HTML tags**
+* **textContent** → plain text
+* **innerHTML** → can include **HTML tags**
 
 ---
 
@@ -44,7 +44,7 @@ title.style.border = "2px solid gold";
 * Events are **actions performed by the user**: click, hover, keypress, etc.
 * You can **respond to these events** with JavaScript.
 
-### 1️⃣ `onclick`
+### 1️⃣ **onclick**
 
 ```javascript
 const button = document.getElementById("castSpell");
@@ -53,7 +53,7 @@ button.onclick = function() {
 };
 ```
 
-### 2️⃣ `addEventListener`
+### 2️⃣ **addEventListener**
 
 ```javascript
 button.addEventListener("click", () => {
@@ -63,9 +63,9 @@ button.addEventListener("click", () => {
 
 ### 3️⃣ Other Common Events
 
-* `mouseover` → when mouse hovers
-* `mouseout` → when mouse leaves
-* `keydown` → when a key is pressed
+* **mouseover** → when mouse hovers
+* **mouseout** → when mouse leaves
+* **keydown** → when a key is pressed
 
 ```javascript
 document.addEventListener("keydown", (e) => {
@@ -117,7 +117,7 @@ document.getElementById("heal").addEventListener("click", () => {
 
 1. Select an element and **change its text content** and **color** when clicked.
 2. Add two buttons that **change background color** of the page differently.
-3. Use `mouseover` and `mouseout` events to **change an element’s font size** when hovered.
+3. Use **mouseover** and **mouseout** events to **change an element’s font size** when hovered.
 
 ---
 
@@ -126,12 +126,12 @@ document.getElementById("heal").addEventListener("click", () => {
 1. Create a **magic potion page** with 3 potions.
 
    * Clicking each potion changes **text, background color, and logs a spell message**.
-2. Add a **key press event** that logs `"Magic key pressed!"` when any key is pressed.
+2. Add a **key press event** that logs **"Magic key pressed!"** when any key is pressed.
 3. Bonus Mini-Project:
 
    * Build a **Magic Inventory**:
 
-     * List items in a `<ul>`
+     * List items in a **<ul>**
      * Clicking an item **moves it to a “used items” list**
      * Console logs a magical message
 

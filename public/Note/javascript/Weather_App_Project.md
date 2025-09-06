@@ -125,7 +125,7 @@ cityInput.addEventListener("keypress", (e) => {
 
 1. Fetch weather for a **single city** and display **temperature** only
 2. Add **error handling** if the city is not found
-3. Convert code to **Async/Await** if using `.then()` previously
+3. Convert code to **Async/Await** if using **.then()** previously
 4. Bonus: Add **Enter key support** for searching
 
 ---
