@@ -23,7 +23,7 @@ export default function InstallPrompt() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 mx-auto max-w-md p-4 bg-orange-500 shadow-lg rounded-lg border border-gray-300">
+    <div className="fixed bottom-4 left-4 right-4 mx-auto z-50 max-w-md p-4 bg-orange-500 shadow-lg rounded-lg border border-gray-300">
       <p className="mb-3 text-sm text-gray-100">
         Install Ip Klazz for a faster, app-like experience.
       </p>

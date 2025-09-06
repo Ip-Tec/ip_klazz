@@ -1,4 +1,4 @@
-# Day 19: Pseudo-elements – ::before, ::after, etc.
+# **Day 19: Pseudo-elements – ::before, ::after, etc.**
 
 ## Introduction to CSS Pseudo-elements
 

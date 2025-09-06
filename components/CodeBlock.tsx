@@ -113,11 +113,11 @@ export default function CodeBlock({
 
       {isOpen && (
         <div
-          className={`transition-all duration-300 overflow-hidden ${
-            isOpen ? "max-h-[1000px]" : "max-h-0"
+          className={`transition-all duration-300 overflow-auto ${
+            isOpen ? "max-h-screen h-auto " : "max-h-4"
           }`}
         >
-          <pre className="bg-gray-100 p-4 rounded overflow-auto">
+          <pre className="bg-gray-200 p-4 rounded overflow-auto">
             <code ref={codeRef} className={className} {...props}>
               {children}
             </code>

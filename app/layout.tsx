@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description:
     "Klazz is a lightweight, markdown-powered learning platform for developers and students. Explore bite-sized tutorials in HTML, CSS, JavaScript, and more.",
   manifest: "/manifest.json",
-  themeColor: "#3b82f6",
+  // themeColor: "#3b82f6",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
