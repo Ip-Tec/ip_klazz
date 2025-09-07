@@ -1,5 +1,5 @@
 
-# 🧠 Masterclass: Accessibility, ARIA Roles & Keyboard Navigation
+# Chapter 7: Day 7 Accessibility, ARIA Roles & Keyboard Navigation
 
 ## 🎯 Learning Objectives
 By the end of this lesson, students will:
@@ -102,15 +102,15 @@ Provide extra info:
 ### 🔑 Why It Matters
 Many users rely on keyboards — especially those with motor impairments. Your site must be fully usable without a mouse.
 
-### 🔄 Common Keys
+### Common Keys
 | Key         | Action                                  |
 |-------------|------------------------------------------|
-| `Tab`       | Move to next focusable element           |
-| `Shift + Tab`| Move to previous focusable element      |
-| `Enter`     | Activate buttons/links                   |
-| `Spacebar`  | Toggle checkboxes or activate buttons    |
-| `Arrow keys`| Navigate menus, sliders, tabs            |
-| `Escape`    | Close dropdowns or modals                |
+| Tab       | Move to next focusable element           |
+| Shift + Tab| Move to previous focusable element      |
+| Enter     | Activate buttons/links                   |
+| Spacebar  | Toggle checkboxes or activate buttons    |
+| Arrow keys| Navigate menus, sliders, tabs            |
+| Escape    | Close dropdowns or modals                |
 
 ### 🧪 Example: Skip Link
 ```html
@@ -173,12 +173,4 @@ Accessibility Audit Report:
 - Learned how ARIA roles help screen readers
 -->
 ```
-
----
-
-## 🧑‍🏫 Teaching Tips
-- Use screen reader demos (VoiceOver, NVDA)
-- Encourage students to navigate with keyboard only
-- Pair students for peer audits
-- Use real-world examples (e.g., e-commerce sites)
 
