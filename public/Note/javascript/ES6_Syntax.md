@@ -66,7 +66,7 @@ console.log(`${name} uses ${power}!`);
 function castSpell({ name, power }) {
   console.log(`${name} casts ${power} ✨`);
 }
-castSpell(wizard);
+castSpell(castSpell);
 ```
 
 ---
