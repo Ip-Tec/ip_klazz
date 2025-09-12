@@ -1,4 +1,3 @@
-
 # 📘 Day 17: Template Literals, Destructuring, Spread & Rest Operators
 
 ---
@@ -25,6 +24,8 @@ console.log(`${name} casts ${spell} and deals ${damage} damage! 🔥`);
 ### Multi-line Example:
 
 ```javascript
+const spell = "Fireball";
+const damage = 50;
 const incantation = `
 Oh mighty dragons,
 Grant me the power of ${spell},
