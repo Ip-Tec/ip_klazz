@@ -11,11 +11,14 @@ export default function InstallPrompt() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    const hasDismissed = localStorage.getItem("installPromptDismissed");
+    if (hasDismissed === "true") return;
     const handler = (e: Event) => {
       e.preventDefault();
       setDeferred(e as BIPEvent);
       setVisible(true);
     };
+
     window.addEventListener("beforeinstallprompt", handler);
     return () => window.removeEventListener("beforeinstallprompt", handler);
   }, []);
@@ -42,7 +45,10 @@ export default function InstallPrompt() {
         </button>
         <button
           className="px-4 py-2 border border-gray-300 text-gray-700 rounded hover:bg-gray-100 transition"
-          onClick={() => setVisible(false)}
+          onClick={() => {
+            setVisible(false);
+            localStorage.setItem("installPromptDismissed", "true");
+          }}
         >
           Not now
         </button>

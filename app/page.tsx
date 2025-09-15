@@ -13,7 +13,8 @@ export default async function Home() {
 
   const languages = languageFolders
     .filter((dirent) => dirent.isDirectory())
-    .map((dirent) => dirent.name);
+    .map((dirent) => dirent.name)
+    .sort((a, b) => (a === "html" ? -1 : b === "html" ? 1 : 0));
 
   const imagePaths = await Promise.all(
     languages.map(async (lang) => {
@@ -37,7 +38,9 @@ export default async function Home() {
 
   return (
     <div className="p-4 my-0 max-w-[900px] mx-auto flex flex-col h-screen items-center justify-center">
-      <h1 className="text-3xl font-bold mt-10 text-center">Choose a Language</h1>
+      <h1 className="text-3xl font-bold mt-10 text-center">
+        Choose a Language
+      </h1>
       <div className="flex flex-wrap gap-4 justify-center items-center mt-4">
         {languages.map((lang, index) => (
           <Link
