@@ -1,12 +1,15 @@
-// ./app/tutorial/[lang]/[slug]/page.tsx
+// ./app/language/[lang]/[slug]/page.tsx
 import path from "path";
 import { existsSync } from "fs";
 import remarkGfm from "remark-gfm";
 import { promises as fs } from "fs";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "@/components/CodeBlock";
+import { savePage } from "@/utils/db";
 
 import type { Metadata } from "next";
+import ClientSaver from "@/components/ClientSaver";
+import OfflineMarkdownLoader from "@/components/OfflineMarkdownLoader";
 
 export async function generateMetadata({
   params,
@@ -75,6 +78,12 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
 
   return (
     <div className="max-w-[900px] mx-auto p-8">
+      {/* Save content to IndexedDB */}
+      <ClientSaver lang={lang} slug={slug} content={fileContents} />
+
+      {/* Client component for offline fallback */}
+      <OfflineMarkdownLoader lang={lang} slug={slug} />
+
       {/* display the tutorial content using ReactMarkdown */}
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}

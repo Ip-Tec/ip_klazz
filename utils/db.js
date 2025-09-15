@@ -1,4 +1,8 @@
 // db.js
+// Utility functions for IndexedDB operations
+// This file can be imported in both client and server contexts
+
+// Open (or create) the IndexedDB database
 export function openDB() {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open("klazz-db", 1);
@@ -12,6 +16,8 @@ export function openDB() {
     request.onerror = () => reject(request.error);
   });
 }
+
+// Save a page to the database
 export async function savePage(id, content) {
   const db = await openDB();
   const tx = db.transaction("pages", "readwrite");
@@ -19,6 +25,8 @@ export async function savePage(id, content) {
   await store.put({ id, content });
   await tx.complete;
 }
+
+// Retrieve a page from the database
 export async function getPage(id) {
   const db = await openDB();
   const tx = db.transaction("pages", "readonly");
