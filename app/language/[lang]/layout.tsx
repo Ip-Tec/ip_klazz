@@ -1,17 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/public/image/default.png";
-
 import type { Metadata } from "next";
+import Logo from "@/public/image/default.png";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export async function generateMetadata({
   params,
 }: {
   params: { lang: string };
 }): Promise<Metadata> {
-  const { lang } = await params; 
-  const languageName = lang.toUpperCase(); // or format as needed
+  const { lang } = params;
+  const languageName = lang.toUpperCase();
 
   return {
     title: `Learn ${languageName} - Ip Klazz`,
@@ -39,30 +39,27 @@ export async function generateMetadata({
   };
 }
 
-// Layout component for tutorial pages
-export default function layout({
+export default function Layout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>): React.ReactNode {
+}): React.ReactNode {
   return (
     <>
-      <nav className="h-p-[1rem] border-b border-gray-300 mb-[2rem] fixed w-full bg-gray-200 text-blue-500 overflow-hidden z-50">
+      <nav className="h-p-[1rem] border-b border-gray-300 mb-[2rem] fixed w-full flex justify-between items-center bg-red-900 text-blue-500 overflow-hidden z-50">
         <Link
           href="/"
           className="text-blue-500 text-3xl text-left w-full block"
         >
-          {/* Website logo */}
           <Image
             src={Logo}
             alt="Ip Klazz"
             className="h-10 w-10 top-0 m-3 rounded-full hover:scale-200 transform scale-[1.6]"
           />
-          {/* Only visible on larger screens */}
-          {/* <span className="hidden md:block text-2xl">Ip Klazz</span> */}
-          {/* Only visible on smaller screens */}
-          {/* <ArrowLeftCircleIcon className="md:hidden h-10 8 w-10 hover:scale-110 text-blue-500" /> */}
         </Link>
+
+        {/* Breadcrumbs now handled by client component */}
+        <Breadcrumbs />
       </nav>
       <div className="pt-[2rem] w-full">{children}</div>
     </>

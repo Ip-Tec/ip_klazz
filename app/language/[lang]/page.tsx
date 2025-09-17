@@ -4,6 +4,7 @@ import path from "path";
 import matter from "gray-matter";
 import { extractSections } from "@/lib/markdownUtils";
 import AccordionList from "@/components/AccordionList";
+import OfflineDashboard from "@/components/OfflineDashboard";
 
 interface LanguagePageProps {
   params: {
@@ -40,6 +41,9 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
         </h1>
         {description && <p>{description}</p>}
         <AccordionList sections={sections} language={lang} />
+
+        {/* Add offline dashboard */}
+        <OfflineDashboard language={lang} sections={sections} />
       </div>
     );
   } catch {

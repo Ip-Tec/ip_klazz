@@ -46,9 +46,9 @@ export default async function Home() {
           <Link
             key={lang}
             href={`/language/${lang}`}
-            className="hover:scale-105 transition-transform "
+            className="hover:scale-105 transition-transform flex flex-wrap gap-4 justify-center items-center mt-4"
           >
-            <div className=" rounded-lg p-4 w-48 text-center cursor-pointer bg-gray-100">
+            <div className=" rounded-lg p-4 w- text-center cursor-pointer bg-gray-100">
               <Image
                 src={imagePaths[index]}
                 alt={lang}

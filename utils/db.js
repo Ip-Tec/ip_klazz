@@ -1,4 +1,4 @@
-// db.js
+// @/utils/db.js
 // Utility functions for IndexedDB operations
 // This file can be imported in both client and server contexts
 
@@ -22,7 +22,11 @@ export async function savePage(id, content) {
   const db = await openDB();
   const tx = db.transaction("pages", "readwrite");
   const store = tx.objectStore("pages");
-  await store.put({ id, content });
+  await store.put({
+    id,
+    content,
+    updatedAt: new Date().toISOString(),
+  });
   await tx.complete;
 }
 
@@ -33,5 +37,13 @@ export async function getPage(id) {
   const store = tx.objectStore("pages");
   const result = await store.get(id);
   await tx.complete;
-  return result ? result.content : null;
+  return result || null;
+}
+
+// Delete a page from the database
+export async function deletePage(id) {
+  const db = await openDB();
+  const tx = db.transaction("pages", "readwrite");
+  tx.objectStore("pages").delete(id);
+  return tx.complete;
 }

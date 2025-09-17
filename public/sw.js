@@ -1,9 +1,10 @@
+// public/sw.js
 const CACHE_NAME = "klazz-v1.0.3";
 // const CACHE = "klazz-cache-v1.0.3";
 const urlsToCache = [
   "/",
   "/logo.png",
-  "/styles.css",
+  "/global.css",
   "/favicon.ico",
   "/manifest.json",
   "/language/html/",
@@ -14,7 +15,12 @@ const urlsToCache = [
 self.addEventListener("install", (event) => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
+    fetch("/cache-urls.json")
+      .then((res) => res.json())
+      .then((dynamicUrls) => {
+        const urlsToCaches = [...urlsToCache, ...dynamicUrls];
+        caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCaches));
+      })
   );
 });
 

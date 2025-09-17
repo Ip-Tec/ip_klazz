@@ -35,7 +35,8 @@ export default function OfflineMarkdownLoader({
 
   return (
     <div className="max-w-[900px] mx-auto p-8">
-      <div className="mb-4 text-yellow-700 font-semibold">
+      {/* make it look like a card */}
+      <div className="mb-4 bg-yellow-700 text-gray-200 shadow-2xl p-2 rounded-lg text-center font-semibold">
         You are offline. Showing cached content.
       </div>
       <ReactMarkdown

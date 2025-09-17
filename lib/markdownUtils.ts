@@ -6,6 +6,7 @@ import { Heading, Text, RootContent } from "mdast";
 
 interface Section {
   title: string;
+  slug: string;
   content: string;
 }
 
@@ -23,7 +24,11 @@ export function extractSections(markdown: string): Section[] {
       if (headingNode.depth === 2) {
         if (currentTitle && currentNodes.length > 0) {
           const content = toMarkdown({ type: "root", children: currentNodes });
-          sections.push({ title: currentTitle, content });
+          sections.push({
+            title: currentTitle,
+            content: content,
+            slug: currentTitle.toLowerCase().replace(/\s+/g, "-"), // simple slug
+          });
           currentNodes = [];
         }
 
@@ -39,7 +44,11 @@ export function extractSections(markdown: string): Section[] {
 
   if (currentTitle && currentNodes.length > 0) {
     const content = toMarkdown({ type: "root", children: currentNodes });
-    sections.push({ title: currentTitle, content });
+    sections.push({
+      title: currentTitle,
+      content: content,
+      slug: currentTitle.toLowerCase().replace(/\s+/g, "-"), // simple slug
+    });
   }
 
   return sections;

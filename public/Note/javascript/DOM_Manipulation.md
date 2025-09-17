@@ -79,6 +79,7 @@
 
       const lastItem = list.lastElementChild;
       console.log(lastItem.textContent); // last item
+    </script>
   </body>
 </html>
 ```
