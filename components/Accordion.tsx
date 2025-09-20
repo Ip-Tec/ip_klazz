@@ -22,9 +22,9 @@ export default function Accordion({
         onClick={onToggle}
         className="w-full flex items-center justify-between px-4 py-3 bg-gray-100 hover:bg-gray-200 transition duration-200 dark:bg-blue-900 dark:hover:bg-blue-800"
       >
-        <span className="font-semibold text-left">{title}</span>
+        <span className="font-semibold text-left text-gray-500 dark:text-gray-300">{title}</span>
         <ChevronDownIcon
-          className={`h-5 w-5 transform transition-transform duration-300 ${
+          className={`h-5 w-5 transform transition-transform duration-300 text-gray-500 dark:text-gray-300 ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
         />
