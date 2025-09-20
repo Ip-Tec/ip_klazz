@@ -100,7 +100,7 @@ export default function CodeBlock({
     <div className="mb-4 relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-gray-200 text-gray-700 dark:bg-blue-950 dark:text-300 border-none py-2 px-3 rounded cursor-pointer mb-2 absolute -top-4 right-0"
+        className="bg-gray-200 text-gray-700 dark:bg-blue-950 dark:text-gray-300 border-none py-2 px-3 rounded cursor-pointer mb-2 absolute -top-4 right-0"
       >
         {/* Add icon from Heroicons */}
         {isOpen ? (
@@ -117,7 +117,7 @@ export default function CodeBlock({
             isOpen ? "max-h-screen h-auto " : "max-h-4"
           }`}
         >
-          <pre className="bg-gray-200 p-4 rounded overflow-auto dark:bg-blue-950 dark:text-gray-300">
+          <pre className="bg-gray-200 p-4 rounded overflow-auto dark:bg-blue-950 ">
             <code ref={codeRef} className={className} {...props}>
               {children}
             </code>
