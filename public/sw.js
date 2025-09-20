@@ -1,6 +1,6 @@
 // public/sw.js
-const CACHE_NAME = "klazz-v1.0.3";
-// const CACHE = "klazz-cache-v1.0.3";
+const CACHE_NAME = "klazz-v1.0.4";
+// const CACHE = "klazz-cache-v1.0.4";
 const urlsToCache = [
   "/",
   "/logo.png",

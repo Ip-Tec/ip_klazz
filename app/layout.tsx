@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Ip Klazz - Markdown-Powered Tutorials",
     description:
       "Explore bite-sized tutorials in HTML, CSS, JavaScript, and more — rendered from markdown with syntax highlighting.",
-    url: "https://your-domain.xyz/", // set your live domain
+    url: "https://klazz.vercel.app/",
     siteName: "Ip Klazz",
     images: [
       {
@@ -71,13 +71,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-blue-950 dark:text-gray-300`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-gray-300 text-gray-900 dark:bg-gray-950 dark:text-gray-300`}
       >
         <ServiceWorkerRegister />
         <InstallPrompt />
         <IOSInstallHint />
         <UpdateToast />
-        <nav className="p-[1rem] shadow-2xl mb-[-2rem] fixed w-full bg-gray-200 dark:bg-blue-900 dark:text-gray-300">
+        <nav className="p-[1rem] shadow-2xl mb-[-2rem] fixed w-full bg-gray-200 dark:bg-blue-950 dark:text-gray-300">
           <Link href="/" className="text-decoration-none">
             <span className="text-orange-500 font-bold">Ip Klazz</span>
           </Link>
