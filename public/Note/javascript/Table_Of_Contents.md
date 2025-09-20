@@ -58,12 +58,3 @@ Description: Start here to explore JavaScript tutorials.
 
 - [Day 29: Major Project: Calculator or Notes App with Local Storage](./Capstone_Project.md)
 - [Day 30: Final Project Showcase & Next Steps (Intro to Node.js & Frameworks)](./Final_Showcase.md)
-
-## ✅ Key Features of this Plan
-
-- **30 full lessons** → spread across 7.5 weeks.
-- Each week has **4 days of study**, matching your request.
-- **Mini-projects** are built-in to reinforce concepts.
-- Ends with **capstone projects** to tie everything together.
-- Focuses on **modern JavaScript (ES6+)** and practical skills.
-- Designed for **beginners to intermediate learners** aiming to build a solid foundation in JavaScript.
