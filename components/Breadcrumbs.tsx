@@ -15,18 +15,18 @@ export default function Breadcrumbs() {
 
   return (
     <div className="text-orange-700 text-lg flex justify-end w-full pr-3">
-      <Link href="/" className="hover:underline">
+      <Link href="/" className="hover:underline hover:scale-105 transition-transform">
         Home
       </Link>
       <span className="mx-2">/</span>
-      <Link href={`/language/${lang}`} className="hover:underline">
+      <Link href={`/language/${lang}`} className="hover:underline hover:scale-105 transition-transform">
       {/* only make the first letter capitalized */}
         {lang.charAt(0).toUpperCase() + lang.slice(1)}
       </Link>
       {topic && (
         <>
           <span className="mx-2">/</span>
-          <span className="text-orange-600 hover:underline">{formatTopic(topic)}</span>
+          <span className="text-orange-600">{formatTopic(topic)}</span>
         </>
       )}
     </div>

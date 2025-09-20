@@ -5,7 +5,6 @@ import remarkGfm from "remark-gfm";
 import { promises as fs } from "fs";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "@/components/CodeBlock";
-import { savePage } from "@/utils/db";
 
 import type { Metadata } from "next";
 import ClientSaver from "@/components/ClientSaver";
