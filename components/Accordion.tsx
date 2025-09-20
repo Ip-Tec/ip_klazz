@@ -10,12 +10,17 @@ interface AccordionProps {
   onToggle: () => void;
 }
 
-export default function Accordion({ title, children, isOpen, onToggle }: AccordionProps) {
+export default function Accordion({
+  title,
+  children,
+  isOpen,
+  onToggle,
+}: AccordionProps) {
   return (
     <div className="mb-4 border border-none rounded-md overflow-hidden">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-4 py-3 bg-gray-100 hover:bg-gray-200 transition duration-200"
+        className="w-full flex items-center justify-between px-4 py-3 bg-gray-100 hover:bg-gray-200 transition duration-200 dark:bg-blue-900 dark:hover:bg-blue-800"
       >
         <span className="font-semibold text-left">{title}</span>
         <ChevronDownIcon
@@ -25,7 +30,7 @@ export default function Accordion({ title, children, isOpen, onToggle }: Accordi
         />
       </button>
       <div
-        className={`px-4 py-2 bg-white transition-all duration-300 ease-in-out ${
+        className={`px-4 py-2 bg-white transition-all duration-300 ease-in-out dark:bg-blue-950 ${
           isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >

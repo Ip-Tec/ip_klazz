@@ -46,7 +46,7 @@ export default function Layout({
 }): React.ReactNode {
   return (
     <>
-      <nav className="h-p-[1rem] border-b border-gray-300 mb-[2rem] fixed w-full flex justify-between items-center bg-red-900 text-blue-500 overflow-hidden z-50">
+      <nav className="h-p-[1rem] border-b border-gray-300 mb-[2rem] fixed w-full flex justify-between items-center dark:bg-blue-950 overflow-hidden z-50">
         <Link
           href="/"
           className="text-blue-500 text-3xl text-left w-full block"

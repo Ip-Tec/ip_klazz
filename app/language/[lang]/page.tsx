@@ -36,7 +36,7 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
 
     return (
       <div className="p-4 max-w-[900px] mx-auto">
-        <h1 className="text-2xl font-bold my-2">
+        <h1 className="text-2xl font-bold my-2 text-gray-900 dark:text-gray-300">
           {title || `${lang.toUpperCase()} Table Of Contents`}
         </h1>
         {description && <p>{description}</p>}

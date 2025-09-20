@@ -83,7 +83,9 @@ export default function OfflineDashboard({
 
   return (
     <div className="mt-6 border-t pt-4">
-      <h2 className="text-lg font-semibold mb-2">Manage Offline Content</h2>
+      <h2 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-300">
+        Manage Offline Content
+      </h2>
       <ul className="space-y-2">
         {sections.map(({ title, slug }) => {
           const id = `${language}/${slug}`;
@@ -100,14 +102,14 @@ export default function OfflineDashboard({
                 {title} {isCached && "(Saved)"}
               </label>
               {isCached && (
-                <span className="text-xs text-gray-500 ml-2">
+                <span className="text-xs text-gray-500 dark:text-gray-300 ml-2">
                   Last updated:{" "}
                   {new Date(cachedData[id]?.updatedAt).toLocaleString()}
                 </span>
               )}
 
               <button
-                className="ml-2 px-2 py-1 bg-red-600 text-white rounded"
+                className="ml-2 px-2 py-1 text-gray-50 hover:text-gray-100 hover:bg-red-600 transition border border-red-600 rounded"
                 onClick={() => {
                   deletePage(id);
                   setCachedTopics((prev) => prev.filter((t) => t !== id));

@@ -14,7 +14,7 @@ export default function Breadcrumbs() {
     slug.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase()); // "html-tags" → "Html Tags"
 
   return (
-    <div className="text-orange-500 text-lg flex justify-end w-full pr-3">
+    <div className="text-orange-700 text-lg flex justify-end w-full pr-3">
       <Link href="/" className="hover:underline">
         Home
       </Link>
@@ -26,7 +26,7 @@ export default function Breadcrumbs() {
       {topic && (
         <>
           <span className="mx-2">/</span>
-          <span className="text-gray-700">{formatTopic(topic)}</span>
+          <span className="text-orange-600 hover:underline">{formatTopic(topic)}</span>
         </>
       )}
     </div>
