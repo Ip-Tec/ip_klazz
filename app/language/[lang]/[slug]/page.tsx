@@ -87,11 +87,30 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
-          code({ className, children, ...props }) {
+          code({
+            inline,
+            className,
+            children,
+            ...props
+          }: {
+            inline?: boolean;
+            className?: string;
+            children?: React.ReactNode;
+          }) {
+            if (inline) {
+              return (
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              );
+            }
+
             return (
-              <CodeBlock className={className} {...props}>
-                {children}
-              </CodeBlock>
+              <div>
+                <CodeBlock className={className} {...props}>
+                  {children}
+                </CodeBlock>
+              </div>
             );
           },
         }}
