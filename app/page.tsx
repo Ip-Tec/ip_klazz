@@ -46,7 +46,7 @@ export default async function Home() {
           <Link
             key={lang}
             href={`/language/${lang}`}
-            className="hover:scale-105 transition-transform flex flex-wrap gap-4 justify-center items-center mt-4"
+            className="hover:scale-105 transition-transform flex flex-wrap gap-4 justify-center items-center mt-4  dark:text-gray-300 dark:bg-gray-800"
           >
             <div className=" rounded-lg p-4 w- text-center cursor-pointer bg-gray-200 dark:bg-blue-950 dark:text-gray-300">
               <Image

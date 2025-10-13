@@ -58,7 +58,7 @@ interface TutorialPageProps {
 
 // Get the file path of the tutorial file
 export default async function TutorialPage({ params }: TutorialPageProps) {
-  const { lang, slug } = params;
+  const { lang, slug } = await params;
 
   // Get the file path of the tutorial file
   const filePath = path.join(

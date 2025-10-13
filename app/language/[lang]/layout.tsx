@@ -1,16 +1,24 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import type { Metadata } from "next";
 import Logo from "@/public/image/default.png";
+import type { Metadata, Viewport } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "#3b82f6",
+};
 
 export async function generateMetadata({
   params,
 }: {
   params: { lang: string };
 }): Promise<Metadata> {
-  const { lang } = params;
+  const { lang } = await params;
   const languageName = lang.toUpperCase();
 
   return {
@@ -19,7 +27,7 @@ export async function generateMetadata({
     openGraph: {
       title: `Learn ${languageName} - Ip Klazz`,
       description: `Explore tutorials and lessons in ${languageName} with Ip Klazz - a markdown-powered learning platform for developers and students.`,
-      url: `https://klazz.vercel.app/language/${params.lang}`,
+      url: `https://klazz.vercel.app/language/${lang}`,
       siteName: "Ip Klazz",
       images: [
         {
