@@ -611,4 +611,4 @@ In the next lesson, we'll dive deeper into variables and data types to understan
 - **Practice Platform:** [https://www.hackerrank.com/domains/python](https://www.hackerrank.com/domains/python)
 - **Interactive Learning:** [https://www.learnpython.org/](https://www.learnpython.org/)
 
-**Next lesson:** [Python IDEs and Text Editors](ides-editors.md)
+**Next lesson:** [Python IDEs and Text Editors](ides-editors)

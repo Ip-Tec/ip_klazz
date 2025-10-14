@@ -695,4 +695,4 @@ In this lesson, you learned:
 - **Jupyter Documentation:** [https://jupyter.org/documentation](https://jupyter.org/documentation)
 - **Python IDEs Comparison:** [https://realpython.com/python-ides-code-editors-guide/](https://realpython.com/python-ides-code-editors-guide/)
 
-**Next lesson:** [Variables and Data Types](variables-datatypes.md)
+**Next lesson:** [Variables and Data Types](variables-datatypes)
