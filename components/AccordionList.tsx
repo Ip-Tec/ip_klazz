@@ -53,6 +53,7 @@ export default function AccordionList({
               ),
 
               li: ({ node, ...props }) => (
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
                 <li {...props} className="block my-2" />
               ),
 

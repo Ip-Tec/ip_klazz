@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState, useCallback } from "react";
 
-const THEME_KEY = "theme-preference"; // 'dark' | 'light' | 'system'
+const THEME_KEY = "light"; // 'dark' | 'light' | 'system'
 const ORDER: Array<string> = ["light", "system", "dark"];
 
 function SunIcon(props: { className?: string }) {
