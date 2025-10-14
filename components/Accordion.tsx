@@ -20,7 +20,7 @@ export default function Accordion({
     <div className="mb-4 border border-none rounded-md overflow-hidden">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-4 py-3 bg-gray-100 hover:bg-gray-200 transition duration-200 dark:bg-gray-900 dark:hover:bg-gray-800"
+        className="w-full flex items-center justify-between px-4 py-3 bg-gray-100 hover:bg-gray-200 transition duration-200 dark:bg-gray-900 dark:hover:bg-gray-700"
       >
         <span className="font-semibold text-left text-gray-500 dark:text-gray-300">{title}</span>
         <ChevronDownIcon

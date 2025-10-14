@@ -14,7 +14,7 @@ export default function Breadcrumbs() {
     slug.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase()); // "html-tags" → "Html Tags"
 
   return (
-    <div className="text-orange-100 text-lg flex justify-end w-full pr-3">
+    <div className="text-orange-500 text-lg flex justify-end w-full pr-3">
       <Link href="/" className="hover:underline hover:scale-105 transition-transform">
         Home
       </Link>

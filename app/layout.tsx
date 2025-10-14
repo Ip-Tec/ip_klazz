@@ -86,7 +86,7 @@ export default function RootLayout({
         <UpdateToast />
         <nav className="p-[1rem] shadow-2xl mb-[-2rem] fixed w-full bg-gray-200 dark:bg-gray-900 dark:text-gray-300 flex items-center justify-between">
           <Link href="/" className="text-decoration-none">
-            <span className="text-orange-300 font-bold">Ip Klazz</span>
+            <span className="text-orange-400 font-bold">Ip Klazz</span>
           </Link>
         </nav>
         {children}

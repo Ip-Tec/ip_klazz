@@ -3,7 +3,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t mt-8 py-6 bg-gray-100 dark:bg-gray-900 dark:text-gray-300">
+    <footer className="w-full border-t mt-8 py-6 bg-gray-200 dark:bg-gray-900 dark:text-gray-300">
       <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-sm">© {new Date().getFullYear()} Ip Klazz</div>
         <div className="flex items-center gap-4 text-sm">
