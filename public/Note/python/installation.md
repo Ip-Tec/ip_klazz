@@ -450,4 +450,4 @@ If you're having trouble with installation:
 - **Stack Overflow:** Search your specific error message
 - **r/learnpython:** Reddit community for Python beginners
 
-**Next lesson:** [Your First Python Program](first-program.md)
+**Next lesson:** [Your First Python Program](first-program)
