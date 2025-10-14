@@ -78,15 +78,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-gray-300 text-gray-900 dark:bg-gray-950 dark:text-gray-300`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-gray-300 text-gray-900 dark:bg-gray-800 dark:text-gray-300`}
       >
         <ServiceWorkerRegister />
         <InstallPrompt />
         <IOSInstallHint />
         <UpdateToast />
-        <nav className="p-[1rem] shadow-2xl mb-[-2rem] fixed w-full bg-gray-200 dark:bg-blue-950 dark:text-gray-300 flex items-center justify-between">
+        <nav className="p-[1rem] shadow-2xl mb-[-2rem] fixed w-full bg-gray-200 dark:bg-gray-900 dark:text-gray-300 flex items-center justify-between">
           <Link href="/" className="text-decoration-none">
-            <span className="text-orange-500 font-bold">Ip Klazz</span>
+            <span className="text-orange-400 font-bold">Ip Klazz</span>
           </Link>
         </nav>
         {children}

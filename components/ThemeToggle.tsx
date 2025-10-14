@@ -1,31 +1,78 @@
 "use client";
 import { useEffect, useState, useCallback } from "react";
 
-const THEME_KEY = "light"; // 'dark' | 'light' | 'system'
+const THEME_KEY = "theme"; // 'dark' | 'light' | 'system'
 const ORDER: Array<string> = ["light", "system", "dark"];
 
 function SunIcon(props: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={props.className} width="18" height="18" aria-hidden>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      className={props.className}
+      width="18"
+      height="18"
+      aria-hidden
+    >
       <circle cx="12" cy="12" r="4" strokeWidth="1.5" />
-      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
 function MoonIcon(props: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={props.className} width="18" height="18" aria-hidden>
-      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      className={props.className}
+      width="18"
+      height="18"
+      aria-hidden
+    >
+      <path
+        d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
 function SystemIcon(props: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className={props.className} width="18" height="18" aria-hidden>
-      <rect x="3" y="4" width="18" height="12" rx="2" ry="2" strokeWidth="1.5" />
-      <path d="M8 20h8M12 16v4" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      className={props.className}
+      width="18"
+      height="18"
+      aria-hidden
+    >
+      <rect
+        x="3"
+        y="4"
+        width="18"
+        height="12"
+        rx="2"
+        ry="2"
+        strokeWidth="1.5"
+      />
+      <path
+        d="M8 20h8M12 16v4"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -38,8 +85,17 @@ export default function ThemeToggle() {
   // On mount, load any persisted preference and apply it.
   useEffect(() => {
     try {
+      // Support migration: older versions mistakenly used the key 'light'
+      const oldKey = "light";
+      const storedOld = localStorage.getItem(oldKey);
       const stored = localStorage.getItem(THEME_KEY);
       if (stored) setTheme(stored);
+      else if (storedOld) {
+        // migrate to new key
+        localStorage.setItem(THEME_KEY, storedOld);
+        localStorage.removeItem(oldKey);
+        setTheme(storedOld);
+      }
     } catch (e) {
       // ignore
     }
@@ -50,9 +106,17 @@ export default function ThemeToggle() {
     if (t === "dark") root.classList.add("dark");
     else if (t === "light") root.classList.remove("dark");
     else {
-      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
       if (prefersDark) root.classList.add("dark");
       else root.classList.remove("dark");
+    }
+    try {
+      // also set a data attribute so it's easy to inspect the current theme in devtools
+      root.dataset.theme = t;
+    } catch (e) {
+      /* ignore */
     }
   }, []);
 
@@ -75,7 +139,8 @@ export default function ThemeToggle() {
 
     return () => {
       if (mql) {
-        if (mql.removeEventListener) mql.removeEventListener("change", handleChange);
+        if (mql.removeEventListener)
+          mql.removeEventListener("change", handleChange);
         else if (mql.removeListener) mql.removeListener(handleChange);
       }
     };
@@ -88,6 +153,12 @@ export default function ThemeToggle() {
       console.warn("Could not persist theme preference", e);
       /* ignore */
     }
+    // Apply immediately so the DOM updates even before React re-renders
+    try {
+      apply(t);
+    } catch (e) {
+      /* ignore */
+    }
     setTheme(t);
   }
 
@@ -97,14 +168,19 @@ export default function ThemeToggle() {
     setAndPersist(next);
   }
 
-  const label = theme === "light" ? "Light theme" : theme === "dark" ? "Dark theme" : "System theme";
+  const label =
+    theme === "light"
+      ? "Light theme"
+      : theme === "dark"
+      ? "Dark theme"
+      : "System theme";
 
   return (
     <button
       onClick={cycle}
       title={label}
       aria-label={`Toggle theme — currently ${label}`}
-      className="p-2 rounded border bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:shadow-sm"
+      className="cursor-pointer p-2 rounded border bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:shadow-sm"
     >
       <span className="sr-only">{label}</span>
       {theme === "light" && <SunIcon />}

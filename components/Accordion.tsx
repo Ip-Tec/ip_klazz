@@ -20,7 +20,7 @@ export default function Accordion({
     <div className="mb-4 border border-none rounded-md overflow-hidden">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-4 py-3 bg-gray-100 hover:bg-gray-200 transition duration-200 dark:bg-blue-900 dark:hover:bg-blue-800"
+        className="w-full flex items-center justify-between px-4 py-3 bg-gray-100 hover:bg-gray-200 transition duration-200 dark:bg-gray-900 dark:hover:bg-gray-700"
       >
         <span className="font-semibold text-left text-gray-500 dark:text-gray-300">{title}</span>
         <ChevronDownIcon
@@ -30,7 +30,7 @@ export default function Accordion({
         />
       </button>
       <div
-        className={`px-4 py-2 bg-white transition-all duration-300 ease-in-out dark:bg-blue-950 ${
+        className={`px-4 py-2 bg-white transition-all duration-300 ease-in-out dark:bg-gray-900 ${
           isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >

@@ -109,7 +109,7 @@ export default function OfflineDashboard({
               )}
 
               <button
-                className="ml-2 px-2 py-1 text-gray-50 hover:text-gray-100 hover:bg-red-600 transition border border-red-600 rounded"
+                className="ml-2 px-2 py-1 text-red-400 dark:text-gray-200 hover:text-gray-100 hover:bg-red-600 transition border border-red-600 rounded"
                 onClick={() => {
                   deletePage(id);
                   setCachedTopics((prev) => prev.filter((t) => t !== id));
