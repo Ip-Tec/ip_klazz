@@ -845,4 +845,4 @@ In the next lesson, we'll dive deep into working with strings and text manipulat
 - **Float Precision:** [https://docs.python.org/3/tutorial/floatingpoint.html](https://docs.python.org/3/tutorial/floatingpoint.html)
 - **Real Python - Numbers:** [https://realpython.com/python-numbers/](https://realpython.com/python-numbers/)
 
-**Next lesson:** [Strings and String Methods](strings.md)
+**Next lesson:** [Strings and String Methods](strings)
