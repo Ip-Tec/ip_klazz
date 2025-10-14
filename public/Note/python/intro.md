@@ -4,7 +4,7 @@ Welcome to Python programming! Whether you're completely new to coding or coming
 
 ## What is Python?
 
-Python is a **high-level, interpreted programming language** that emphasizes code readability and simplicity. It was created by Guido van Rossum and first released in 1991. 
+Python is a **high-level, interpreted programming language** that emphasizes code readability and simplicity. It was created by Guido van Rossum and first released in 1991.
 
 **Fun fact:** Python is named after the British comedy group "Monty Python," not the snake! Guido van Rossum was a fan of the show and wanted the language to be fun to use.
 

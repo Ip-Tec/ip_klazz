@@ -813,4 +813,4 @@ In the next lesson, we'll dive deeper into working with numbers and performing m
 - **Real Python - Variables:** [https://realpython.com/python-variables/](https://realpython.com/python-variables/)
 - **W3Schools Python Data Types:** [https://www.w3schools.com/python/python_datatypes.asp](https://www.w3schools.com/python/python_datatypes.asp)
 
-**Next lesson:** [Numbers (Integers and Floats)](numbers.md)
+**Next lesson:** [Numbers (Integers and Floats)](numbers)
