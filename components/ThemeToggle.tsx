@@ -86,10 +86,10 @@ export default function ThemeToggle() {
   function setAndPersist(t: string) {
     try {
       localStorage.setItem(THEME_KEY, t);
-    } 
-    // catch (e) {
+    } catch (e) {
+      console.warn("Could not persist theme preference", e);
       /* ignore */
-    // }
+    }
     setTheme(t);
   }
 
