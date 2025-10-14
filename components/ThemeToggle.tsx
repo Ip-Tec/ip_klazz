@@ -69,14 +69,12 @@ export default function ThemeToggle() {
 
     if (window.matchMedia) {
       mql = window.matchMedia("(prefers-color-scheme: dark)");
-      // @ts-ignore
       if (mql.addEventListener) mql.addEventListener("change", handleChange);
       else if (mql.addListener) mql.addListener(handleChange);
     }
 
     return () => {
       if (mql) {
-        // @ts-ignore
         if (mql.removeEventListener) mql.removeEventListener("change", handleChange);
         else if (mql.removeListener) mql.removeListener(handleChange);
       }
