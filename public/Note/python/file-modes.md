@@ -13,23 +13,23 @@ Here's a breakdown of the most common file modes:
 
 | Mode | Description                                                                 |
 | :--- | :-------------------------------------------------------------------------- |
-| `'r'`  | **Read (default):** Opens a file for reading. Raises an error if the file does not exist. |
-| `'w'`  | **Write:** Opens a file for writing. Creates a new file if it does not exist, or **truncates** (empties) the file if it exists. |
-| `'a'`  | **Append:** Opens a file for appending. Creates a new file if it does not exist. The file pointer is at the end of the file. |
-| `'x'`  | **Create:** Creates a new file. Raises an error if the file already exists.      |
-| `'b'`  | **Binary:** Opens a file in binary mode (e.g., for images or executables).   |
-| `'t'`  | **Text (default):** Opens a file in text mode.                             |
-| `'+'`  | **Update:** Opens a file for both reading and writing.                      |
+| 'r'  | **Read (default):** Opens a file for reading. Raises an error if the file does not exist. |
+| 'w'  | **Write:** Opens a file for writing. Creates a new file if it does not exist, or **truncates** (empties) the file if it exists. |
+| 'a'  | **Append:** Opens a file for appending. Creates a new file if it does not exist. The file pointer is at the end of the file. |
+| 'x'  | **Create:** Creates a new file. Raises an error if the file already exists.      |
+| 'b'  | **Binary:** Opens a file in binary mode (e.g., for images or executables).   |
+| 't'  | **Text (default):** Opens a file in text mode.                             |
+| '+'  | **Update:** Opens a file for both reading and writing.                      |
 
 ### Combining Modes
 
 You can combine these modes. For example:
 
-- `'r+'`: Read and write. The file must exist.
-- `'w+'`: Write and read. Truncates the file if it exists, or creates it otherwise.
-- `'a+'`: Append and read. Creates the file if it doesn't exist.
-- `'rb'`: Read in binary mode.
-- `'wb'`: Write in binary mode.
+- 'r+': Read and write. The file must exist.
+- 'w+': Write and read. Truncates the file if it exists, or creates it otherwise.
+- 'a+': Append and read. Creates the file if it doesn't exist.
+- 'rb': Read in binary mode.
+- 'wb': Write in binary mode.
 
 ### Important File Methods
 

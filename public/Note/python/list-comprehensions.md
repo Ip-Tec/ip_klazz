@@ -40,8 +40,8 @@ new_list = [expression for item in iterable]
 
 Breaking it down:
 
-- **expression** — What you do to each item (e.g., `num * 2`)
-- **for item in iterable** — Loop through items (e.g., `for num in numbers`)
+- **expression** — What you do to each item (e.g., **num * 2**)
+- **for item in iterable** — Loop through items (e.g., **for num in numbers**)
 
 ## Simple Examples
 
@@ -82,7 +82,7 @@ print(chars)  # ['h', 'e', 'l', 'l', 'o']
 
 ## List Comprehension with Conditions
 
-You can add an `if` statement to filter items:
+You can add an **if** statement to filter items:
 
 ```python
 new_list = [expression for item in iterable if condition]
@@ -117,7 +117,7 @@ print(above_five)  # [7, 8, 9]
 
 ## List Comprehension with if-else
 
-You can add `else` to handle items that don't meet the condition:
+You can add **else** to handle items that don't meet the condition:
 
 ```python
 new_list = [expression_if_true if condition else expression_if_false for item in iterable]
@@ -250,7 +250,7 @@ for num in range(5):
 
 ## Common Mistakes
 
-**1. Forgetting the `for` clause**
+**1. Forgetting the **for** clause**
 
 ```python
 # ❌ Wrong
@@ -299,9 +299,9 @@ print(doubled)   # [2, 4, 6]
 ## Key Takeaways
 
 - List comprehensions create new lists in a single line
-- Syntax: `[expression for item in iterable]`
-- Add conditions with `if`: `[expression for item in iterable if condition]`
-- Add if-else with: `[expr_if_true if condition else expr_if_false for item in iterable]`
+- Syntax: **[expression for item in iterable]**
+- Add conditions with **if**: **[expression for item in iterable if condition]**
+- Add if-else with: **[expr_if_true if condition else expr_if_false for item in iterable]**
 - You can nest list comprehensions for complex operations
 - Use them when they're readable—don't sacrifice clarity for brevity
 - List comprehensions are faster than for loops for simple operations
