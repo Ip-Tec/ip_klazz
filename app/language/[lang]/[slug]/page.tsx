@@ -83,40 +83,8 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
       {/* Client component for offline fallback */}
       <OfflineMarkdownLoader lang={lang} slug={slug} />
 
-      {/* display the tutorial content using ReactMarkdown */}
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
-        components={{
-          code({
-            inline,
-            className,
-            children,
-            ...props
-          }: {
-            inline?: boolean;
-            className?: string;
-            children?: React.ReactNode;
-          }) {
-            if (inline) {
-              return (
-                <code className={className} {...props}>
-                  {children}
-                </code>
-              );
-            }
-
-            return (
-              <div>
-                <CodeBlock className={className} {...props}>
-                  {children}
-                </CodeBlock>
-              </div>
-            );
-          },
-        }}
-      >
-        {fileContents}
-      </ReactMarkdown>
+      {/* display the tutorial content using ProtectedContent */}
+      <ProtectedContent lang={lang} fileContents={fileContents} />
     </div>
   );
 }

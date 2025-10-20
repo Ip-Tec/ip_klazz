@@ -6,6 +6,15 @@ import { extractSections } from "@/lib/markdownUtils";
 import AccordionList from "@/components/AccordionList";
 import OfflineDashboard from "@/components/OfflineDashboard";
 
+export async function generateStaticParams() {
+  // These are the languages supported.
+  const languages = ["html", "css", "javascript", "python"];
+ 
+  return languages.map((lang) => ({
+    lang: lang,
+  }));
+}
+
 interface LanguagePageProps {
   params: {
     lang: string;
