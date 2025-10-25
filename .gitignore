@@ -10,6 +10,10 @@
 !.yarn/releases
 !.yarn/versions
 
+# tauri
+/src-tauri/target
+/src-tauri/bundler
+
 # testing
 /coverage
 
@@ -39,3 +43,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Firebase service account key
+serviceAccountKey.json
+firebase-debug.log
