@@ -786,9 +786,9 @@ print(f"Time: {hours:02d}:{minutes:02d}:{seconds:02d}")
 
 ## Assignment
 
-### Project: Multi-Function Calculator
+### Project: Financial Calculator System
 
-Create a comprehensive calculator program called `multi_calculator.py` that demonstrates mastery of arithmetic operators.
+Create a comprehensive program called `financial_calculator.py` that demonstrates mastery of assignment operators through financial calculations.
 
 ### Requirements
 
@@ -939,22 +939,23 @@ Press Enter to continue...
 
 ### Grading Criteria
 
-- ✅ Basic calculator (5 points)
-- ✅ Scientific calculator (8 points)
-- ✅ Geometry calculator (10 points)
-- ✅ Finance calculator (10 points)
-- ✅ Unit converters (8 points)
-- ✅ Number properties (8 points)
-- ✅ Real-world problems (8 points)
+- ✅ Personal budget tracker (12 points)
+- ✅ Investment growth calculator (14 points)
+- ✅ Loan amortization calculator (14 points)
+- ✅ Shopping cart with discounts (14 points)
+- ✅ Salary calculator (12 points)
+- ✅ Currency converter (10 points)
+- ✅ Tip calculator (10 points)
+- ✅ Retirement savings planner (14 points)
+- ✅ Use of all assignment operators (15 points)
+- ✅ Proper initialization (5 points)
 - ✅ Error handling (8 points)
-- ✅ Code organization and functions (8 points)
-- ✅ Menu system (5 points)
+- ✅ Code organization (5 points)
 - ✅ Output formatting (5 points)
 - ✅ Comments and documentation (5 points)
-- ✅ Input validation (5 points)
 - ✅ Bonus challenges (up to 8 extra points)
 
-**Total: 93 points (+ up to 8 bonus points)**
+**Total: 143 points (+ up to 8 bonus points)**
 
 ---
 
@@ -975,23 +976,20 @@ Press Enter to continue...
 ### Common Patterns
 
 ```python
-# Even/odd check
-number % 2 == 0  # Even if True
+# Increment
+count += 1
 
-# Divisibility check
-number % divisor == 0
+# Accumulate
+total += value
 
-# Last digit
-number % 10
+# Decrement
+lives -= 1
 
-# Swap values
-a, b = b, a
+# Double
+value *= 2
 
-# Average
-average = sum / count
-
-# Percentage
-percentage = (part / total) * 100
+# Halve
+value /= 2
 ```
 
 ---
@@ -1000,27 +998,24 @@ percentage = (part / total) * 100
 
 In this lesson, you learned:
 
-- ✅ All seven arithmetic operators (+, -, *, /, //, %, **)
-- ✅ How each operator works with examples
-- ✅ Difference between `/` and `//`
-- ✅ Practical uses of modulus operator
-- ✅ Exponentiation for powers and roots
-- ✅ Operator precedence (PEMDAS)
-- ✅ Combining operators in expressions
-- ✅ Unary operators (+ and -)
-- ✅ Common pitfalls and how to avoid them
-- ✅ Real-world applications of arithmetic operators
+- ✅ Simple assignment operator (=)
+- ✅ All compound assignment operators (+=, -=, *=, /=, //=, %=, **=)
+- ✅ How assignment operators combine operation and assignment
+- ✅ Common patterns (counter, accumulator, decrement)
+- ✅ Assignment with unpacking
+- ✅ Chaining assignment operators
+- ✅ Practical applications in various scenarios
+- ✅ Common mistakes and how to avoid them
 
-**You now have a solid understanding of arithmetic operations in Python!** These operators are the foundation for mathematical calculations, data processing, and problem-solving.
+**You can now write more concise and efficient code!** Assignment operators are essential for updating variables, accumulating values, and writing cleaner code.
 
-In the next lesson, we'll learn about comparison operators for comparing values.
+You have now completed the **Operators** section! Next, we'll move to **Control Flow** to learn about making decisions and repeating actions.
 
 ---
 
 ## Additional Resources
 
-- **Python Operators:** [https://docs.python.org/3/library/operator.html](https://docs.python.org/3/library/operator.html)
-- **Operator Precedence:** [https://docs.python.org/3/reference/expressions.html#operator-precedence](https://docs.python.org/3/reference/expressions.html#operator-precedence)
-- **Real Python - Operators:** [https://realpython.com/python-operators-expressions/](https://realpython.com/python-operators-expressions/)
+- **Python Assignment Operators:** [https://docs.python.org/3/reference/simple_stmts.html#assignment-statements](https://docs.python.org/3/reference/simple_stmts.html#assignment-statements)
+- **Augmented Assignment:** [https://docs.python.org/3/reference/simple_stmts.html#augmented-assignment-statements](https://docs.python.org/3/reference/simple_stmts.html#augmented-assignment-statements)
 
-**Next lesson:** [Comparison Operators](comparison-operators)
+**Next section:** [Control Flow - If, Elif, and Else Statements](conditionals)

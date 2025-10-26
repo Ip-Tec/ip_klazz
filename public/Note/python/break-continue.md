@@ -1,483 +1,752 @@
 # Break and Continue
 
-## What Are Break and Continue?
+Break and continue statements give you fine control over loop execution. They allow you to exit loops early or skip specific iterations, making your loops more efficient and flexible.
 
-`break` and `continue` are special statements that control how loops behave. They let you exit loops early or skip parts of a loop—giving you more control over your code's flow.
+## The break Statement
 
-You've already seen these briefly, but let's dive deeper into how they work and when to use them.
+`break` immediately exits the loop, skipping any remaining iterations.
 
-## The `break` Statement
-
-`break` immediately exits a loop, no matter what. The loop stops running completely, and the code after the loop continues.
-
-### How It Works
+### Basic break Usage
 
 ```python
-count = 1
-
-while count <= 10:
-    if count == 5:
-        break
-    print(count)
-    count += 1
-
-print("Loop ended")
-```
-
-**Output:**
-
-```sh
-1
-2
-3
-4
-Loop ended
-```
-
-When `count` reaches 5, `break` kicks in and the entire loop stops. Notice that 5 through 10 never print.
-
-### Another Example
-
-```python
-for i in range(1, 11):
-    if i == 6:
-        break
+# Exit loop when condition met
+for i in range(10):
+    if i == 5:
+        break  # Exit loop when i is 5
     print(i)
+# Output: 0, 1, 2, 3, 4
 
-print("Done!")
+# Search and stop
+numbers = [10, 20, 30, 40, 50]
+for num in numbers:
+    if num == 30:
+        print(f"Found {num}")
+        break
 ```
 
-**Output:**
-
-```sh
-1
-2
-3
-4
-5
-Done!
-```
-
-## The `continue` Statement
-
-`continue` skips the rest of the current loop iteration and jumps to the next one. Unlike `break`, the loop keeps running—it just skips that one cycle.
-
-### How It Works
+### break in While Loops
 
 ```python
-count = 1
+# Infinite loop with break
+while True:
+    command = input("Enter 'quit' to exit: ")
+    if command == "quit":
+        break
+    print(f"You entered: {command}")
 
-while count <= 5:
+# Count until condition
+count = 0
+while count < 100:
+    count += 1
+    if count == 10:
+        break
+print(f"Stopped at: {count}")
+```
+
+---
+
+## The continue Statement
+
+`continue` skips the rest of the current iteration and moves to the next one.
+
+### Basic continue Usage
+
+```python
+# Skip odd numbers
+for i in range(10):
+    if i % 2 != 0:
+        continue  # Skip odd numbers
+    print(i)
+# Output: 0, 2, 4, 6, 8
+
+# Skip specific values
+numbers = [1, 2, 3, 4, 5, 6]
+for num in numbers:
+    if num == 3:
+        continue  # Skip 3
+    print(num)
+# Output: 1, 2, 4, 5, 6
+```
+
+### continue in While Loops
+
+```python
+# Skip invalid input
+count = 0
+while count < 5:
     count += 1
     if count == 3:
-        continue
+        continue  # Skip when count is 3
     print(count)
+# Output: 1, 2, 4, 5
 
-print("Loop ended")
-```
-
-**Output:**
-
-```sh
-2
-4
-5
-Loop ended
-```
-
-Notice that 3 is skipped! When `count` is 3, `continue` makes the loop jump to the next iteration without printing.
-
-### Another Example
-
-```python
-for i in range(1, 6):
-    if i == 3:
-        continue
-    print(i)
-
-print("Done!")
-```
-
-**Output:**
-
-```sh
-1
-2
-4
-5
-Done!
-```
-
-## Break vs Continue
-
-Here's the key difference:
-
-- **`break`** — Exits the loop completely
-- **`continue`** — Skips the current iteration and goes to the next one
-
-```python
-print("Using break:")
-for i in range(1, 6):
-    if i == 3:
-        break
-    print(i)
-
-print("\nUsing continue:")
-for i in range(1, 6):
-    if i == 3:
-        continue
-    print(i)
-```
-
-**Output:**
-
-```sh
-Using break:
-1
-2
-
-Using continue:
-1
-2
-4
-5
-```
-
-## Real-World Examples
-
-### Example 1: Finding a Number in a List
-
-```python
-numbers = [2, 5, 8, 3, 9, 1, 7]
-target = 3
-
-for num in numbers:
-    if num == target:
-        print(f"Found {target}!")
-        break
-    print(f"Checking {num}...")
-
-print("Search complete")
-```
-
-**Output:**
-
-```text
-Checking 2...
-Checking 5...
-Checking 8...
-Found 3!
-Search complete
-```
-
-Once we find the target, we `break` to stop searching. No need to check the rest!
-
-### Example 2: Skipping Invalid Data
-
-```python
-data = [5, -2, 10, -4, 8, -1, 6]
-
-print("Valid numbers:")
-for num in data:
-    if num < 0:
-        continue
-    print(num)
-
-print("Done")
-```
-
-**Output:**
-
-```text
-Valid numbers:
-5
-10
-8
-6
-Done
-```
-
-We skip negative numbers with `continue` and only print positive ones.
-
-### Example 3: Password Input with Retry Limit
-
-```python
-attempts = 0
-max_attempts = 3
-
-while attempts < max_attempts:
-    password = input("Enter password: ")
-    attempts += 1
-    
-    if password == "secret123":
-        print("Access granted!")
-        break
-    elif attempts < max_attempts:
-        print(f"Wrong! Try again ({max_attempts - attempts} left)")
-        continue
-    else:
-        print("Account locked!")
-```
-
-Here we use both `break` (when password is correct) and `continue` (to skip to the next attempt).
-
-### Example 4: Filtering User Input
-
-```python
-print("Enter numbers (type 'done' to stop):")
-sum_total = 0
-
+# Process only valid data
 while True:
-    user_input = input("Number: ")
-    
-    if user_input == "done":
+    value = input("Enter positive number (0 to quit): ")
+    num = int(value)
+    if num == 0:
         break
-    
-    if user_input == "":
-        print("Please enter a number!")
+    if num < 0:
+        print("Invalid! Must be positive")
+        continue  # Skip this iteration
+    print(f"Processing: {num}")
+```
+
+---
+
+## break vs continue
+
+### Key Differences
+
+| Statement | Action | Effect |
+|-----------|--------|--------|
+| `break` | Exit loop completely | Stops all iterations |
+| `continue` | Skip current iteration | Continues with next iteration |
+
+### Visual Comparison
+
+```python
+# break example
+print("With break:")
+for i in range(5):
+    if i == 3:
+        break
+    print(i)
+# Output: 0, 1, 2
+
+# continue example
+print("\nWith continue:")
+for i in range(5):
+    if i == 3:
         continue
+    print(i)
+# Output: 0, 1, 2, 4
+```
+
+---
+
+## Practical Applications
+
+### Search Operations
+
+```python
+# Find first occurrence
+items = ["apple", "banana", "cherry", "banana"]
+target = "banana"
+
+for index, item in enumerate(items):
+    if item == target:
+        print(f"Found '{target}' at index {index}")
+        break
+else:
+    print(f"'{target}' not found")
+
+# Find all occurrences (no break)
+indices = []
+for index, item in enumerate(items):
+    if item == target:
+        indices.append(index)
+print(f"Found at indices: {indices}")
+```
+
+### Input Validation
+
+```python
+# Get valid age
+while True:
+    age = int(input("Enter age (0-120): "))
+    if 0 <= age <= 120:
+        break  # Valid age, exit loop
+    print("Invalid age! Try again.")
+
+print(f"Age: {age}")
+
+# Skip invalid entries
+total = 0
+count = 0
+while True:
+    value = input("Enter number (-1 to stop): ")
+    num = float(value)
+    if num == -1:
+        break
+    if num < 0:
+        print("Skipping negative number")
+        continue  # Skip this number
+    total += num
+    count += 1
+
+if count > 0:
+    print(f"Average: {total / count:.2f}")
+```
+
+### Menu Systems
+
+```python
+# Menu with break
+while True:
+    print("\n=== MENU ===")
+    print("1. Option 1")
+    print("2. Option 2")
+    print("3. Exit")
     
-    try:
-        num = int(user_input)
-        sum_total += num
-    except:
-        print("Invalid number! Try again.")
-        continue
-
-print(f"Total: {sum_total}")
+    choice = input("Choose: ")
+    
+    if choice == "1":
+        print("Option 1 selected")
+    elif choice == "2":
+        print("Option 2 selected")
+    elif choice == "3":
+        print("Goodbye!")
+        break  # Exit menu
+    else:
+        print("Invalid choice")
+        continue  # Show menu again
 ```
 
-This example shows how `break` and `continue` work together in a real program.
-
-## Break and Continue with Nested Loops
-
-When you use `break` or `continue` in nested loops, they only affect the innermost loop.
-
-### Example with `break`
+### Filtering Data
 
 ```python
-for i in range(1, 4):
-    print(f"Outer loop: {i}")
-    for j in range(1, 4):
+# Process only valid data
+numbers = [10, -5, 20, 0, 30, -10, 40]
+
+# Skip invalid values
+for num in numbers:
+    if num <= 0:
+        continue  # Skip non-positive
+    result = 100 / num
+    print(f"100 / {num} = {result:.2f}")
+
+# Stop at first invalid
+total = 0
+for num in numbers:
+    if num <= 0:
+        print(f"Stopped at invalid value: {num}")
+        break
+    total += num
+print(f"Sum before invalid: {total}")
+```
+
+---
+
+## Nested Loops with break/continue
+
+### break in Nested Loops
+
+```python
+# break only exits innermost loop
+for i in range(3):
+    for j in range(3):
         if j == 2:
-            break
-        print(f"  Inner loop: {j}")
-    print()
+            break  # Exits only inner loop
+        print(f"i={i}, j={j}")
+
+# Exit all loops with flag
+found = False
+for i in range(5):
+    for j in range(5):
+        if i * j == 6:
+            found = True
+            break  # Exit inner loop
+    if found:
+        break  # Exit outer loop
+print(f"Found at i={i}, j={j}")
 ```
 
-**Output:**
-
-```sh
-Outer loop: 1
-  Inner loop: 1
-
-Outer loop: 2
-  Inner loop: 1
-
-Outer loop: 3
-  Inner loop: 1
-
-```
-
-The `break` only exits the inner loop, not the outer loop.
-
-### Example with `continue`
+### continue in Nested Loops
 
 ```python
-for i in range(1, 4):
-    print(f"Outer loop: {i}")
-    for j in range(1, 4):
-        if j == 2:
-            continue
-        print(f"  Inner loop: {j}")
-    print()
-```
-
-**Output:**
-
-```
-Outer loop: 1
-  Inner loop: 1
-  Inner loop: 3
-
-Outer loop: 2
-  Inner loop: 1
-  Inner loop: 3
-
-Outer loop: 3
-  Inner loop: 1
-  Inner loop: 3
-
-```
-
-The `continue` only skips the inner loop iteration, while the outer loop keeps running.
-
-## When to Use Break and Continue
-
-### Use `break` When
-
-- You found what you're looking for
-- An error condition occurred
-- You want to exit early under specific circumstances
-
-### Use `continue` When
-
-- You want to skip invalid data
-- A condition doesn't apply to this iteration
-- You need to filter items without stopping the loop
-
-## Common Mistakes
-
-**1. Forgetting that break only affects the innermost loop**
-
-```python
-# ❌ This doesn't work as expected
+# continue affects only current loop
 for i in range(3):
     for j in range(3):
         if j == 1:
-            break  # Only breaks inner loop, not outer
-    print(i)  # This still prints
+            continue  # Skip to next j
+        print(f"i={i}, j={j}")
 
-# ✅ If you need to break both, you need more logic
+# Skip outer iteration
+for i in range(5):
+    if i == 2:
+        continue  # Skip when i=2
+    for j in range(3):
+        print(f"i={i}, j={j}")
 ```
-
-**2. Using break/continue outside a loop**
-
-```python
-# ❌ This will cause an error
-if True:
-    break  # SyntaxError: 'break' outside loop
-
-# ✅ Only use inside loops
-while True:
-    break
-```
-
-**3. Overusing break/continue makes code hard to read**
-
-```python
-# ❌ Hard to follow
-for i in range(100):
-    if condition1:
-        continue
-    if condition2:
-        break
-    if condition3:
-        continue
-    # ... more logic
-
-# ✅ Better to use if/else for clarity
-for i in range(100):
-    if condition1:
-        continue
-    
-    if condition2:
-        break
-    
-    if condition3:
-        continue
-```
-
-## Key Takeaways
-
-- `break` exits a loop completely
-- `continue` skips the current iteration and goes to the next one
-- In nested loops, they only affect the innermost loop
-- Use `break` when you're done and want to stop
-- Use `continue` when you want to skip something but keep looping
-- Don't overuse them—keep your code readable
 
 ---
 
-## Practice Exercises
+## Using break with else
 
-1. Write a program that searches for a name in a list and prints a message when found.
-2. Create a loop that prints numbers 1-20 but skips multiples of 3.
-3. Build a guessing game where the user gets 5 attempts. Use `break` when they guess correctly.
-4. Write a program that filters out empty strings from user input until the user types "done".
-5. Create a nested loop that prints a grid but skips certain positions based on a condition.
+The `else` clause runs only if loop completes without `break`.
+
+```python
+# Search with else
+numbers = [1, 3, 5, 7, 9]
+target = 6
+
+for num in numbers:
+    if num == target:
+        print(f"Found {target}")
+        break
+else:
+    print(f"{target} not found")
+
+# Validate all items
+scores = [85, 92, 78, 95]
+for score in scores:
+    if score < 60:
+        print("At least one failed")
+        break
+else:
+    print("All passed!")
+
+# Prime number check
+n = 17
+for i in range(2, n):
+    if n % i == 0:
+        print(f"{n} is not prime")
+        break
+else:
+    print(f"{n} is prime")
+```
 
 ---
 
-# Solution
+## Common Patterns
+
+### Early Exit Pattern
 
 ```python
+# Stop when condition met
+for i in range(1000):
+    if i * i > 100:
+        print(f"First number where square > 100: {i}")
+        break
 
-# Exercise 1: Search for a name
-names = ["Alice", "Bob", "Charlie", "David", "Eve"]
-search_name = input("Enter a name to search: ")
+# Stop on error
+items = [10, 20, 0, 30]
+for item in items:
+    if item == 0:
+        print("Error: zero found")
+        break
+    result = 100 / item
+    print(result)
+```
 
+### Skip Invalid Pattern
+
+```python
+# Skip invalid entries
+words = ["hello", "", "world", "", "python"]
+for word in words:
+    if not word:
+        continue  # Skip empty strings
+    print(word.upper())
+
+# Skip based on condition
+numbers = range(1, 21)
+for num in numbers:
+    if num % 3 == 0:
+        continue  # Skip multiples of 3
+    print(num)
+```
+
+### Find First Match Pattern
+
+```python
+# Find first match
+users = [
+    {"name": "Alice", "age": 25},
+    {"name": "Bob", "age": 30},
+    {"name": "Charlie", "age": 35}
+]
+
+target_name = "Bob"
+for user in users:
+    if user["name"] == target_name:
+        print(f"Found: {user}")
+        break
+```
+
+### Collect Valid Items Pattern
+
+```python
+# Collect only valid items
+numbers = [1, -2, 3, -4, 5, -6]
+positive = []
+
+for num in numbers:
+    if num < 0:
+        continue  # Skip negative
+    positive.append(num)
+
+print(positive)  # [1, 3, 5]
+```
+
+---
+
+## Performance Optimization
+
+### Avoid Unnecessary Iterations
+
+```python
+# Without break (checks all)
+numbers = list(range(1000000))
+for num in numbers:
+    if num == 10:
+        found = True
+
+# With break (stops early)
+for num in numbers:
+    if num == 10:
+        found = True
+        break  # Much faster!
+
+# Skip expensive operations
+for item in large_list:
+    if not item_is_valid(item):
+        continue  # Skip expensive processing
+    expensive_operation(item)
+```
+
+---
+
+## Common Mistakes
+
+### Mistake 1: break in Wrong Loop
+
+```python
+# Wrong - break only affects inner loop
+for i in range(5):
+    for j in range(5):
+        if i + j == 5:
+            break  # Only exits inner loop
+    # Outer loop continues
+
+# Correct - use flag for outer loop
 found = False
-for name in names:
-    if name == search_name:
-        print(f"Found {search_name} in the list!")
+for i in range(5):
+    for j in range(5):
+        if i + j == 5:
+            found = True
+            break
+    if found:
+        break
+```
+
+### Mistake 2: Using break Outside Loop
+
+```python
+# Wrong - SyntaxError
+# if condition:
+#     break  # Can't use break outside loop
+
+# Correct - use return in function
+def find_item(items, target):
+    for item in items:
+        if item == target:
+            return item
+    return None
+```
+
+### Mistake 3: Forgetting else Logic
+
+```python
+# Without else (requires extra variable)
+found = False
+for num in numbers:
+    if num == target:
         found = True
         break
 if not found:
-    print(f"{search_name} not found in the list.")
+    print("Not found")
 
-# Exercise 2: Skip multiples of 3
-print("\nNumbers 1-20 (skipping multiples of 3):")
-for i in range(1, 21):
-    if i % 3 == 0:
-        continue
-    print(i)
-
-# Exercise 3: Guessing Game
-import random
-secret_number = random.randint(1, 10)
-attempts = 0
-max_attempts = 5
-
-print(f"\nGuess the number between 1 and 10. You have {max_attempts} attempts.")
-
-while attempts < max_attempts:
-    try:
-        guess = int(input(f"Attempt {attempts + 1}: Enter your guess: "))
-        attempts += 1
-        if guess == secret_number:
-            print(f"Congratulations! You guessed {secret_number} correctly in {attempts} attempts!")
-            break
-        elif guess < secret_number:
-            print("Too low!")
-        else:
-            print("Too high!")
-    except ValueError:
-        print("Invalid input. Please enter a number.")
-else: # This else block executes if the while loop finishes without a break
-    print(f"Sorry, you ran out of attempts. The secret number was {secret_number}.")
-
-# Exercise 4: Filter empty strings from user input
-print("\nEnter text (empty strings will be skipped). Type 'done' to finish.")
-filtered_inputs = []
-
-while True:
-    user_input = input("> ")
-    if user_input.lower() == "done":
+# With else (cleaner)
+for num in numbers:
+    if num == target:
         break
-    if user_input.strip() == "":
-        print("Empty input skipped.")
-        continue
-    filtered_inputs.append(user_input)
-
-print("\nYour non-empty inputs:")
-if filtered_inputs:
-    for item in filtered_inputs:
-            print(f"- {item}")
-    else:
-        print("No non-empty inputs were entered.")
-    
-    # Exercise 5: Nested loop with skip condition
-    print("\nGrid with skipped positions:")
-    for row in range(1, 4):
-        for col in range(1, 4):
-            if row == 2 and col == 2: # Skip the center position
-                print("  X  ", end="")
-                continue
-            print(f" ({row},{col}) ", end="")
-        print() # New line after each row
+else:
+    print("Not found")
 ```
 
 ---
 
-> **Next lesson:** [Pass Statement](pass-statement)
+## Classwork
+
+### Exercise 1: Search Operations
+
+Create `search_operations.py`:
+
+```python
+"""Practice break with search operations."""
+
+# Find first negative
+numbers = [10, 20, -5, 30, 40]
+for index, num in enumerate(numbers):
+    if num < 0:
+        print(f"First negative: {num} at index {index}")
+        break
+else:
+    print("No negatives found")
+
+# Find all negatives (no break)
+negatives = []
+for num in numbers:
+    if num < 0:
+        negatives.append(num)
+print(f"All negatives: {negatives}")
+
+# Linear search
+def find_index(items, target):
+    for index, item in enumerate(items):
+        if item == target:
+            return index
+    return -1
+
+items = [10, 20, 30, 40, 50]
+print(f"Index of 30: {find_index(items, 30)}")
+print(f"Index of 99: {find_index(items, 99)}")
+```
+
+### Exercise 2: Input Filtering
+
+Create `input_filtering.py`:
+
+```python
+"""Practice continue with filtering."""
+
+# Sum positive numbers only
+numbers = [10, -5, 20, -3, 30, 0, 40]
+total = 0
+
+for num in numbers:
+    if num <= 0:
+        continue  # Skip non-positive
+    total += num
+
+print(f"Sum of positive: {total}")
+
+# Process valid strings
+words = ["hello", "", "world", "  ", "python", ""]
+valid_words = []
+
+for word in words:
+    if not word.strip():
+        continue  # Skip empty/whitespace
+    valid_words.append(word.upper())
+
+print(f"Valid words: {valid_words}")
+```
+
+### Exercise 3: Password Validator
+
+Create `password_validator.py`:
+
+```python
+"""Password validator with break/continue."""
+
+MAX_ATTEMPTS = 3
+CORRECT_PASSWORD = "secret123"
+
+attempts = 0
+while attempts < MAX_ATTEMPTS:
+    password = input("Enter password: ")
+    attempts += 1
+    
+    # Check for empty password
+    if not password:
+        print("Password cannot be empty")
+        continue  # Try again
+    
+    # Check password
+    if password == CORRECT_PASSWORD:
+        print("Access granted!")
+        break
+    
+    remaining = MAX_ATTEMPTS - attempts
+    if remaining > 0:
+        print(f"Wrong! {remaining} attempts left")
+else:
+    print("Account locked!")
+```
+
+### Exercise 4: Number Game
+
+Create `number_game.py`:
+
+```python
+"""Number guessing game with break/continue."""
+import random
+
+secret = random.randint(1, 50)
+attempts = 0
+
+print("Guess the number (1-50)!")
+print("Type 'hint' for a clue or 'quit' to exit")
+
+while True:
+    guess_str = input("Your guess: ")
+    
+    # Handle commands
+    if guess_str.lower() == "quit":
+        print(f"Game over! Number was {secret}")
+        break
+    
+    if guess_str.lower() == "hint":
+        if secret % 2 == 0:
+            print("Hint: The number is even")
+        else:
+            print("Hint: The number is odd")
+        continue  # Don't count as attempt
+    
+    # Process guess
+    try:
+        guess = int(guess_str)
+    except ValueError:
+        print("Invalid input!")
+        continue
+    
+    attempts += 1
+    
+    if guess == secret:
+        print(f"Correct! Took {attempts} attempts")
+        break
+    elif guess < secret:
+        print("Too low!")
+    else:
+        print("Too high!")
+```
+
+---
+
+## Assignment
+
+### Project: Loop Control System
+
+Create `loop_control_system.py` with programs demonstrating break and continue.
+
+### Requirements
+
+#### 1. **Prime Number Finder**
+
+- Find all primes up to N
+- Use break for optimization
+- Show count and list
+
+#### 2. **Data Cleaner**
+
+- Process list of data
+- Skip invalid entries (continue)
+- Stop at sentinel value (break)
+- Report cleaned data
+
+#### 3. **Login System**
+
+- Max 3 attempts
+- Skip empty passwords (continue)
+- Lock after failures (break)
+- Track attempt history
+
+#### 4. **Shopping Cart**
+
+- Add items until "done"
+- Skip invalid items (continue)
+- Break on checkout
+- Calculate total
+
+#### 5. **Search Engine**
+
+- Search through data
+- Skip non-matches (continue)
+- Stop at first match (break)
+- Show search time
+
+### Code Requirements
+
+- Use break appropriately
+- Use continue appropriately
+- Use for-else or while-else
+- Handle nested loops
+- Input validation
+- Comments explaining control flow
+
+### Grading Criteria
+
+- ✅ Prime number finder (20 points)
+- ✅ Data cleaner (20 points)
+- ✅ Login system (20 points)
+- ✅ Shopping cart (20 points)
+- ✅ Search engine (20 points)
+- ✅ break usage (15 points)
+- ✅ continue usage (15 points)
+- ✅ Loop-else usage (10 points)
+- ✅ Code organization (10 points)
+- ✅ Comments/documentation (10 points)
+
+**Total: 160 points**
+
+---
+
+## Quick Reference
+
+### break Statement
+
+```python
+for item in items:
+    if condition:
+        break  # Exit loop
+
+while condition:
+    if exit_condition:
+        break  # Exit loop
+```
+
+### continue Statement
+
+```python
+for item in items:
+    if skip_condition:
+        continue  # Skip iteration
+    # process item
+
+while condition:
+    if skip_condition:
+        continue  # Skip iteration
+    # process
+```
+
+### With else
+
+```python
+for item in items:
+    if found:
+        break
+else:
+    # Runs if no break
+    print("Not found")
+```
+
+---
+
+## Summary
+
+In this lesson, you learned:
+
+- ✅ break statement to exit loops
+- ✅ continue statement to skip iterations
+- ✅ Differences between break and continue
+- ✅ Using break/continue in while loops
+- ✅ Using break/continue in for loops
+- ✅ Nested loops with break/continue
+- ✅ Loop-else with break
+- ✅ Common patterns and best practices
+- ✅ Performance optimization
+- ✅ Common mistakes to avoid
+
+**You now have complete control over loop execution!** Break and continue statements make your loops more efficient and flexible.
+
+---
+
+## Additional Resources
+
+- **Loop Control:** [https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements](https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements)
+- **For-Else:** [https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops](https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops)
+
+**Next lesson:** [Pass Statement](pass-statement)

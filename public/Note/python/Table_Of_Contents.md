@@ -54,8 +54,8 @@ This topic based on teaching beginners
 - [Defining Functions](./functions-basics.md)
 - [Function Parameters, Default Parameters, *args and **kwargs and Scope and Global Variables](./function-parameters.md)
 - [Return Values](./return-values.md)
-<!-- - [Default Parameters](./default-parameters.md) -->
-<!-- - [*args and **kwargs](./args-kwargs.md) -->
+- [Default Parameters](./default-parameters.md)
+- [*args and **kwargs](./args-kwargs.md)
 - [Lambda Functions](./lambda-functions.md)
 - [Scope and Global Variables](./scope.md)
 
