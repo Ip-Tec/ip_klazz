@@ -1,867 +1,785 @@
-# Assignment Operators
+# Arithmetic Operators
 
-Assignment operators are used to assign values to variables and perform operations at the same time. They provide a shorthand way to update variables, making your code more concise and readable.
+Arithmetic operators are used to perform mathematical operations in Python. They're essential for calculations, data processing, and solving problems. Let's explore all arithmetic operators in detail!
 
-## Simple Assignment (=)
+## Basic Arithmetic Operators
 
-The basic assignment operator assigns a value to a variable.
+Python provides seven main arithmetic operators:
+
+| Operator | Name | Example | Result |
+|----------|------|---------|--------|
+| + | Addition | 5 + 3 | 8 |
+| - | Subtraction | 5 - 3 | 2 |
+| * | Multiplication | 5 * 3 | 15 |
+| / | Division | 5 / 2 | 2.5 |
+| // | Floor Division | 5 // 2 | 2 |
+| % | Modulus | 5 % 2 | 1 |
+| ** | Exponentiation | 5 ** 2 | 25 |
+
+---
+
+## Addition (+)
+
+Adds two numbers together.
 
 ```python
-# Basic assignment
-x = 5
-name = "Alice"
-price = 19.99
-is_active = True
+# Basic addition
+result = 5 + 3
+print(result)  # 8
 
-# Assign result of expression
-total = 10 + 5
-area = length * width
+# Adding variables
+a = 10
+b = 20
+total = a + b
+print(total)  # 30
 
-# Multiple assignment (same value)
-a = b = c = 0
-print(a, b, c)  # 0 0 0
+# Multiple additions
+sum_total = 1 + 2 + 3 + 4 + 5
+print(sum_total)  # 15
 
-# Multiple assignment (different values)
-x, y, z = 1, 2, 3
-print(x, y, z)  # 1 2 3
+# Adding negative numbers
+result = -5 + 10
+print(result)  # 5
 
-# Swapping values
-a = 5
-b = 10
-a, b = b, a
-print(a, b)  # 10 5
+# Float addition
+price1 = 19.99
+price2 = 29.99
+total = price1 + price2
+print(total)  # 49.98
+```
+
+### Addition with Different Types
+
+```python
+# Integer + Float = Float
+result = 5 + 2.5
+print(result)  # 7.5
+print(type(result))  # <class 'float'>
+
+# Adding to zero (identity)
+x = 42
+result = x + 0
+print(result)  # 42
+
+# String concatenation (not arithmetic, but uses +)
+greeting = "Hello" + " " + "World"
+print(greeting)  # "Hello World"
 ```
 
 ---
 
-## Compound Assignment Operators
+## Subtraction (-)
 
-Compound assignment operators combine an operation with assignment, providing a shorthand notation.
-
-### Overview Table
-
-| Operator | Example | Equivalent To | Description |
-|----------|---------|---------------|-------------|
-| `+=` | `x += 5` | `x = x + 5` | Add and assign |
-| `-=` | `x -= 5` | `x = x - 5` | Subtract and assign |
-| `*=` | `x *= 5` | `x = x * 5` | Multiply and assign |
-| `/=` | `x /= 5` | `x = x / 5` | Divide and assign |
-| `//=` | `x //= 5` | `x = x // 5` | Floor divide and assign |
-| `%=` | `x %= 5` | `x = x % 5` | Modulus and assign |
-| `**=` | `x **= 5` | `x = x ** 5` | Exponent and assign |
-
----
-
-## Addition Assignment (+=)
-
-Adds a value to the variable and assigns the result.
+Subtracts one number from another.
 
 ```python
-# Basic usage
-count = 10
-count += 5  # Same as: count = count + 5
-print(count)  # 15
+# Basic subtraction
+result = 10 - 3
+print(result)  # 7
 
-# Adding to zero (initialization)
-total = 0
-total += 10
-total += 20
-total += 30
-print(total)  # 60
-
-# Incrementing by 1
-score = 0
-score += 1  # Increment
-score += 1
-score += 1
-print(score)  # 3
-
-# With floats
-price = 19.99
-price += 5.00
-print(price)  # 24.99
-
-# With negative numbers
-balance = 100
-balance += -25  # Same as balance -= 25
-print(balance)  # 75
-```
-
-### Practical Examples
-
-```python
-# Accumulating sum
-total = 0
-for i in range(1, 6):
-    total += i
-print(f"Sum: {total}")  # Sum: 15
-
-# Shopping cart
-cart_total = 0.0
-cart_total += 19.99  # Item 1
-cart_total += 29.99  # Item 2
-cart_total += 9.99   # Item 3
-print(f"Cart total: ${cart_total:.2f}")
-
-# Score tracking
-player_score = 0
-player_score += 10  # Small win
-player_score += 50  # Big win
-player_score += 5   # Bonus
-print(f"Final score: {player_score}")
-
-# String concatenation
-message = "Hello"
-message += " "
-message += "World"
-message += "!"
-print(message)  # Hello World!
-```
-
----
-
-## Subtraction Assignment (-=)
-
-Subtracts a value from the variable and assigns the result.
-
-```python
-# Basic usage
-count = 10
-count -= 3  # Same as: count = count - 3
-print(count)  # 7
-
-# Decrementing
-lives = 3
-lives -= 1  # Lost a life
-print(lives)  # 2
-
-# With floats
-balance = 100.50
-balance -= 25.25
-print(balance)  # 75.25
-
-# Multiple subtractions
-value = 100
-value -= 10
-value -= 20
-value -= 5
-print(value)  # 65
-```
-
-### Practical Examples
-
-```python
-# Bank withdrawal
+# Subtracting variables
 balance = 1000
 withdrawal = 250
-balance -= withdrawal
-print(f"New balance: ${balance}")
+new_balance = balance - withdrawal
+print(new_balance)  # 750
 
-# Inventory management
-stock = 50
-sold = 15
-stock -= sold
-print(f"Remaining stock: {stock}")
+# Negative result
+result = 5 - 10
+print(result)  # -5
 
-# Countdown
-time_left = 60
-time_left -= 10  # 10 seconds passed
-time_left -= 15  # 15 more seconds
-print(f"Time remaining: {time_left} seconds")
+# Multiple subtractions
+result = 100 - 20 - 10 - 5
+print(result)  # 65
 
-# Health points in game
-health = 100
-health -= 25  # Took damage
-health -= 10  # More damage
-print(f"Health: {health}/100")
+# Subtracting floats
+result = 10.5 - 3.2
+print(result)  # 7.3
+```
+
+### Subtraction Use Cases
+
+```python
+# Calculate age
+current_year = 2024
+birth_year = 1990
+age = current_year - birth_year
+print(f"Age: {age}")  # Age: 34
+
+# Calculate difference
+score1 = 85
+score2 = 92
+difference = score2 - score1
+print(f"Difference: {difference}")  # Difference: 7
+
+# Temperature change
+morning_temp = 15.5
+evening_temp = 22.3
+temp_change = evening_temp - morning_temp
+print(f"Temperature increased by {temp_change}°C")
 ```
 
 ---
 
-## Multiplication Assignment (*=)
+## Multiplication (*)
 
-Multiplies the variable by a value and assigns the result.
+Multiplies two numbers.
 
 ```python
-# Basic usage
-count = 5
-count *= 3  # Same as: count = count * 3
-print(count)  # 15
+# Basic multiplication
+result = 5 * 3
+print(result)  # 15
 
-# Doubling
-value = 10
-value *= 2
-print(value)  # 20
+# Multiplying variables
+price = 19.99
+quantity = 5
+total = price * quantity
+print(f"Total: ${total}")  # Total: $49.95
 
-# With floats
-price = 10.0
-price *= 1.5
-print(price)  # 15.0
+# Negative multiplication
+result = -5 * 3
+print(result)  # -15
 
-# Multiplying by fraction
-amount = 100
-amount *= 0.5  # Half
-print(amount)  # 50.0
+result = -5 * -3
+print(result)  # 15
+
+# Multiple multiplications
+result = 2 * 3 * 4
+print(result)  # 24
+
+# Multiplying by zero
+result = 42 * 0
+print(result)  # 0
 ```
 
-### Practical Examples
+### Multiplication Use Cases
 
 ```python
-# Apply tax
+# Calculate area
+length = 10
+width = 5
+area = length * width
+print(f"Area: {area} square units")
+
+# Convert units
+miles = 5
+km_per_mile = 1.60934
+kilometers = miles * km_per_mile
+print(f"{miles} miles = {kilometers} km")
+
+# Calculate total cost with tax
 price = 100
 tax_rate = 1.08  # 8% tax
-price *= tax_rate
-print(f"Price with tax: ${price:.2f}")
+total_with_tax = price * tax_rate
+print(f"Total with tax: ${total_with_tax}")
 
-# Population growth
-population = 1000
-growth_rate = 1.05  # 5% growth
-population *= growth_rate
-print(f"New population: {population:.0f}")
+# String repetition (not arithmetic, but uses *)
+separator = "=" * 50
+print(separator)  # ==================================================
+```
+
+---
+
+## Division (/)
+
+Divides one number by another. **Always returns a float**, even if the result is a whole number.
+
+```python
+# Basic division
+result = 10 / 2
+print(result)  # 5.0 (notice the .0)
+print(type(result))  # <class 'float'>
+
+# Division with remainder
+result = 10 / 3
+print(result)  # 3.3333333333333335
+
+# Dividing integers returns float
+result = 15 / 5
+print(result)  # 3.0 (not 3!)
+
+# Negative division
+result = -10 / 2
+print(result)  # -5.0
+
+result = 10 / -2
+print(result)  # -5.0
+
+result = -10 / -2
+print(result)  # 5.0
+```
+
+### Division by Zero
+
+```python
+# This will cause an error!
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero!")
+
+# Always check before dividing
+divisor = 0
+if divisor != 0:
+    result = 10 / divisor
+else:
+    print("Cannot divide by zero")
+```
+
+### Division Use Cases
+
+```python
+# Calculate average
+total_score = 450
+num_tests = 5
+average = total_score / num_tests
+print(f"Average: {average}")  # Average: 90.0
+
+# Split bill evenly
+total_bill = 120.50
+num_people = 4
+per_person = total_bill / num_people
+print(f"Each person pays: ${per_person:.2f}")
+
+# Convert to percentage
+correct = 85
+total = 100
+percentage = (correct / total) * 100
+print(f"Score: {percentage}%")
+```
+
+---
+
+## Floor Division (//)
+
+Divides and rounds down to the nearest integer. Returns an integer if both operands are integers.
+
+```python
+# Basic floor division
+result = 10 // 3
+print(result)  # 3 (not 3.333...)
+
+result = 15 // 4
+print(result)  # 3 (not 3.75)
+
+# Exact division still returns integer
+result = 10 // 2
+print(result)  # 5
+
+# Float operands return float
+result = 10.0 // 3
+print(result)  # 3.0
+
+result = 10 // 3.0
+print(result)  # 3.0
+```
+
+### Floor Division Behavior
+
+```python
+# Positive numbers (rounds down)
+print(7 // 2)   # 3
+print(8 // 3)   # 2
+print(10 // 4)  # 2
+
+# Negative numbers (rounds DOWN, not toward zero!)
+print(-7 // 2)   # -4 (not -3!)
+print(-8 // 3)   # -3 (not -2!)
+print(7 // -2)   # -4
+print(-7 // -2)  # 3
+```
+
+### Floor Division Use Cases
+
+```python
+# Distribute items evenly
+total_items = 47
+boxes = 5
+items_per_box = total_items // boxes
+print(f"Each box gets: {items_per_box} items")  # 9 items
+leftover = total_items % boxes
+print(f"Leftover: {leftover} items")  # 2 items
+
+# Convert minutes to hours
+total_minutes = 125
+hours = total_minutes // 60
+minutes = total_minutes % 60
+print(f"{total_minutes} minutes = {hours} hours and {minutes} minutes")
+# 125 minutes = 2 hours and 5 minutes
+
+# Page calculation
+total_items = 100
+items_per_page = 15
+pages_needed = total_items // items_per_page
+if total_items % items_per_page != 0:
+    pages_needed += 1
+print(f"Pages needed: {pages_needed}")  # 7 pages
+```
+
+---
+
+## Modulus (%)
+
+Returns the remainder of division. Very useful for checking divisibility and cycling.
+
+```python
+# Basic modulus
+result = 10 % 3
+print(result)  # 1 (10 = 3*3 + 1)
+
+result = 15 % 4
+print(result)  # 3 (15 = 4*3 + 3)
+
+# No remainder
+result = 15 % 5
+print(result)  # 0 (evenly divisible)
+
+# Negative numbers
+result = -10 % 3
+print(result)  # 2
+
+result = 10 % -3
+print(result)  # -2
+```
+
+### Modulus Use Cases
+
+#### Check Even or Odd
+
+```python
+number = 42
+
+if number % 2 == 0:
+    print(f"{number} is even")
+else:
+    print(f"{number} is odd")
+```
+
+#### Check Divisibility
+
+```python
+number = 15
+
+if number % 3 == 0:
+    print(f"{number} is divisible by 3")
+
+if number % 5 == 0:
+    print(f"{number} is divisible by 5")
+
+# Check if prime (simplified)
+def is_prime(n):
+    """Check if number is prime (basic version)."""
+    if n < 2:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+print(is_prime(17))  # True
+print(is_prime(15))  # False
+```
+
+#### Cycling/Wrapping Values
+
+```python
+# Day of week (0-6)
+day = 8  # Monday next week
+day_of_week = day % 7
+print(f"Day of week: {day_of_week}")  # 1 (Monday)
+
+# Clock hours (12-hour format)
+hour = 14  # 2 PM in 24-hour
+hour_12 = hour % 12
+if hour_12 == 0:
+    hour_12 = 12
+print(f"12-hour format: {hour_12}")  # 2
+
+# Array index wrapping
+items = ["A", "B", "C", "D"]
+index = 10
+wrapped_index = index % len(items)
+print(items[wrapped_index])  # "C" (index 2)
+```
+
+#### Get Last Digit
+
+```python
+number = 12345
+last_digit = number % 10
+print(f"Last digit: {last_digit}")  # 5
+
+# Get last two digits
+last_two = number % 100
+print(f"Last two digits: {last_two}")  # 45
+```
+
+---
+
+## Exponentiation (**)
+
+Raises a number to a power.
+
+```python
+# Basic exponentiation
+result = 2 ** 3
+print(result)  # 8 (2 × 2 × 2)
+
+result = 5 ** 2
+print(result)  # 25 (5 × 5)
+
+# Square root (using fractional exponent)
+result = 16 ** 0.5
+print(result)  # 4.0
+
+# Cube root
+result = 27 ** (1/3)
+print(result)  # 3.0
+
+# Negative exponent (reciprocal)
+result = 2 ** -3
+print(result)  # 0.125 (1/8)
+
+# Zero exponent
+result = 5 ** 0
+print(result)  # 1 (any number to power 0 is 1)
+```
+
+### Exponentiation Use Cases
+
+```python
+# Calculate area of square
+side = 5
+area = side ** 2
+print(f"Area: {area} square units")  # 25
+
+# Calculate volume of cube
+side = 3
+volume = side ** 3
+print(f"Volume: {volume} cubic units")  # 27
 
 # Compound interest
 principal = 1000
-rate = 1.05  # 5% interest
-principal *= rate  # Year 1
-principal *= rate  # Year 2
-principal *= rate  # Year 3
-print(f"Amount after 3 years: ${principal:.2f}")
-
-# Scale measurement
-meters = 5
-meters *= 100  # Convert to centimeters
-print(f"{meters} cm")
-
-# Doubling pattern
-value = 1
-value *= 2  # 2
-value *= 2  # 4
-value *= 2  # 8
-value *= 2  # 16
-print(value)  # 16
-```
-
----
-
-## Division Assignment (/=)
-
-Divides the variable by a value and assigns the result. Always returns a float.
-
-```python
-# Basic usage
-count = 20
-count /= 4  # Same as: count = count / 4
-print(count)  # 5.0
-
-# Even division
-value = 100
-value /= 2
-print(value)  # 50.0
-
-# Division with remainder
-number = 10
-number /= 3
-print(number)  # 3.3333...
-
-# Multiple divisions
-value = 1000
-value /= 10
-value /= 10
-print(value)  # 10.0
-```
-
-### Practical Examples
-
-```python
-# Split bill
-total_bill = 120.0
-num_people = 4
-total_bill /= num_people
-print(f"Each person pays: ${total_bill:.2f}")
-
-# Calculate average
-total = 450
-count = 5
-total /= count
-print(f"Average: {total}")
-
-# Halving
-value = 100
-value /= 2  # 50.0
-value /= 2  # 25.0
-value /= 2  # 12.5
-print(value)
-
-# Convert percentage
-percentage = 75
-percentage /= 100  # Convert to decimal
-print(percentage)  # 0.75
-```
-
----
-
-## Floor Division Assignment (//=)
-
-Performs floor division and assigns the result (rounds down to nearest integer).
-
-```python
-# Basic usage
-count = 20
-count //= 3  # Same as: count = count // 3
-print(count)  # 6
-
-# Even division
-value = 100
-value //= 2
-print(value)  # 50
-
-# Multiple floor divisions
-number = 1000
-number //= 10  # 100
-number //= 10  # 10
-print(number)  # 10
-
-# With negative numbers
-value = 17
-value //= -5
-print(value)  # -4 (rounds down!)
-```
-
-### Practical Examples
-
-```python
-# Items per box
-total_items = 47
-box_capacity = 5
-boxes_needed = total_items
-boxes_needed //= box_capacity
-print(f"Full boxes: {boxes_needed}")  # 9
-leftover = total_items % box_capacity
-print(f"Items left over: {leftover}")  # 2
-
-# Time conversion
-total_seconds = 3725
-hours = total_seconds
-hours //= 3600  # 1 hour
-print(f"Hours: {hours}")
-
-# Halving (integer)
-value = 100
-value //= 2  # 50
-value //= 2  # 25
-value //= 2  # 12
-print(value)  # 12 (not 12.5)
-```
-
----
-
-## Modulus Assignment (%=)
-
-Performs modulus operation and assigns the remainder.
-
-```python
-# Basic usage
-count = 17
-count %= 5  # Same as: count = count % 5
-print(count)  # 2 (remainder)
-
-# Getting last digit
-number = 12345
-number %= 10
-print(number)  # 5
-
-# Wrapping around
-position = 8
-max_position = 5
-position %= max_position
-print(position)  # 3
-```
-
-### Practical Examples
-
-```python
-# Circular array index
-index = 10
-array_length = 7
-index %= array_length
-print(f"Wrapped index: {index}")  # 3
-
-# Clock hours (12-hour format)
-hour = 14  # 2 PM
-hour %= 12
-if hour == 0:
-    hour = 12
-print(f"12-hour format: {hour}")
-
-# Day of week cycling
-day = 25  # Day 25
-day %= 7  # Get day of week (0-6)
-print(f"Day of week: {day}")
-
-# Getting remainder repeatedly
-value = 100
-value %= 30  # 10
-value %= 7   # 3
-print(value)  # 3
-```
-
----
-
-## Exponentiation Assignment (**=)
-
-Raises the variable to a power and assigns the result.
-
-```python
-# Basic usage
-count = 2
-count **= 3  # Same as: count = count ** 3
-print(count)  # 8
-
-# Squaring
-value = 5
-value **= 2
-print(value)  # 25
-
-# Cubing
-number = 3
-number **= 3
-print(number)  # 27
-
-# Multiple exponentiations
-value = 2
-value **= 2  # 4
-value **= 2  # 16
-value **= 2  # 256
-print(value)
-```
-
-### Practical Examples
-
-```python
-# Compound interest formula
-principal = 1000
-rate = 1.05
+rate = 0.05  # 5% annual interest
 years = 10
-# Calculate (1 + r)^n
-rate **= years
-amount = principal * rate
-print(f"Amount: ${amount:.2f}")
+amount = principal * (1 + rate) ** years
+print(f"Amount after {years} years: ${amount:.2f}")
 
-# Population growth exponential
-population = 1000
-growth_factor = 1.02  # 2% growth
+# Scientific calculations
+speed_of_light = 3 * (10 ** 8)  # 3 × 10^8 m/s
+print(f"Speed of light: {speed_of_light} m/s")
+
+# Population growth
+initial_population = 1000
+growth_rate = 1.05  # 5% growth per year
 years = 5
-growth_factor **= years
-final_population = population * growth_factor
-print(f"Population: {final_population:.0f}")
-
-# Area of square (repeated squaring)
-side = 2
-side **= 2  # 4 (area of 2x2 square)
-print(f"Area: {side}")
+future_population = initial_population * (growth_rate ** years)
+print(f"Population after {years} years: {future_population:.0f}")
 ```
 
 ---
 
-## Chaining Assignment Operators
+## Operator Precedence
 
-You can use multiple assignment operators in sequence.
+Python follows mathematical order of operations (PEMDAS):
+
+1. **P**arentheses `()`
+2. **E**xponents `**`
+3. **M**ultiplication `*`, **D**ivision `/`, Floor Division `//`, **M**odulus `%` (left to right)
+4. **A**ddition `+`, **S**ubtraction `-` (left to right)
 
 ```python
-# Chain different operations
-x = 10
-x += 5   # 15
-x *= 2   # 30
-x -= 10  # 20
-x /= 4   # 5.0
-print(x)
+# Without parentheses
+result = 2 + 3 * 4
+print(result)  # 14 (not 20!)
+# Order: 3 * 4 = 12, then 2 + 12 = 14
 
-# Accumulating values
-total = 0
-total += 10
-total += 20
-total += 30
-total -= 5
-print(total)  # 55
+# With parentheses
+result = (2 + 3) * 4
+print(result)  # 20
+# Order: (2 + 3) = 5, then 5 * 4 = 20
+
+# Complex example
+result = 2 + 3 * 4 ** 2 / 2 - 1
+# Step 1: 4 ** 2 = 16
+# Step 2: 3 * 16 = 48
+# Step 3: 48 / 2 = 24.0
+# Step 4: 2 + 24.0 = 26.0
+# Step 5: 26.0 - 1 = 25.0
+print(result)  # 25.0
+
+# Always use parentheses for clarity!
+result = 2 + ((3 * (4 ** 2)) / 2) - 1
+print(result)  # 25.0 (same result, more readable)
+```
+
+### Precedence Examples
+
+```python
+# Multiplication before addition
+print(5 + 2 * 3)      # 11 (not 21)
+
+# Division before subtraction
+print(10 - 8 / 4)     # 8.0 (not 0.5)
+
+# Exponentiation before multiplication
+print(2 * 3 ** 2)     # 18 (not 36)
+
+# Left-to-right for same precedence
+print(10 / 5 * 2)     # 4.0 (not 1.0)
+print(10 - 5 + 2)     # 7 (not 3)
+
+# Use parentheses to override
+print((5 + 2) * 3)    # 21
+print(10 - (8 / 4))   # 8.0
+print((2 * 3) ** 2)   # 36
+print(10 / (5 * 2))   # 1.0
+```
+
+---
+
+## Combining Operators
+
+### Chaining Operations
+
+```python
+# Multiple operations
+total = 10 + 5 - 3 * 2
+print(total)  # 9
+# Order: 3 * 2 = 6, 10 + 5 = 15, 15 - 6 = 9
 
 # Complex calculation
-value = 100
-value *= 1.1   # Apply 10% increase
-value -= 15    # Subtract fee
-value /= 2     # Split in half
-print(f"Final value: {value:.2f}")
+result = (100 + 50) * 2 / 3 ** 2
+print(result)  # 33.333...
+# Order: (100 + 50) = 150, 3 ** 2 = 9, 150 * 2 = 300, 300 / 9 = 33.333...
+```
+
+### Real-World Formula
+
+```python
+# Quadratic formula: x = (-b ± √(b² - 4ac)) / 2a
+a = 1
+b = -5
+c = 6
+
+discriminant = b ** 2 - 4 * a * c
+x1 = (-b + discriminant ** 0.5) / (2 * a)
+x2 = (-b - discriminant ** 0.5) / (2 * a)
+
+print(f"Solutions: x1 = {x1}, x2 = {x2}")  # Solutions: x1 = 3.0, x2 = 2.0
+
+# Distance formula: d = √((x2 - x1)² + (y2 - y1)²)
+x1, y1 = 0, 0
+x2, y2 = 3, 4
+distance = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+print(f"Distance: {distance}")  # Distance: 5.0
+
+# BMI formula: BMI = weight(kg) / height(m)²
+weight = 70  # kg
+height = 1.75  # meters
+bmi = weight / height ** 2
+print(f"BMI: {bmi:.2f}")  # BMI: 22.86
 ```
 
 ---
 
-## Assignment with Unpacking
+## Unary Operators
 
-Python allows assigning multiple variables at once through unpacking.
+Operators that work with a single operand.
+
+### Unary Plus (+)
 
 ```python
-# Unpack sequence
-x, y, z = 1, 2, 3
-print(x, y, z)  # 1 2 3
+# Doesn't change the value (rarely used)
+x = 5
+result = +x
+print(result)  # 5
+```
 
-# Unpack list
-numbers = [10, 20, 30]
-a, b, c = numbers
-print(a, b, c)  # 10 20 30
+### Unary Minus (-)
 
-# Swap values
-x, y = 5, 10
-x, y = y, x
-print(x, y)  # 10 5
+```python
+# Negates the value
+x = 5
+result = -x
+print(result)  # -5
 
-# Unpack with remainder
-first, *rest = [1, 2, 3, 4, 5]
-print(first)  # 1
-print(rest)   # [2, 3, 4, 5]
+# Double negative
+x = -5
+result = -x
+print(result)  # 5
 
-# Get first and last
-first, *middle, last = [1, 2, 3, 4, 5]
-print(first)   # 1
-print(middle)  # [2, 3, 4]
-print(last)    # 5
+# In expressions
+result = -3 + 5
+print(result)  # 2
 ```
 
 ---
 
-## Common Patterns
+## Common Pitfalls and Tips
 
-### Counter Pattern
+### Pitfall 1: Integer Division in Python 2 vs 3
 
 ```python
-# Simple counter
-count = 0
-count += 1  # Increment
-count += 1
-count += 1
-print(count)  # 3
+# Python 3 (current)
+print(5 / 2)   # 2.5 (float division)
+print(5 // 2)  # 2 (floor division)
 
-# Loop counter
-iterations = 0
-for i in range(10):
-    iterations += 1
-print(f"Total iterations: {iterations}")
+# Python 2 (old) - don't use this anymore!
+# 5 / 2 would give 2, not 2.5!
 ```
 
-### Accumulator Pattern
+### Pitfall 2: Float Precision
 
 ```python
-# Sum accumulator
-total = 0
-numbers = [1, 2, 3, 4, 5]
-for num in numbers:
-    total += num
-print(f"Sum: {total}")  # 15
+# Floats aren't always exact
+result = 0.1 + 0.2
+print(result)  # 0.30000000000000004 (not exactly 0.3!)
 
-# Product accumulator
-product = 1
-for num in numbers:
-    product *= num
-print(f"Product: {product}")  # 120
+# Solution: round for display
+print(f"{result:.2f}")  # 0.30
+
+# Or use decimal module for precision
+from decimal import Decimal
+result = Decimal('0.1') + Decimal('0.2')
+print(result)  # 0.3 (exact!)
 ```
 
-### Running Average
+### Pitfall 3: Division by Zero
 
 ```python
-# Calculate running average
-total = 0
-count = 0
-values = [10, 20, 30, 40, 50]
-
-for value in values:
-    total += value
-    count += 1
-    average = total / count
-    print(f"After {count} values, average = {average}")
+# Always check before dividing
+divisor = 0
+if divisor != 0:
+    result = 10 / divisor
+else:
+    print("Cannot divide by zero")
+    result = None
 ```
 
-### Decrement Pattern
+### Pitfall 4: Operator Precedence
 
 ```python
-# Countdown
-countdown = 10
-while countdown > 0:
-    print(countdown)
-    countdown -= 1
-print("Blast off!")
-```
+# Wrong assumption
+result = 5 + 3 * 2
+print(result)  # 11 (not 16!)
 
----
-
-## Common Mistakes
-
-### Mistake 1: Using Before Initializing
-
-```python
-# Wrong - variable not initialized
-# count += 5  # NameError: name 'count' is not defined
-
-# Correct - initialize first
-count = 0
-count += 5
-print(count)  # 5
-```
-
-### Mistake 2: Confusing = and ==
-
-```python
-x = 5
-
-# Wrong - assignment in condition
-# if x = 10:  # SyntaxError
-#     print("Equal")
-
-# Correct - comparison
-if x == 10:
-    print("Equal")
-
-# Assignment operator is =
-x = 10
-
-# Comparison operator is ==
-if x == 10:
-    print("Now it's 10")
-```
-
-### Mistake 3: Forgetting Type Changes
-
-```python
-# Division always returns float
-count = 10
-count /= 2
-print(type(count))  # <class 'float'>
-print(count)  # 5.0 (not 5)
-
-# Use floor division for integer result
-count = 10
-count //= 2
-print(type(count))  # <class 'int'>
-print(count)  # 5
-```
-
-### Mistake 4: Order of Operations
-
-```python
-# Be careful with order
-x = 5
-x += 3 * 2  # x = x + (3 * 2) = x + 6 = 11
-print(x)  # 11
-
-# Not the same as:
-x = 5
-x = (x + 3) * 2  # (5 + 3) * 2 = 16
-print(x)  # 16
+# Use parentheses for clarity
+result = (5 + 3) * 2
+print(result)  # 16
 ```
 
 ---
 
 ## Classwork
 
-Practice assignment operators!
+Practice arithmetic operators!
 
 ### Exercise 1: Basic Operations
 
-Create a file called `assignment_practice.py`:
+Create a file called `basic_arithmetic.py`:
 
 ```python
 """
-Practice all assignment operators.
+Practice basic arithmetic operations.
 """
 
-# Start with initial value
-value = 100
+# Define two numbers
+a = 15
+b = 4
 
-print(f"Starting value: {value}")
-
-# Addition assignment
-value += 50
-print(f"After += 50: {value}")
-
-# Subtraction assignment
-value -= 30
-print(f"After -= 30: {value}")
-
-# Multiplication assignment
-value *= 2
-print(f"After *= 2: {value}")
-
-# Division assignment
-value /= 4
-print(f"After /= 4: {value}")
-
-# Floor division assignment
-value //= 10
-print(f"After //= 10: {value}")
-
-# Modulus assignment
-value %= 3
-print(f"After %= 3: {value}")
-
-# Exponentiation assignment
-value **= 4
-print(f"After **= 4: {value}")
-```
-
-### Exercise 2: Shopping Cart
-
-Create a file called `shopping_cart.py`:
-
-```python
-"""
-Shopping cart using assignment operators.
-"""
-
-# Initialize cart
-cart_total = 0.0
-items_count = 0
-
+# Perform all operations
 print("=" * 50)
-print("SHOPPING CART")
+print("ARITHMETIC OPERATIONS")
 print("=" * 50)
+print(f"a = {a}, b = {b}\n")
 
-# Add items
-print("\nAdding items...")
-cart_total += 19.99
-items_count += 1
-print(f"Added item ($19.99) - Total: ${cart_total:.2f}")
-
-cart_total += 29.99
-items_count += 1
-print(f"Added item ($29.99) - Total: ${cart_total:.2f}")
-
-cart_total += 9.99
-items_count += 1
-print(f"Added item ($9.99) - Total: ${cart_total:.2f}")
-
-# Apply discount
-print(f"\nSubtotal: ${cart_total:.2f}")
-discount = 0.10  # 10% discount
-discount_amount = cart_total * discount
-cart_total -= discount_amount
-print(f"Discount (10%): -${discount_amount:.2f}")
-
-# Add tax
-tax_rate = 0.08  # 8% tax
-tax_amount = cart_total * tax_rate
-cart_total += tax_amount
-print(f"Tax (8%): +${tax_amount:.2f}")
-
-# Final total
-print("=" * 50)
-print(f"Items: {items_count}")
-print(f"TOTAL: ${cart_total:.2f}")
+print(f"Addition:        {a} + {b} = {a + b}")
+print(f"Subtraction:     {a} - {b} = {a - b}")
+print(f"Multiplication:  {a} × {b} = {a * b}")
+print(f"Division:        {a} / {b} = {a / b:.2f}")
+print(f"Floor Division:  {a} // {b} = {a // b}")
+print(f"Modulus:         {a} % {b} = {a % b}")
+print(f"Exponentiation:  {a} ** {b} = {a ** b}")
 print("=" * 50)
 ```
 
-### Exercise 3: Game Score System
+### Exercise 2: Calculator
 
-Create a file called `game_score.py`:
+Create a file called `simple_calc.py`:
 
 ```python
 """
-Game scoring system using assignment operators.
+Interactive calculator using arithmetic operators.
 """
 
-# Initialize
-player_score = 0
-level = 1
-multiplier = 1
+# Get input from user
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
 
-print("=" * 50)
-print("GAME SCORE TRACKER")
-print("=" * 50)
+# Perform calculations
+print("\nResults:")
+print(f"{num1} + {num2} = {num1 + num2}")
+print(f"{num1} - {num2} = {num1 - num2}")
+print(f"{num1} × {num2} = {num1 * num2}")
 
-# Level 1
-print(f"\nLevel {level}")
-player_score += 10  # Small enemy
-print(f"  Defeated small enemy: +10 (Score: {player_score})")
+# Check for division by zero
+if num2 != 0:
+    print(f"{num1} / {num2} = {num1 / num2:.2f}")
+    print(f"{num1} // {num2} = {num1 // num2}")
+    print(f"{num1} % {num2} = {num1 % num2}")
+else:
+    print("Cannot divide by zero!")
 
-player_score += 50  # Boss
-print(f"  Defeated boss: +50 (Score: {player_score})")
-
-player_score += 25  # Bonus
-print(f"  Collected bonus: +25 (Score: {player_score})")
-
-# Level 2 with multiplier
-level += 1
-multiplier += 1
-print(f"\nLevel {level} (Multiplier: x{multiplier})")
-
-points = 10
-points *= multiplier
-player_score += points
-print(f"  Defeated small enemy: +{points} (Score: {player_score})")
-
-points = 50
-points *= multiplier
-player_score += points
-print(f"  Defeated boss: +{points} (Score: {player_score})")
-
-# Penalty
-penalty = 20
-player_score -= penalty
-print(f"  Time penalty: -{penalty} (Score: {player_score})")
-
-print("=" * 50)
-print(f"FINAL SCORE: {player_score}")
-print("=" * 50)
+print(f"{num1} ** {num2} = {num1 ** num2}")
 ```
 
-### Exercise 4: Bank Account Simulator
+### Exercise 3: Even or Odd
 
-Create a file called `bank_account.py`:
+Create a file called `even_odd.py`:
 
 ```python
 """
-Bank account simulator using assignment operators.
+Check if numbers are even or odd using modulus operator.
 """
 
-# Initialize account
-balance = 1000.00
-transaction_count = 0
+# Get number from user
+number = int(input("Enter a number: "))
 
-print("=" * 50)
-print("BANK ACCOUNT SIMULATOR")
-print("=" * 50)
-print(f"Opening balance: ${balance:.2f}\n")
+# Check using modulus
+if number % 2 == 0:
+    print(f"{number} is EVEN")
+else:
+    print(f"{number} is ODD")
 
-# Deposit
-deposit = 500.00
-balance += deposit
-transaction_count += 1
-print(f"Deposit: +${deposit:.2f}")
-print(f"Balance: ${balance:.2f}\n")
+# Show calculation
+remainder = number % 2
+print(f"\n{number} ÷ 2 = {number // 2} remainder {remainder}")
+```
 
-# Withdrawal
-withdrawal = 200.00
-balance -= withdrawal
-transaction_count += 1
-print(f"Withdrawal: -${withdrawal:.2f}")
-print(f"Balance: ${balance:.2f}\n")
+### Exercise 4: Time Converter
 
-# Interest (monthly)
-interest_rate = 0.01  # 1% per month
-interest = balance * interest_rate
-balance += interest
-transaction_count += 1
-print(f"Interest: +${interest:.2f}")
-print(f"Balance: ${balance:.2f}\n")
+Create a file called `time_converter.py`:
 
-# Fee
-fee = 10.00
-balance -= fee
-transaction_count += 1
-print(f"Monthly fee: -${fee:.2f}")
-print(f"Balance: ${balance:.2f}\n")
+```python
+"""
+Convert seconds to hours, minutes, and seconds.
+"""
 
-# Summary
-print("=" * 50)
-print(f"Final balance: ${balance:.2f}")
-print(f"Total transactions: {transaction_count}")
-print("=" * 50)
+# Get total seconds
+total_seconds = int(input("Enter number of seconds: "))
+
+# Calculate hours, minutes, seconds using // and %
+hours = total_seconds // 3600
+remaining = total_seconds % 3600
+minutes = remaining // 60
+seconds = remaining % 60
+
+# Display result
+print(f"\n{total_seconds} seconds equals:")
+print(f"{hours} hours, {minutes} minutes, and {seconds} seconds")
+
+# Alternative format
+print(f"Time: {hours:02d}:{minutes:02d}:{seconds:02d}")
 ```
 
 ---
@@ -876,165 +794,147 @@ Create a comprehensive program called `financial_calculator.py` that demonstrate
 
 Your program should include:
 
-#### 1. **Personal Budget Tracker**
+#### 1. **Basic Calculator**
 
-- Track income (use +=)
-- Track expenses (use -=)
-- Calculate savings
-- Apply percentage-based allocations
-- Generate monthly summary
+- Get two numbers from user
+- Display all seven arithmetic operations
+- Handle division by zero
+- Format output professionally
 
-#### 2. **Investment Growth Calculator**
+#### 2. **Scientific Calculator**
 
-- Initial investment
-- Monthly contributions (use +=)
-- Annual return rate (use *=)
-- Calculate compound growth over years
-- Show year-by-year breakdown
+- Square root (x ** 0.5)
+- Cube root (x ** (1/3))
+- Powers (any base and exponent)
+- Absolute value
+- Percentage calculations
 
-#### 3. **Loan Amortization Calculator**
+#### 3. **Geometry Calculator**
 
-- Loan amount
-- Interest rate
-- Monthly payment (use -=)
-- Calculate remaining balance
-- Show payment schedule
+Calculate:
 
-#### 4. **Shopping Cart with Complex Discounts**
+- Circle (area and circumference from radius)
+- Rectangle (area and perimeter from length/width)
+- Triangle (area from base/height)
+- Cube (volume and surface area from side)
+- Sphere (volume and surface area from radius)
 
-- Add/remove items
-- Apply multiple discount types:
-  - Percentage discounts (use *=)
-  - Fixed amount discounts (use -=)
-  - Buy-one-get-one deals
-- Calculate tax
-- Split bill among people (use /=)
+#### 4. **Finance Calculator**
 
-#### 5. **Salary Calculator**
+- Simple interest
+- Compound interest
+- Loan payment calculation
+- Tip calculator
+- Split bill calculator
 
-- Gross salary
-- Deductions (use -=):
-  - Federal tax
-  - State tax
-  - Insurance
-  - Retirement contribution
-- Calculate net salary
-- Show monthly and yearly breakdown
+#### 5. **Unit Converters**
 
-#### 6. **Currency Converter**
+- Temperature (Celsius ↔ Fahrenheit ↔ Kelvin)
+- Distance (miles ↔ kilometers)
+- Weight (pounds ↔ kilograms)
+- Time (seconds ↔ minutes ↔ hours)
 
-- Convert between currencies
-- Apply exchange rates (use *=)
-- Apply conversion fees (use -=)
-- Handle multiple conversions
+#### 6. **Number Properties**
 
-#### 7. **Tip Calculator**
+- Check even/odd
+- Check if prime
+- Calculate factorial
+- Find GCD (Greatest Common Divisor)
+- List divisors
 
-- Bill amount
-- Tip percentage (use *=)
-- Split among people (use /=)
-- Round up option
-- Show per-person breakdown
+#### 7. **Real-World Problems**
 
-#### 8. **Retirement Savings Planner**
-
-- Current age and retirement age
-- Current savings
-- Monthly contributions (use +=)
-- Expected return (use *=)
-- Calculate future value
-- Determine if goal is achievable
+- BMI calculator
+- Age calculator (from birth year)
+- Gas mileage calculator
+- Grade average calculator
+- Discount calculator
 
 ### Code Requirements
 
-- Use ALL assignment operators (+= -= *= /= //= %= **=)
-- Demonstrate each operator at least 3 times
-- Use compound operators for efficiency
-- Include running totals with +=
-- Show proper initialization
-- Professional error handling
-- Menu-driven interface
-- Functions for organization
-- Comments and docstrings
-- Formatted currency output
+- Use ALL seven arithmetic operators
+- Demonstrate operator precedence
+- Include error handling (division by zero, negative roots, etc.)
+- Use functions to organize code
+- Include comments and docstrings
+- Professional formatted output
+- Input validation
+- Menu system for different calculators
 
 ### Example Output
 
 ```
 ╔══════════════════════════════════════════════════╗
 ║                                                  ║
-║        FINANCIAL CALCULATOR SYSTEM               ║
+║           MULTI-FUNCTION CALCULATOR              ║
 ║                                                  ║
 ╚══════════════════════════════════════════════════╝
 
 MAIN MENU:
-1. Personal Budget Tracker
-2. Investment Growth Calculator
-3. Loan Amortization Calculator
-4. Shopping Cart with Discounts
-5. Salary Calculator
-6. Currency Converter
-7. Tip Calculator
-8. Retirement Savings Planner
-9. Exit
+1. Basic Calculator
+2. Scientific Calculator
+3. Geometry Calculator
+4. Finance Calculator
+5. Unit Converters
+6. Number Properties
+7. Real-World Problems
+8. Exit
 
-Enter your choice (1-9): 4
+Enter your choice (1-8): 3
 
 ════════════════════════════════════════════════════
-        SHOPPING CART WITH DISCOUNTS
+           GEOMETRY CALCULATOR
 ════════════════════════════════════════════════════
 
-ADDING ITEMS:
-────────────────────────────────────────────────────
-Item 1: $29.99 added
-Item 2: $49.99 added
-Item 3: $19.99 added
-Item 4: $39.99 added
-────────────────────────────────────────────────────
-Subtotal: $139.96
+1. Circle
+2. Rectangle
+3. Triangle
+4. Cube
+5. Sphere
+6. Back to Main Menu
 
-APPLYING DISCOUNTS:
-────────────────────────────────────────────────────
-Member discount (15%): -$20.99
-Coupon ($10 off): -$10.00
-────────────────────────────────────────────────────
-After discounts: $108.97
+Enter choice (1-6): 1
 
-ADDING TAX:
 ────────────────────────────────────────────────────
-Tax (8.5%): +$9.26
+CIRCLE CALCULATOR
 ────────────────────────────────────────────────────
-Total: $118.23
 
-SPLIT BILL:
+Enter radius: 5
+
+Calculations:
 ────────────────────────────────────────────────────
-Number of people: 3
-Per person: $39.41
-════════════════════════════════════════════════════
+Radius:           5.00 units
+Diameter:         10.00 units
+Circumference:    31.42 units
+Area:             78.54 square units
+
+Formula Used:
+  Circumference = 2 × π × r
+  Area = π × r²
+
+Press Enter to continue...
 ```
 
 ### Bonus Challenges (Optional)
 
-1. **Credit Card Payment Calculator**: Minimum payment vs full payment
-2. **Stock Portfolio Tracker**: Buys, sells, dividends, splits
-3. **Utility Bill Splitter**: Multiple roommates, variable usage
-4. **Cryptocurrency Converter**: Multiple conversions, fees
-5. **Mortgage Calculator**: Principal, interest, escrow
-6. **Tax Refund Estimator**: Multiple deductions and credits
-7. **Business Expense Tracker**: Categories, reimbursements
-8. **College Savings Calculator**: 529 plan simulation
+1. **Expression Evaluator**: Let users enter expressions like "5 + 3 * 2"
+2. **History**: Keep track of calculations in the session
+3. **Save Results**: Write results to a file
+4. **Graphing**: Show visual representation (ASCII art bar chart)
+5. **Statistics**: Mean, median, mode from list of numbers
+6. **Matrix Operations**: Add/multiply 2×2 matrices
+7. **Roman Numeral**: Convert decimal to Roman numerals
+8. **Binary Calculator**: Operations in binary
 
 ### Submission Guidelines
 
-- File name: `financial_calculator.py`
-- Must include all 8 calculators
+- File name: `multi_calculator.py`
+- Must include all 7 calculator sections
 - Professional menu system
-- Currency formatting ($X.XX)
-- Input validation
-- Use all assignment operators
+- Complete error handling
 - Well-organized with functions
 - Comments and docstrings
-- Test with various inputs
+- Test all features thoroughly
 - Estimated time: 120-150 minutes
 
 ### Grading Criteria
@@ -1061,17 +961,16 @@ Per person: $39.41
 
 ## Quick Reference
 
-### Assignment Operators
+### Arithmetic Operators
 
 ```python
-=     # Assign
-+=    # Add and assign
--=    # Subtract and assign
-*=    # Multiply and assign
-/=    # Divide and assign
-//=   # Floor divide and assign
-%=    # Modulus and assign
-**=   # Exponent and assign
++    # Addition
+-    # Subtraction
+*    # Multiplication
+/    # Division (returns float)
+//   # Floor division (rounds down)
+%    # Modulus (remainder)
+**   # Exponentiation (power)
 ```
 
 ### Common Patterns

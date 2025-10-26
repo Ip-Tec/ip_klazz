@@ -8,9 +8,9 @@ Python provides three logical operators:
 
 | Operator | Description | Example | Result |
 |----------|-------------|---------|--------|
-| `and` | Returns True if BOTH conditions are true | `True and True` | `True` |
-| `or` | Returns True if AT LEAST ONE condition is true | `True or False` | `True` |
-| `not` | Reverses the boolean value | `not True` | `False` |
+| 'and' | Returns True if BOTH conditions are true | 'True and True' | 'True' |
+| 'or' | Returns True if AT LEAST ONE condition is true | 'True or False` | 'True' |
+| 'not' | Reverses the boolean value | 'not True' | 'False' |
 
 **Important:** Logical operators work with boolean values and return boolean results.
 
