@@ -1,390 +1,770 @@
-# While Loops
+# For Loops
 
-## What is a Loop?
+For loops allow you to iterate over sequences (like lists, strings, ranges) and execute code for each item. They're perfect when you know how many times you want to repeat something or when working with collections.
 
-A loop lets your code repeat a block of code multiple times without writing it over and over. Imagine you need to print "Hello" 100 times—would you write **print("Hello")** 100 times? No way! That's what loops are for.
+## Basic For Loop
 
-There are two main types of loops in Python: **while** loops and **for** loops. Let's start with **while**.
-
-## The **while** Loop
-
-A **while** loop keeps running as long as a condition is **True**. The moment the condition becomes **False**, the loop stops.
-
-### Basic Syntax
+### Syntax
 
 ```python
-while condition:
-    # Code inside the loop
+for variable in sequence:
+    # Code to execute for each item
+    statement
 ```
 
-### Example 1: Simple Counter
+### Simple Examples
 
 ```python
-count = 1
+# Loop through a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
 
-while count <= 5:
-    print(count)
-    count = count + 1
+# Loop through a string
+for letter in "Python":
+    print(letter)
+
+# Loop through a range
+for i in range(5):
+    print(i)  # 0, 1, 2, 3, 4
 ```
 
-**Output:**
+---
 
-```sh
-1
-2
-3
-4
-5
-```
+## The range() Function
 
-Let's trace through what happens:
+`range()` generates a sequence of numbers.
 
-1. **count** is 1, and 1 <= 5 is **True**, so we print 1
-2. **count** becomes 2, and 2 <= 5 is **True**, so we print 2
-3. This continues until **count** is 6
-4. 6 <= 5 is **False**, so the loop stops
-
-### Example 2: User Input Loop
+### range(stop)
 
 ```python
-name = ""
+# 0 to stop-1
+for i in range(5):
+    print(i)  # 0, 1, 2, 3, 4
 
-while name == "":
-    name = input("What's your name? ")
-
-print(f"Hello, {name}!")
+# Common use: repeat n times
+for i in range(3):
+    print("Hello!")
 ```
 
-This keeps asking for a name until the user enters something.
-
-### Example 3: Countdown
+### range(start, stop)
 
 ```python
-count = 5
+# start to stop-1
+for i in range(1, 6):
+    print(i)  # 1, 2, 3, 4, 5
 
-while count > 0:
-    print(count)
-    count = count - 1
-
-print("Blastoff!")
+# Count from 10 to 15
+for num in range(10, 16):
+    print(num)
 ```
 
-**Output:**
-
-```sh
-5
-4
-3
-2
-1
-Blastoff!
-```
-
-## The **break** Statement
-
-**break** lets you exit a loop immediately, even if the condition is still **True**.
+### range(start, stop, step)
 
 ```python
-count = 1
+# Count by 2s
+for i in range(0, 10, 2):
+    print(i)  # 0, 2, 4, 6, 8
 
-while count <= 10:
-    if count == 5:
+# Count backwards
+for i in range(10, 0, -1):
+    print(i)  # 10, 9, 8, ..., 1
+
+# Every 5th number
+for i in range(0, 50, 5):
+    print(i)  # 0, 5, 10, 15, ..., 45
+```
+
+---
+
+## Looping Through Collections
+
+### Lists
+
+```python
+# Loop through list
+numbers = [10, 20, 30, 40, 50]
+for num in numbers:
+    print(num)
+
+# With index using enumerate()
+for index, num in enumerate(numbers):
+    print(f"Index {index}: {num}")
+
+# Calculate sum
+total = 0
+for num in numbers:
+    total += num
+print(f"Sum: {total}")
+```
+
+### Strings
+
+```python
+# Loop through characters
+word = "Python"
+for char in word:
+    print(char)
+
+# Count vowels
+text = "Hello World"
+vowel_count = 0
+for char in text.lower():
+    if char in "aeiou":
+        vowel_count += 1
+print(f"Vowels: {vowel_count}")
+```
+
+### Dictionaries
+
+```python
+# Loop through keys
+student = {"name": "Alice", "age": 20, "grade": "A"}
+for key in student:
+    print(key)
+
+# Loop through values
+for value in student.values():
+    print(value)
+
+# Loop through key-value pairs
+for key, value in student.items():
+    print(f"{key}: {value}")
+```
+
+### Tuples
+
+```python
+# Loop through tuple
+coordinates = (10, 20, 30)
+for coord in coordinates:
+    print(coord)
+
+# Unpack tuples
+points = [(1, 2), (3, 4), (5, 6)]
+for x, y in points:
+    print(f"x={x}, y={y}")
+```
+
+---
+
+## Loop Control Statements
+
+### break - Exit Loop Early
+
+```python
+# Find first even number
+numbers = [1, 3, 5, 8, 9, 10]
+for num in numbers:
+    if num % 2 == 0:
+        print(f"First even: {num}")
         break
-    print(count)
-    count = count + 1
 
-print("Loop ended")
+# Search for item
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    if fruit == "banana":
+        print("Found banana!")
+        break
 ```
 
-**Output:**
-
-```sh
-1
-2
-3
-4
-Loop ended
-```
-
-When **count** reaches 5, the **break** statement runs and the loop stops completely.
-
-## The **continue** Statement
-
-**continue** skips the rest of the current loop iteration and goes to the next one. It doesn't exit the loop like **break**—it just skips that one cycle.
+### continue - Skip Iteration
 
 ```python
-count = 1
-
-while count <= 5:
-    count = count + 1
-    if count == 3:
+# Skip odd numbers
+for i in range(10):
+    if i % 2 != 0:
         continue
-    print(count)
+    print(i)  # Only even numbers
+
+# Skip negative numbers
+numbers = [5, -3, 8, -1, 10]
+for num in numbers:
+    if num < 0:
+        continue
+    print(num)  # Only positive
 ```
 
-**Output:**
-
-```sh
-2
-4
-5
-```
-
-Notice that 3 is skipped. When **count** is 3, **continue** makes the loop jump to the next iteration.
-
-## Incrementing and Decrementing
-
-You'll often see shorthand ways to change a variable:
+### pass - Do Nothing
 
 ```python
-count = count + 1  # Long way
-count += 1         # Short way
+# Placeholder for future code
+for i in range(5):
+    if i == 3:
+        pass  # TODO: implement later
+    else:
+        print(i)
 
-count = count - 1  # Long way
-count -= 1         # Short way
-
-count = count * 2  # Long way
-count *= 2         # Short way
+# Empty loop body
+for item in items:
+    pass  # Will implement later
 ```
 
-All of these do the same thing. The short versions are just more convenient:
+---
+
+## Nested For Loops
 
 ```python
+# Multiplication table
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(f"{i} × {j} = {i*j}")
+
+# Pattern printing
+for i in range(1, 6):
+    for j in range(i):
+        print("*", end="")
+    print()
+
+# Nested list iteration
+matrix = [[1, 2], [3, 4], [5, 6]]
+for row in matrix:
+    for num in row:
+        print(num, end=" ")
+    print()
+```
+
+---
+
+## For-Else Construct
+
+The `else` block executes when loop completes normally (not via `break`).
+
+```python
+# Search with for-else
+numbers = [1, 3, 5, 7, 9]
+target = 6
+
+for num in numbers:
+    if num == target:
+        print(f"Found {target}")
+        break
+else:
+    print(f"{target} not found")
+
+# Check if all pass
+scores = [85, 92, 78, 95]
+for score in scores:
+    if score < 60:
+        print("At least one failed")
+        break
+else:
+    print("All passed!")
+```
+
+---
+
+## Common For Loop Patterns
+
+### Counter Pattern
+
+```python
+# Count occurrences
+numbers = [1, 2, 2, 3, 2, 4, 2]
 count = 0
-
-while count < 5:
-    count += 1
-    print(count)
+for num in numbers:
+    if num == 2:
+        count += 1
+print(f"Found {count} twos")
 ```
 
-**Output:**
-
-```sh
-1
-2
-3
-4
-5
-```
-
-## Real-World Examples
-
-### Example 1: Simple ATM Program
+### Accumulator Pattern
 
 ```python
-balance = 1000
-attempts = 0
+# Sum
+numbers = [1, 2, 3, 4, 5]
+total = 0
+for num in numbers:
+    total += num
+print(f"Sum: {total}")
 
-while attempts < 3:
-    guess = int(input("Enter your PIN: "))
-    
-    if guess == 1234:
-        print(f"Access granted. Your balance: ${balance}")
-        break
-    else:
-        attempts += 1
-        print(f"Wrong PIN. Attempts left: {3 - attempts}")
-
-if attempts == 3:
-    print("Account locked!")
+# Product
+product = 1
+for num in numbers:
+    product *= num
+print(f"Product: {product}")
 ```
 
-### Example 2: Game Loop
+### Transformation Pattern
 
 ```python
-score = 0
-playing = True
+# Square all numbers
+numbers = [1, 2, 3, 4, 5]
+squares = []
+for num in numbers:
+    squares.append(num ** 2)
+print(squares)
 
-while playing:
-    print(f"Current score: {score}")
-    action = input("(a)ttack or (q)uit? ")
-    
-    if action == "a":
-        score += 10
-    elif action == "q":
-        playing = False
-    else:
-        print("Invalid action")
-
-print(f"Game over! Final score: {score}")
+# Uppercase all strings
+words = ["hello", "world"]
+upper_words = []
+for word in words:
+    upper_words.append(word.upper())
+print(upper_words)
 ```
 
-### Example 3: Input Validation
+### Filter Pattern
 
 ```python
-age = -1
+# Get even numbers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+evens = []
+for num in numbers:
+    if num % 2 == 0:
+        evens.append(num)
+print(evens)
 
-while age < 0 or age > 150:
-    age = int(input("Enter your age (0-150): "))
-    
-    if age < 0 or age > 150:
-        print("Invalid age. Try again.")
-
-print(f"You are {age} years old")
+# Get passing grades
+scores = [55, 85, 92, 45, 78]
+passing = []
+for score in scores:
+    if score >= 60:
+        passing.append(score)
+print(passing)
 ```
 
-## Infinite Loops
+---
 
-Be careful! If your condition never becomes **False**, your loop will run forever. This is called an infinite loop.
+## enumerate() Function
+
+Get both index and value when looping.
 
 ```python
-# ❌ Infinite loop - DON'T run this!
-while True:
-    print("This runs forever!")
+# Basic enumerate
+fruits = ["apple", "banana", "cherry"]
+for index, fruit in enumerate(fruits):
+    print(f"{index}: {fruit}")
+
+# Start index at 1
+for index, fruit in enumerate(fruits, start=1):
+    print(f"{index}. {fruit}")
+
+# Find index of item
+for index, fruit in enumerate(fruits):
+    if fruit == "banana":
+        print(f"Banana at index {index}")
 ```
 
-This will never stop. The condition **True** is always true.
+---
 
-You can create an intentional infinite loop and use **break** to exit:
+## zip() Function
+
+Iterate over multiple sequences in parallel.
 
 ```python
-# ✅ This is okay
-while True:
-    answer = input("Do you want to continue? (yes/no): ")
-    
-    if answer == "no":
-        break
-    
-    print("Continuing...")
+# Zip two lists
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+
+for name, age in zip(names, ages):
+    print(f"{name} is {age} years old")
+
+# Zip three lists
+cities = ["New York", "London", "Tokyo"]
+for name, age, city in zip(names, ages, cities):
+    print(f"{name}, {age}, lives in {city}")
+
+# Create dictionary from two lists
+keys = ["name", "age", "city"]
+values = ["Alice", 25, "New York"]
+person = dict(zip(keys, values))
+print(person)
 ```
+
+---
+
+## List Comprehensions (Preview)
+
+A concise way to create lists using for loops.
+
+```python
+# Traditional loop
+squares = []
+for i in range(5):
+    squares.append(i ** 2)
+
+# List comprehension (more Pythonic)
+squares = [i ** 2 for i in range(5)]
+print(squares)  # [0, 1, 4, 9, 16]
+
+# With condition
+evens = [i for i in range(10) if i % 2 == 0]
+print(evens)  # [0, 2, 4, 6, 8]
+
+# Transform strings
+words = ["hello", "world"]
+upper = [word.upper() for word in words]
+print(upper)  # ['HELLO', 'WORLD']
+```
+
+---
+
+## Practical Examples
+
+### Sum and Average
+
+```python
+numbers = [10, 20, 30, 40, 50]
+
+# Calculate sum
+total = 0
+for num in numbers:
+    total += num
+
+# Calculate average
+average = total / len(numbers)
+print(f"Sum: {total}, Average: {average}")
+```
+
+### Find Maximum
+
+```python
+numbers = [34, 78, 12, 95, 23]
+
+max_num = numbers[0]
+for num in numbers:
+    if num > max_num:
+        max_num = num
+
+print(f"Maximum: {max_num}")
+```
+
+### Grade Statistics
+
+```python
+grades = [85, 92, 78, 90, 88]
+
+# Calculate statistics
+total = 0
+count_a = 0
+count_pass = 0
+
+for grade in grades:
+    total += grade
+    if grade >= 90:
+        count_a += 1
+    if grade >= 60:
+        count_pass += 1
+
+average = total / len(grades)
+print(f"Average: {average:.2f}")
+print(f"A grades: {count_a}")
+print(f"Passing: {count_pass}")
+```
+
+### Reverse a String
+
+```python
+text = "Python"
+reversed_text = ""
+
+for char in text:
+    reversed_text = char + reversed_text
+
+print(reversed_text)  # "nohtyP"
+```
+
+---
 
 ## Common Mistakes
 
-## **1. Forgetting to update the condition variable**
+### Mistake 1: Modifying List While Iterating
 
 ```python
-# ❌ Infinite loop - count never changes
-count = 1
-while count < 5:
-    print(count)
-    # Forgot to increment count!
+# Wrong - can cause issues
+numbers = [1, 2, 3, 4, 5]
+# for num in numbers:
+#     if num % 2 == 0:
+#         numbers.remove(num)  # Don't modify while iterating!
 
-# ✅ Correct
-count = 1
-while count < 5:
-    print(count)
-    count += 1
+# Correct - iterate over copy
+for num in numbers[:]:
+    if num % 2 == 0:
+        numbers.remove(num)
 ```
 
-## **2. Using **=** instead of **==** in the condition**
+### Mistake 2: Using Wrong Variable
 
 ```python
-# ❌ Wrong - this assigns, not compares
-while count = 5:
-    print(count)
+# Wrong - using wrong variable
+for i in range(5):
+    print(j)  # NameError: j not defined
 
-# ✅ Correct
-while count == 5:
-    print(count)
+# Correct
+for i in range(5):
+    print(i)
 ```
 
-## **3. Indentation errors**
+### Mistake 3: Range Off-by-One
 
 ```python
-# ❌ Wrong - code not indented
-while count < 5:
-print(count)
-count += 1
+# Wrong - misses last element
+numbers = [10, 20, 30, 40, 50]
+for i in range(len(numbers) - 1):  # Misses last!
+    print(numbers[i])
 
-# ✅ Correct
-while count < 5:
-    print(count)
-    count += 1
-```
+# Correct
+for i in range(len(numbers)):
+    print(numbers[i])
 
-## Key Takeaways
-
-- **while** loops repeat code as long as a condition is **True**
-- Always make sure the condition will eventually become **False**
-- Use **break** to exit a loop early
-- Use **continue** to skip to the next iteration
-- Use **+=** and **-=** to increment/decrement variables
-- Watch out for infinite loops!
-
-## Practice Exercises
-
-1. Write a program that asks the user to guess a number between 1 and 10. Keep asking until they guess correctly.
-2. Create a multiplication table generator (ask the user for a number and print its multiplication table).
-3. Build a simple password validator that keeps asking until the password is strong enough.
-4. Write a program that calculates the factorial of a number using a while loop.
-5. Create a program that asks for user input and stops when the user types "exit".
-
-## Solution
-
-```python
-
-# Exercise 1: Number Guessing Game
-import random
-secret_number = random.randint(1, 10)
-guess = 0
-
-while guess != secret_number:
-    try:
-        guess = int(input("Guess a number between 1 and 10: "))
-        if guess < secret_number:
-            print("Too low! Try again.")
-        elif guess > secret_number:
-            print("Too high! Try again.")
-    except ValueError:
-        print("Invalid input. Please enter a number.")
-
-print(f"Congratulations! You guessed the number {secret_number} correctly!")
-
-# Exercise 2: Multiplication Table Generator
-num = int(input("Enter a number to see its multiplication table: "))
-i = 1
-while i <= 10:
-    print(f"{num} x {i} = {num * i}")
-    i += 1
-
-# Exercise 3: Simple Password Validator
-password = ""
-min_length = 8
-has_digit = False
-has_upper = False
-
-while not (len(password) >= min_length and has_digit and has_upper):
-    password = input(f"Enter a password (min {min_length} chars, 1 digit, 1 uppercase): ")
-    has_digit = any(char.isdigit() for char in password)
-    has_upper = any(char.isupper() for char in password)
-
-    if len(password) < min_length:
-        print(f"Password too short. Needs at least {min_length} characters.")
-    if not has_digit:
-        print("Password needs at least one digit.")
-    if not has_upper:
-        print("Password needs at least one uppercase letter.")
-
-print("Password set successfully!")
-
-# Exercise 4: Factorial Calculator
-number = int(input("Enter a non-negative integer to calculate its factorial: "))
-factorial = 1
-i = 1
-
-if number < 0:
-    print("Factorial is not defined for negative numbers.")
-elif number == 0:
-    print("The factorial of 0 is 1.")
-else:
-    while i <= number:
-        factorial *= i
-        i += 1
-    print(f"The factorial of {number} is {factorial.")
-    
-    # Exercise 5: User Input until "exit"
-    user_input = ""
-    print("Enter text. Type 'exit' to quit.")
-    while user_input.lower() != "exit":
-        user_input = input("> ")
-        if user_input.lower() != "exit":
-            print(f"You typed: {user_input}")
-    print("Exiting program. Goodbye!")
-
+# Better - iterate directly
+for num in numbers:
+    print(num)
 ```
 
 ---
 
-> **Next lesson:** [Break and Continue](break-continue)
+## Classwork
+
+### Exercise 1: Basic For Loops
+
+Create `for_basics.py`:
+
+```python
+"""Practice basic for loops."""
+
+# Print 1 to 10
+for i in range(1, 11):
+    print(i, end=" ")
+print()
+
+# Sum 1 to 100
+total = 0
+for i in range(1, 101):
+    total += i
+print(f"Sum 1-100: {total}")
+
+# Multiplication table for 5
+for i in range(1, 11):
+    print(f"5 × {i} = {5 * i}")
+```
+
+### Exercise 2: List Processing
+
+Create `list_processing.py`:
+
+```python
+"""Process lists with for loops."""
+
+numbers = [23, 45, 12, 67, 34, 89, 15]
+
+# Find min and max
+minimum = numbers[0]
+maximum = numbers[0]
+for num in numbers:
+    if num < minimum:
+        minimum = num
+    if num > maximum:
+        maximum = num
+
+print(f"Min: {minimum}, Max: {maximum}")
+
+# Count evens and odds
+evens = 0
+odds = 0
+for num in numbers:
+    if num % 2 == 0:
+        evens += 1
+    else:
+        odds += 1
+
+print(f"Evens: {evens}, Odds: {odds}")
+```
+
+### Exercise 3: String Analysis
+
+Create `string_analysis.py`:
+
+```python
+"""Analyze strings with for loops."""
+
+text = "Hello, World!"
+
+# Count characters
+letters = 0
+digits = 0
+spaces = 0
+other = 0
+
+for char in text:
+    if char.isalpha():
+        letters += 1
+    elif char.isdigit():
+        digits += 1
+    elif char.isspace():
+        spaces += 1
+    else:
+        other += 1
+
+print(f"Letters: {letters}")
+print(f"Digits: {digits}")
+print(f"Spaces: {spaces}")
+print(f"Other: {other}")
+```
+
+### Exercise 4: Pattern Generator
+
+Create `pattern_generator.py`:
+
+```python
+"""Generate patterns with for loops."""
+
+# Right triangle
+print("Right Triangle:")
+for i in range(1, 6):
+    for j in range(i):
+        print("*", end="")
+    print()
+
+# Pyramid
+print("\nPyramid:")
+for i in range(1, 6):
+    spaces = " " * (5 - i)
+    stars = "*" * (2 * i - 1)
+    print(spaces + stars)
+
+# Number pyramid
+print("\nNumber Pyramid:")
+for i in range(1, 6):
+    for j in range(1, i + 1):
+        print(j, end="")
+    print()
+```
 
 ---
+
+## Assignment
+
+### Project: Data Analysis Suite
+
+Create `data_analysis.py` with a menu system containing programs that use for loops.
+
+### Requirements
+
+#### 1. **Grade Analyzer**
+
+- Input multiple student grades
+- Calculate average, min, max
+- Count A, B, C, D, F grades
+- Show percentage passing
+
+#### 2. **Number Statistics**
+
+- Process list of numbers
+- Find sum, average, median
+- Count positive, negative, zero
+- Find range (max - min)
+
+#### 3. **Word Counter**
+
+- Analyze text input
+- Count total words
+- Find longest/shortest word
+- Count specific word occurrences
+
+#### 4. **Shopping List Manager**
+
+- Add items with prices
+- Calculate total cost
+- Find most expensive item
+- Show itemized list
+
+#### 5. **Multiplication Table Generator**
+
+- Generate any size table
+- Format output nicely
+- Highlight specific numbers
+- Allow custom ranges
+
+### Code Requirements
+
+- Use for loops appropriately
+- Use range(), enumerate(), zip()
+- Include break/continue where needed
+- Process collections (lists, strings)
+- Clear output formatting
+- Comments and docstrings
+
+### Grading Criteria
+
+- ✅ Grade analyzer (20 points)
+- ✅ Number statistics (20 points)
+- ✅ Word counter (20 points)
+- ✅ Shopping list manager (20 points)
+- ✅ Multiplication table (20 points)
+- ✅ For loop usage (15 points)
+- ✅ range/enumerate/zip (10 points)
+- ✅ Collection processing (10 points)
+- ✅ Code organization (10 points)
+- ✅ Comments/documentation (5 points)
+
+**Total: 150 points**
+
+---
+
+## Quick Reference
+
+### Basic For Loop
+
+```python
+for item in sequence:
+    # code
+```
+
+### range() Function
+
+```python
+range(stop)           # 0 to stop-1
+range(start, stop)    # start to stop-1
+range(start, stop, step)  # with step
+```
+
+### With enumerate()
+
+```python
+for index, item in enumerate(list):
+    print(index, item)
+```
+
+### With zip()
+
+```python
+for a, b in zip(list1, list2):
+    print(a, b)
+```
+
+### Loop Control
+
+```python
+break     # Exit loop
+continue  # Skip to next iteration
+pass      # Do nothing
+```
+
+---
+
+## Summary
+
+In this lesson, you learned:
+
+- ✅ For loop syntax and usage
+- ✅ range() function variations
+- ✅ Looping through collections
+- ✅ Break, continue, and pass
+- ✅ Nested for loops
+- ✅ For-else construct
+- ✅ enumerate() and zip() functions
+- ✅ Common loop patterns
+- ✅ List comprehensions (preview)
+- ✅ Practical applications
+
+**You can now efficiently process sequences and collections!** For loops are essential for data processing, list manipulation, and iterative tasks.
+
+---
+
+## Additional Resources
+
+- **Python For Loops:** [https://docs.python.org/3/tutorial/controlflow.html#for-statements](https://docs.python.org/3/tutorial/controlflow.html#for-statements)
+- **range() Function:** [https://docs.python.org/3/library/stdtypes.html#range](https://docs.python.org/3/library/stdtypes.html#range)
+
+**Next lesson:** [Break and Continue](break-continue)
