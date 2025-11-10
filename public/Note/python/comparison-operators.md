@@ -1,6 +1,6 @@
 # Comparison Operators
 
-Comparison operators are used to compare values and return boolean results (`True` or `False`). They're essential for making decisions in your programs, controlling flow, and creating conditions.
+Comparison operators are used to compare values and return boolean results (**True** or **False**). They're essential for making decisions in your programs, controlling flow, and creating conditions.
 
 ## Overview of Comparison Operators
 
@@ -8,14 +8,14 @@ Python provides six comparison operators:
 
 | Operator | Name | Example | Result |
 |----------|------|---------|--------|
-| `==` | Equal to | `5 == 5` | `True` |
-| `!=` | Not equal to | `5 != 3` | `True` |
-| `>` | Greater than | `5 > 3` | `True` |
-| `<` | Less than | `3 < 5` | `True` |
-| `>=` | Greater than or equal to | `5 >= 5` | `True` |
-| `<=` | Less than or equal to | `3 <= 5` | `True` |
+| **==** | Equal to | **5 == 5** | **True** |
+| **!=** | Not equal to | **5 != 3** | **True** |
+| **>** | Greater than | **5 > 3** | **True** |
+| **<** | Less than | **3 < 5** | **True** |
+| **>=** | Greater than or equal to | **5 >= 5** | **True** |
+| **<=** | Less than or equal to | **3 <= 5** | **True** |
 
-**Important:** All comparison operators return boolean values (`True` or `False`).
+**Important:** All comparison operators return boolean values (**True** or **False**).
 
 ---
 
@@ -661,7 +661,7 @@ Practice comparison operators!
 
 ### Exercise 1: Comparison Explorer
 
-Create a file called `comparison_explorer.py`:
+Create a file called **comparison_explorer.py**:
 
 ```python
 """
@@ -691,7 +691,7 @@ print("=" * 50)
 
 ### Exercise 2: Age Classifier
 
-Create a file called `age_classifier.py`:
+Create a file called **age_classifier.py**:
 
 ```python
 """
@@ -733,7 +733,7 @@ else:
 
 ### Exercise 3: Number Comparator
 
-Create a file called `number_comparator.py`:
+Create a file called **number_comparator.py**:
 
 ```python
 """
@@ -785,7 +785,7 @@ else:
 
 ### Exercise 4: Grade Calculator
 
-Create a file called `grade_calculator.py`:
+Create a file called **grade_calculator.py**:
 
 ```python
 """
@@ -838,7 +838,7 @@ else:
 
 ### Project: Comprehensive Comparison System
 
-Create a program called `comparison_system.py` that demonstrates mastery of comparison operators through various real-world scenarios.
+Create a program called **comparison_system.py** that demonstrates mastery of comparison operators through various real-world scenarios.
 
 ### Requirements
 
@@ -991,7 +991,7 @@ Age: 25 years
 
 ### Submission Guidelines
 
-- File name: `comparison_system.py`
+- File name: **comparison_system.py**
 - Must include all 8 modules
 - Professional menu system
 - Complete input validation
@@ -1083,4 +1083,4 @@ In the next lesson, we'll learn about logical operators (and, or, not) to combin
 - **Truth Value Testing:** [https://docs.python.org/3/library/stdtypes.html#truth-value-testing](https://docs.python.org/3/library/stdtypes.html#truth-value-testing)
 - **Real Python - Operators:** [https://realpython.com/python-operators-expressions/](https://realpython.com/python-operators-expressions/)
 
-**Next lesson:** [Logical Operators](logical-operators.md)
+**Next lesson:** [Logical Operators](logical-operators)

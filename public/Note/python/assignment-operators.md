@@ -482,10 +482,10 @@ print(f"Population after {years} years: {future_population:.0f}")
 
 Python follows mathematical order of operations (PEMDAS):
 
-1. **P**arentheses `()`
-2. **E**xponents `**`
-3. **M**ultiplication `*`, **D**ivision `/`, Floor Division `//`, **M**odulus `%` (left to right)
-4. **A**ddition `+`, **S**ubtraction `-` (left to right)
+1. **P**arentheses **()**
+2. **E**xponents **
+3. **M**ultiplication *, **D**ivision **/**, Floor Division **//**, **M**odulus **%** (left to right)
+4. **A**ddition **+**, **S**ubtraction **-** (left to right)
 
 ```python
 # Without parentheses
@@ -676,7 +676,7 @@ Practice arithmetic operators!
 
 ### Exercise 1: Basic Operations
 
-Create a file called `basic_arithmetic.py`:
+Create a file called **basic_arithmetic.py**:
 
 ```python
 """
@@ -705,7 +705,7 @@ print("=" * 50)
 
 ### Exercise 2: Calculator
 
-Create a file called `simple_calc.py`:
+Create a file called **simple_calc.py**:
 
 ```python
 """
@@ -735,7 +735,7 @@ print(f"{num1} ** {num2} = {num1 ** num2}")
 
 ### Exercise 3: Even or Odd
 
-Create a file called `even_odd.py`:
+Create a file called **even_odd.py**:
 
 ```python
 """
@@ -758,7 +758,7 @@ print(f"\n{number} ÷ 2 = {number // 2} remainder {remainder}")
 
 ### Exercise 4: Time Converter
 
-Create a file called `time_converter.py`:
+Create a file called **time_converter.py**:
 
 ```python
 """
@@ -788,7 +788,7 @@ print(f"Time: {hours:02d}:{minutes:02d}:{seconds:02d}")
 
 ### Project: Multi-Function Calculator
 
-Create a comprehensive calculator program called `multi_calculator.py` that demonstrates mastery of arithmetic operators.
+Create a comprehensive calculator program called **multi_calculator.py** that demonstrates mastery of arithmetic operators.
 
 ### Requirements
 
@@ -928,7 +928,7 @@ Press Enter to continue...
 
 ### Submission Guidelines
 
-- File name: `multi_calculator.py`
+- File name: **multi_calculator.py**
 - Must include all 7 calculator sections
 - Professional menu system
 - Complete error handling
@@ -1002,7 +1002,7 @@ In this lesson, you learned:
 
 - ✅ All seven arithmetic operators (+, -, *, /, //, %, **)
 - ✅ How each operator works with examples
-- ✅ Difference between `/` and `//`
+- ✅ Difference between **/** and **//**
 - ✅ Practical uses of modulus operator
 - ✅ Exponentiation for powers and roots
 - ✅ Operator precedence (PEMDAS)
@@ -1023,4 +1023,4 @@ In the next lesson, we'll learn about comparison operators for comparing values.
 - **Operator Precedence:** [https://docs.python.org/3/reference/expressions.html#operator-precedence](https://docs.python.org/3/reference/expressions.html#operator-precedence)
 - **Real Python - Operators:** [https://realpython.com/python-operators-expressions/](https://realpython.com/python-operators-expressions/)
 
-**Next lesson:** [Comparison Operators](comparison-operators)
+**Next lesson:** [If, Elif, and Else Statements](conditionals)

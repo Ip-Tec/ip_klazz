@@ -2,13 +2,13 @@
 
 ## Introduction
 
-Conditional statements allow your code to make decisions and perform different actions based on different conditions. They are the foundation of programming logic. In Python, we use `if`, `elif` (else if), and `else` statements to control the flow of our programs.
+Conditional statements allow your code to make decisions and perform different actions based on different conditions. They are the foundation of programming logic. In Python, we use **if**, **elif** (else if), and **else** statements to control the flow of our programs.
 
 ---
 
-## The `if` Statement
+## The **if** Statement
 
-The `if` statement is used to execute code only if a condition is `True`.
+The **if** statement is used to execute code only if a condition is **True**.
 
 ### Syntax
 
@@ -19,8 +19,8 @@ if condition:
 
 ### Key Points
 
-- The condition must be a **boolean expression** (something that evaluates to `True` or `False`)
-- The colon (`:`) is required after the condition
+- The condition must be a **boolean expression** (something that evaluates to **True** or **False**)
+- The colon (**:**) is required after the condition
 - The code block must be **indented** (typically 4 spaces)
 - Indentation is **mandatory** in Python
 
@@ -33,7 +33,7 @@ if age >= 18:
     print("You are an adult")
 ```
 
-**Output:** `You are an adult`
+**Output:** **You are an adult**
 
 ### More Examples
 
@@ -53,9 +53,9 @@ if name == "Alice":
 
 ---
 
-## The `else` Statement
+## The **else** Statement
 
-The `else` statement is used to execute code when the `if` condition is `False`.
+The **else** statement is used to execute code when the **if** condition is **False**.
 
 ### Syntax
 
@@ -77,7 +77,7 @@ else:
     print("You are a minor")
 ```
 
-**Output:** `You are a minor`
+**Output:** **You are a minor**
 
 ### More Examples
 
@@ -101,9 +101,9 @@ else:
 
 ---
 
-## The `elif` Statement
+## The **elif** Statement
 
-The `elif` statement (short for "else if") allows you to check multiple conditions. Use `elif` when you have more than two possible outcomes.
+The **elif** statement (short for "else if") allows you to check multiple conditions. Use **elif** when you have more than two possible outcomes.
 
 ### Syntax
 
@@ -120,9 +120,9 @@ else:
 
 ### Key Points
 
-- You can have as many `elif` blocks as you need
-- Only the first condition that evaluates to `True` will execute
-- The `else` block is optional
+- You can have as many **elif** blocks as you need
+- Only the first condition that evaluates to **True** will execute
+- The **else** block is optional
 
 ### Example
 
@@ -141,7 +141,7 @@ else:
     print("Grade: F")
 ```
 
-**Output:** `Grade: C`
+**Output:** **Grade: C**
 
 ### More Examples
 
@@ -156,7 +156,7 @@ else:
     print("Good evening!")
 ```
 
-**Output:** `Good afternoon!`
+**Output:** **Good afternoon!**
 
 ---
 
@@ -166,12 +166,12 @@ Conditional statements rely on comparison operators to create conditions. Here a
 
 | Operator | Meaning | Example |
 |----------|---------|---------|
-| `==` | Equal to | `x == 5` |
-| `!=` | Not equal to | `x != 5` |
-| `>` | Greater than | `x > 5` |
-| `<` | Less than | `x < 5` |
-| `>=` | Greater than or equal to | `x >= 5` |
-| `<=` | Less than or equal to | `x <= 5` |
+| **==** | Equal to | **x == 5** |
+| **!=** | Not equal to | **x != 5** |
+| **>** | Greater than | **x > 5** |
+| **<** | Less than | **x < 5** |
+| **>=** | Greater than or equal to | **x >= 5** |
+| **<=** | Less than or equal to | **x <= 5** |
 
 ### Examples
 
@@ -190,11 +190,11 @@ print(x <= 9)   # False
 
 ## Logical Operators
 
-You can combine multiple conditions using logical operators: `and`, `or`, and `not`.
+You can combine multiple conditions using logical operators: **and**, **or**, and **not**.
 
-### The `and` Operator
+### The **and** Operator
 
-All conditions must be `True` for the statement to be `True`.
+All conditions must be **True** for the statement to be **True**.
 
 ```python
 age = 25
@@ -206,11 +206,11 @@ else:
     print("You cannot drive")
 ```
 
-**Output:** `You can drive`
+**Output:** **You can drive**
 
-### The `or` Operator
+### The **or** Operator
 
-At least one condition must be `True` for the statement to be `True`.
+At least one condition must be **True** for the statement to be **True**.
 
 ```python
 day = "Saturday"
@@ -221,11 +221,11 @@ else:
     print("It's a weekday")
 ```
 
-**Output:** `It's the weekend!`
+**Output:** **It's the weekend!**
 
-### The `not` Operator
+### The **not** Operator
 
-Reverses the boolean value—`True` becomes `False`, and vice versa.
+Reverses the boolean value—**True** becomes **False**, and vice versa.
 
 ```python
 is_raining = False
@@ -236,7 +236,7 @@ else:
     print("It's raining")
 ```
 
-**Output:** `No rain today!`
+**Output:** **No rain today!**
 
 ---
 
@@ -257,7 +257,7 @@ else:
     print("You are too young")
 ```
 
-**Output:** `You can buy a ticket`
+**Output:** **You can buy a ticket**
 
 ---
 
@@ -280,7 +280,7 @@ else:
     print("It's hot!")
 ```
 
-**Output:** `It's warm`
+**Output:** **It's warm**
 
 ### Example 2: Login System
 
@@ -298,7 +298,7 @@ else:
     print("Username not found")
 ```
 
-**Output:** `Login successful!`
+**Output:** **Login successful!**
 
 ### Example 3: Simple Calculator
 
@@ -322,7 +322,7 @@ else:
     print("Unknown operation")
 ```
 
-**Output:** `15`
+**Output:** **15**
 
 ---
 
@@ -364,7 +364,7 @@ if age == 18:  # This compares
     print("Adult")
 ```
 
-### 4. Not Using `elif` or `else` Unnecessarily
+### 4. Not Using **elif** or **else** Unnecessarily
 
 ```python
 # ❌ Less efficient
@@ -384,13 +384,13 @@ else:
 
 ## Summary
 
-- **`if`** executes code if a condition is `True`
-- **`else`** executes code if the `if` condition is `False`
-- **`elif`** checks multiple conditions in sequence
-- Use **comparison operators** (`==`, `!=`, `>`, `<`, `>=`, `<=`) to create conditions
-- Use **logical operators** (`and`, `or`, `not`) to combine conditions
-- Always remember the **colon** (`:`) and proper **indentation**
-- Only the first `True` condition executes; the rest are skipped
+- **if** executes code if a condition is **True**
+- **else** executes code if the **if** condition is **False**
+- **elif** checks multiple conditions in sequence
+- Use **comparison operators** (**==**, **!=**, **>**, **<**, **>=**, **<=**) to create conditions
+- Use **logical operators** (**and**, **or**, **not**) to combine conditions
+- Always remember the **colon** (**:**) and proper **indentation**
+- Only the first **True** condition executes; the rest are skipped
 
 ---
 

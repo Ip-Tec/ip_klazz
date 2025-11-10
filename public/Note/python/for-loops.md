@@ -2,13 +2,13 @@
 
 ## What is a Loop?
 
-A loop lets your code repeat a block of code multiple times without writing it over and over. Imagine you need to print "Hello" 100 times—would you write `print("Hello")` 100 times? No way! That's what loops are for.
+A loop lets your code repeat a block of code multiple times without writing it over and over. Imagine you need to print "Hello" 100 times—would you write **print("Hello")** 100 times? No way! That's what loops are for.
 
-There are two main types of loops in Python: `while` loops and `for` loops. Let's start with `while`.
+There are two main types of loops in Python: **while** loops and **for** loops. Let's start with **while**.
 
-## The `while` Loop
+## The **while** Loop
 
-A `while` loop keeps running as long as a condition is `True`. The moment the condition becomes `False`, the loop stops.
+A **while** loop keeps running as long as a condition is **True**. The moment the condition becomes **False**, the loop stops.
 
 ### Basic Syntax
 
@@ -39,10 +39,10 @@ while count <= 5:
 
 Let's trace through what happens:
 
-1. `count` is 1, and 1 <= 5 is `True`, so we print 1
-2. `count` becomes 2, and 2 <= 5 is `True`, so we print 2
-3. This continues until `count` is 6
-4. 6 <= 5 is `False`, so the loop stops
+1. **count** is 1, and 1 <= 5 is **True**, so we print 1
+2. **count** becomes 2, and 2 <= 5 is **True**, so we print 2
+3. This continues until **count** is 6
+4. 6 <= 5 is **False**, so the loop stops
 
 ### Example 2: User Input Loop
 
@@ -80,9 +80,9 @@ print("Blastoff!")
 Blastoff!
 ```
 
-## The `break` Statement
+## The **break** Statement
 
-`break` lets you exit a loop immediately, even if the condition is still `True`.
+**break** lets you exit a loop immediately, even if the condition is still **True**.
 
 ```python
 count = 1
@@ -106,11 +106,11 @@ print("Loop ended")
 Loop ended
 ```
 
-When `count` reaches 5, the `break` statement runs and the loop stops completely.
+When **count** reaches 5, the **break** statement runs and the loop stops completely.
 
-## The `continue` Statement
+## The **continue** Statement
 
-`continue` skips the rest of the current loop iteration and goes to the next one. It doesn't exit the loop like `break`—it just skips that one cycle.
+**continue** skips the rest of the current loop iteration and goes to the next one. It doesn't exit the loop like **break**—it just skips that one cycle.
 
 ```python
 count = 1
@@ -130,7 +130,7 @@ while count <= 5:
 5
 ```
 
-Notice that 3 is skipped. When `count` is 3, `continue` makes the loop jump to the next iteration.
+Notice that 3 is skipped. When **count** is 3, **continue** makes the loop jump to the next iteration.
 
 ## Incrementing and Decrementing
 
@@ -225,7 +225,7 @@ print(f"You are {age} years old")
 
 ## Infinite Loops
 
-Be careful! If your condition never becomes `False`, your loop will run forever. This is called an infinite loop.
+Be careful! If your condition never becomes **False**, your loop will run forever. This is called an infinite loop.
 
 ```python
 # ❌ Infinite loop - DON'T run this!
@@ -233,9 +233,9 @@ while True:
     print("This runs forever!")
 ```
 
-This will never stop. The condition `True` is always true.
+This will never stop. The condition **True** is always true.
 
-You can create an intentional infinite loop and use `break` to exit:
+You can create an intentional infinite loop and use **break** to exit:
 
 ```python
 # ✅ This is okay
@@ -250,7 +250,7 @@ while True:
 
 ## Common Mistakes
 
-**1. Forgetting to update the condition variable**
+## **1. Forgetting to update the condition variable**
 
 ```python
 # ❌ Infinite loop - count never changes
@@ -266,7 +266,7 @@ while count < 5:
     count += 1
 ```
 
-**2. Using `=` instead of `==` in the condition**
+## **2. Using **=** instead of **==** in the condition**
 
 ```python
 # ❌ Wrong - this assigns, not compares
@@ -278,7 +278,7 @@ while count == 5:
     print(count)
 ```
 
-**3. Indentation errors**
+## **3. Indentation errors**
 
 ```python
 # ❌ Wrong - code not indented
@@ -294,11 +294,11 @@ while count < 5:
 
 ## Key Takeaways
 
-- `while` loops repeat code as long as a condition is `True`
-- Always make sure the condition will eventually become `False`
-- Use `break` to exit a loop early
-- Use `continue` to skip to the next iteration
-- Use `+=` and `-=` to increment/decrement variables
+- **while** loops repeat code as long as a condition is **True**
+- Always make sure the condition will eventually become **False**
+- Use **break** to exit a loop early
+- Use **continue** to skip to the next iteration
+- Use **+=** and **-=** to increment/decrement variables
 - Watch out for infinite loops!
 
 ## Practice Exercises
@@ -309,7 +309,7 @@ while count < 5:
 4. Write a program that calculates the factorial of a number using a while loop.
 5. Create a program that asks for user input and stops when the user types "exit".
 
-# Solution
+## Solution
 
 ```python
 

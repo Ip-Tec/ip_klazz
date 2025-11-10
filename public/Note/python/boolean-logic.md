@@ -2,9 +2,9 @@
 
 ## What is Boolean?
 
-Boolean is a data type that can only have two values: `True` or `False`. It's named after George Boole, a mathematician who created a system of logic based on these two values.
+Boolean is a data type that can only have two values: **True** or **False**. It's named after George Boole, a mathematician who created a system of logic based on these two values.
 
-In Python, `True` and `False` are special keywords:
+In Python, **True** and **False** are special keywords:
 
 ```python
 is_student = True
@@ -14,7 +14,7 @@ print(is_student)   # True
 print(is_raining)   # False
 ```
 
-**Note:** `True` and `False` must start with a capital letter in Python. `true` and `false` won't work.
+**Note:** **True** and **False** must start with a capital letter in Python. **true** and **false** won't work.
 
 ## Creating Boolean Values
 
@@ -29,11 +29,11 @@ print(age < 18)      # False
 
 ## Boolean Operators
 
-Boolean operators let you combine and manipulate boolean values. There are three main ones: `and`, `or`, and `not`.
+Boolean operators let you combine and manipulate boolean values. There are three main ones: **and**, **or**, and **not**.
 
-### The `and` Operator
+### The **and** Operator
 
-`and` returns `True` only if **both** conditions are `True`. If either is `False`, the result is `False`.
+**and** returns **True** only if **both** conditions are **True**. If either is **False**, the result is **False**.
 
 ```python
 age = 25
@@ -45,9 +45,9 @@ print(result)  # True
 
 Let's break it down:
 
-- `age >= 18` is `True`
-- `has_license` is `True`
-- `True and True` = `True`
+- **age >= 18** is **True**
+- **has_license** is **True**
+- **True and True** = **True**
 
 Another example:
 
@@ -61,13 +61,13 @@ print(result)  # False
 
 Here:
 
-- `age >= 18` is `False`
-- `has_license` is `True`
-- `False and True` = `False`
+- **age >= 18** is **False**
+- **has_license** is **True**
+- **False and True** = **False**
 
-### The `or` Operator
+### The **or** Operator
 
-`or` returns `True` if **at least one** condition is `True`. It only returns `False` if both are `False`.
+**or** returns **True** if **at least one** condition is **True**. It only returns **False** if both are **False**.
 
 ```python
 day = "Saturday"
@@ -78,9 +78,9 @@ print(result)  # True
 
 Let's break it down:
 
-- `day == "Saturday"` is `True`
-- `day == "Sunday"` is `False`
-- `True or False` = `True`
+- **day == "Saturday"** is **True**
+- **day == "Sunday"** is **False**
+- **True or False** = **True**
 
 Another example:
 
@@ -92,11 +92,11 @@ result = is_weekend or is_holiday
 print(result)  # True
 ```
 
-Even though `is_weekend` is `False`, `is_holiday` is `True`, so the result is `True`.
+Even though **is_weekend** is **False**, **is_holiday** is **True**, so the result is **True**.
 
-### The `not` Operator
+### The **not** Operator
 
-`not` reverses a boolean value. `True` becomes `False`, and `False` becomes `True`.
+**not** reverses a boolean value. **True** becomes **False**, and **False** becomes **True**.
 
 ```python
 is_raining = True
@@ -106,8 +106,8 @@ print(not is_raining)  # False
 
 Here:
 
-- `is_raining` is `True`
-- `not True` = `False`
+- **is_raining** is **True**
+- **not True** = **False**
 
 Another example:
 
@@ -121,7 +121,7 @@ print(not is_logged_in)  # True
 
 Here are all the possible combinations:
 
-### `and` Truth Table
+### **and** Truth Table
 
 | A | B | A and B |
 |---|---|---------|
@@ -130,7 +130,7 @@ Here are all the possible combinations:
 | False | True | False |
 | False | False | False |
 
-### `or` Truth Table
+### **or** Truth Table
 
 | A | B | A or B |
 |---|---|--------|
@@ -139,7 +139,7 @@ Here are all the possible combinations:
 | False | True | True |
 | False | False | False |
 
-### `not` Truth Table
+### **not** Truth Table
 
 | A | not A |
 |---|-------|
@@ -159,11 +159,11 @@ if age >= 18 and has_license and has_insurance:
     print("You can drive safely")
 ```
 
-**Output:** `You can drive safely`
+**Output:** **You can drive safely**
 
-Python reads from left to right. All three conditions must be `True`.
+Python reads from left to right. All three conditions must be **True**.
 
-Here's an example with `or`:
+Here's an example with **or**:
 
 ```python
 score = 45
@@ -174,9 +174,9 @@ else:
     print("Normal case")
 ```
 
-**Output:** `Normal case`
+**Output:** **Normal case**
 
-## Combining `and`, `or`, and `not`
+## Combining **and**, **or**, and **not**
 
 ```python
 age = 20
@@ -189,7 +189,7 @@ else:
     print("You cannot apply")
 ```
 
-**Output:** `You can apply`
+**Output:** **You can apply**
 
 This checks: Is the person 18 or older? AND (are they a student OR do they have money?)
 
@@ -199,10 +199,10 @@ Notice the parentheses — they group conditions together, similar to math. Pare
 
 Python evaluates boolean expressions in this order:
 
-1. Parentheses `()`
-2. `not`
-3. `and`
-4. `or`
+1. Parentheses **()**
+2. **not**
+3. **and**
+4. **or**
 
 Example:
 
@@ -245,7 +245,7 @@ else:
     print("Password is weak")
 ```
 
-**Output:** `Password is strong`
+**Output:** **Password is strong**
 
 ### Example 2: Access Control
 
@@ -260,7 +260,7 @@ else:
     print("Access denied")
 ```
 
-**Output:** `Access granted`
+**Output:** **Access granted**
 
 ### Example 3: Game Logic
 
@@ -273,7 +273,7 @@ if player_health > 0 and (not is_invincible or has_shield):
     print("Player is alive and protected")
 ```
 
-**Output:** `Player is alive and protected`
+**Output:** **Player is alive and protected**
 
 ## Common Mistakes
 
@@ -301,7 +301,7 @@ if age > 18 and True:
     pass
 ```
 
-**3. Confusing `and` with `or`**
+**3. Confusing **and** with **or****
 
 ```python
 # ❌ Wrong - both must be true
@@ -315,12 +315,12 @@ if username != "" and password != "":
 
 ## Key Takeaways
 
-- Boolean values are `True` or `False`
-- `and` returns `True` only if both conditions are `True`
-- `or` returns `True` if at least one condition is `True`
-- `not` reverses a boolean value
+- Boolean values are **True** or **False**
+- **and** returns **True** only if both conditions are **True**
+- **or** returns **True** if at least one condition is **True**
+- **not** reverses a boolean value
 - Use parentheses to make complex conditions clear
-- Remember the order of operations: parentheses, `not`, `and`, `or`
+- Remember the order of operations: parentheses, **not**, **and**, **or**
 
 ---
 
@@ -402,7 +402,6 @@ else:
 
 > ...
 >
-> **Next lesson:** [While Loops](./while-loops)
+> **Next lesson:** [While Loops](while-loops)
 >
 > ---
-

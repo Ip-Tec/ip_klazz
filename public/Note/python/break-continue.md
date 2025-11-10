@@ -2,13 +2,13 @@
 
 ## What Are Break and Continue?
 
-`break` and `continue` are special statements that control how loops behave. They let you exit loops early or skip parts of a loop—giving you more control over your code's flow.
+**break** and **continue** are special statements that control how loops behave. They let you exit loops early or skip parts of a loop—giving you more control over your code's flow.
 
 You've already seen these briefly, but let's dive deeper into how they work and when to use them.
 
-## The `break` Statement
+## The **break** Statement
 
-`break` immediately exits a loop, no matter what. The loop stops running completely, and the code after the loop continues.
+**break** immediately exits a loop, no matter what. The loop stops running completely, and the code after the loop continues.
 
 ### How It Works
 
@@ -34,7 +34,7 @@ print("Loop ended")
 Loop ended
 ```
 
-When `count` reaches 5, `break` kicks in and the entire loop stops. Notice that 5 through 10 never print.
+When **count** reaches 5, **break** kicks in and the entire loop stops. Notice that 5 through 10 never print.
 
 ### Another Example
 
@@ -58,9 +58,9 @@ print("Done!")
 Done!
 ```
 
-## The `continue` Statement
+## The **continue** Statement
 
-`continue` skips the rest of the current loop iteration and jumps to the next one. Unlike `break`, the loop keeps running—it just skips that one cycle.
+**continue** skips the rest of the current loop iteration and jumps to the next one. Unlike **break**, the loop keeps running—it just skips that one cycle.
 
 ### How It Works
 
@@ -85,7 +85,7 @@ print("Loop ended")
 Loop ended
 ```
 
-Notice that 3 is skipped! When `count` is 3, `continue` makes the loop jump to the next iteration without printing.
+Notice that 3 is skipped! When **count** is 3, **continue** makes the loop jump to the next iteration without printing.
 
 ### Another Example
 
@@ -112,8 +112,8 @@ Done!
 
 Here's the key difference:
 
-- **`break`** — Exits the loop completely
-- **`continue`** — Skips the current iteration and goes to the next one
+- **break** — Exits the loop completely
+- **continue** — Skips the current iteration and goes to the next one
 
 ```python
 print("Using break:")
@@ -170,7 +170,7 @@ Found 3!
 Search complete
 ```
 
-Once we find the target, we `break` to stop searching. No need to check the rest!
+Once we find the target, we **break** to stop searching. No need to check the rest!
 
 ### Example 2: Skipping Invalid Data
 
@@ -197,7 +197,7 @@ Valid numbers:
 Done
 ```
 
-We skip negative numbers with `continue` and only print positive ones.
+We skip negative numbers with **continue** and only print positive ones.
 
 ### Example 3: Password Input with Retry Limit
 
@@ -219,7 +219,7 @@ while attempts < max_attempts:
         print("Account locked!")
 ```
 
-Here we use both `break` (when password is correct) and `continue` (to skip to the next attempt).
+Here we use both **break** (when password is correct) and **continue** (to skip to the next attempt).
 
 ### Example 4: Filtering User Input
 
@@ -247,13 +247,13 @@ while True:
 print(f"Total: {sum_total}")
 ```
 
-This example shows how `break` and `continue` work together in a real program.
+This example shows how **break** and **continue** work together in a real program.
 
 ## Break and Continue with Nested Loops
 
-When you use `break` or `continue` in nested loops, they only affect the innermost loop.
+When you use **break** or **continue** in nested loops, they only affect the innermost loop.
 
-### Example with `break`
+### Example with **break**
 
 ```python
 for i in range(1, 4):
@@ -279,9 +279,9 @@ Outer loop: 3
 
 ```
 
-The `break` only exits the inner loop, not the outer loop.
+The **break** only exits the inner loop, not the outer loop.
 
-### Example with `continue`
+### Example with **continue**
 
 ```python
 for i in range(1, 4):
@@ -310,17 +310,17 @@ Outer loop: 3
 
 ```
 
-The `continue` only skips the inner loop iteration, while the outer loop keeps running.
+The **continue** only skips the inner loop iteration, while the outer loop keeps running.
 
 ## When to Use Break and Continue
 
-### Use `break` When
+### Use **break** When
 
 - You found what you're looking for
 - An error condition occurred
 - You want to exit early under specific circumstances
 
-### Use `continue` When
+### Use **continue** When
 
 - You want to skip invalid data
 - A condition doesn't apply to this iteration
@@ -328,7 +328,7 @@ The `continue` only skips the inner loop iteration, while the outer loop keeps r
 
 ## Common Mistakes
 
-**1. Forgetting that break only affects the innermost loop**
+### **1. Forgetting that break only affects the innermost loop**
 
 ```python
 # ❌ This doesn't work as expected
@@ -341,7 +341,7 @@ for i in range(3):
 # ✅ If you need to break both, you need more logic
 ```
 
-**2. Using break/continue outside a loop**
+### **2. Using break/continue outside a loop**
 
 ```python
 # ❌ This will cause an error
@@ -353,7 +353,7 @@ while True:
     break
 ```
 
-**3. Overusing break/continue makes code hard to read**
+### **3. Overusing break/continue makes code hard to read**
 
 ```python
 # ❌ Hard to follow
@@ -380,11 +380,11 @@ for i in range(100):
 
 ## Key Takeaways
 
-- `break` exits a loop completely
-- `continue` skips the current iteration and goes to the next one
+- **break** exits a loop completely
+- **continue** skips the current iteration and goes to the next one
 - In nested loops, they only affect the innermost loop
-- Use `break` when you're done and want to stop
-- Use `continue` when you want to skip something but keep looping
+- Use **break** when you're done and want to stop
+- Use **continue** when you want to skip something but keep looping
 - Don't overuse them—keep your code readable
 
 ---
@@ -393,13 +393,13 @@ for i in range(100):
 
 1. Write a program that searches for a name in a list and prints a message when found.
 2. Create a loop that prints numbers 1-20 but skips multiples of 3.
-3. Build a guessing game where the user gets 5 attempts. Use `break` when they guess correctly.
+3. Build a guessing game where the user gets 5 attempts. Use **break** when they guess correctly.
 4. Write a program that filters out empty strings from user input until the user types "done".
 5. Create a nested loop that prints a grid but skips certain positions based on a condition.
 
 ---
 
-# Solution
+## Solution
 
 ```python
 

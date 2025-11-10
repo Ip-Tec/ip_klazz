@@ -8,9 +8,9 @@ Python provides three logical operators:
 
 | Operator | Description | Example | Result |
 |----------|-------------|---------|--------|
-| 'and' | Returns True if BOTH conditions are true | 'True and True' | 'True' |
-| 'or' | Returns True if AT LEAST ONE condition is true | 'True or False` | 'True' |
-| 'not' | Reverses the boolean value | 'not True' | 'False' |
+| **and** | Returns True if BOTH conditions are true | **True and True** | **True** |
+| **or** | Returns True if AT LEAST ONE condition is true | **True or False** | **True** |
+| **not** | Reverses the boolean value | **not True** | **False** |
 
 **Important:** Logical operators work with boolean values and return boolean results.
 
@@ -18,7 +18,7 @@ Python provides three logical operators:
 
 ## The AND Operator
 
-Returns `True` only if **both** conditions are true.
+Returns **True** only if **both** conditions are true.
 
 ### Truth Table for AND
 
@@ -115,7 +115,7 @@ if price < 100 and in_stock and quality_rating >= 4.0:
 
 ## The OR Operator
 
-Returns `True` if **at least one** condition is true.
+Returns **True** if **at least one** condition is true.
 
 ### Truth Table for OR
 
@@ -214,7 +214,7 @@ print(preferences)  # ['default', 'settings']
 
 ## The NOT Operator
 
-Reverses a boolean value. If it's `True`, makes it `False`, and vice versa.
+Reverses a boolean value. If it's **True**, makes it **False**, and vice versa.
 
 ### Truth Table for NOT
 
@@ -308,15 +308,15 @@ if not score < 60:
 
 ## Combining Logical Operators
 
-You can combine `and`, `or`, and `not` to create complex conditions.
+You can combine **and**, **or**, and **not** to create complex conditions.
 
 ### Operator Precedence
 
 Logical operators have a specific order of evaluation:
 
-1. `not` (highest priority)
-2. `and`
-3. `or` (lowest priority)
+1. **not** (highest priority)
+2. **and**
+3. **or** (lowest priority)
 
 ```python
 # Without parentheses
@@ -408,7 +408,7 @@ Python evaluates logical expressions from left to right and stops as soon as the
 
 ### AND Short-Circuiting
 
-If the first condition is `False`, Python doesn't evaluate the rest (because the result will be `False` anyway).
+If the first condition is **False**, Python doesn't evaluate the rest (because the result will be **False** anyway).
 
 ```python
 # Second condition never evaluated
@@ -429,7 +429,7 @@ if data is not None and len(data) > 0:
 
 ### OR Short-Circuiting
 
-If the first condition is `True`, Python doesn't evaluate the rest (because the result will be `True` anyway).
+If the first condition is **True**, Python doesn't evaluate the rest (because the result will be **True** anyway).
 
 ```python
 # Second condition never evaluated
@@ -567,7 +567,7 @@ In Python, non-boolean values can be used in logical expressions.
 
 ### Falsy Values
 
-These values are considered `False` in logical contexts:
+These values are considered **False** in logical contexts:
 
 ```python
 # All of these are "falsy"
@@ -583,7 +583,7 @@ print(bool(()))         # False (empty tuple)
 
 ### Truthy Values
 
-Everything else is considered `True`:
+Everything else is considered **True**:
 
 ```python
 # All of these are "truthy"
@@ -699,7 +699,7 @@ Practice logical operators!
 
 ### Exercise 1: Logical Operations Table
 
-Create a file called `logical_table.py`:
+Create a file called **logical_table.py**:
 
 ```python
 """
@@ -738,7 +738,7 @@ print("=" * 60)
 
 ### Exercise 2: Age and Membership Validator
 
-Create a file called `membership_validator.py`:
+Create a file called **membership_validator.py**:
 
 ```python
 """
@@ -786,7 +786,7 @@ print("=" * 50)
 
 ### Exercise 3: Password Strength Checker
 
-Create a file called `password_checker.py`:
+Create a file called **password_checker.py**:
 
 ```python
 """
@@ -834,7 +834,7 @@ print("=" * 50)
 
 ### Exercise 4: Eligibility Calculator
 
-Create a file called `eligibility_calculator.py`:
+Create a file called **eligibility_calculator.py**:
 
 ```python
 """
@@ -881,7 +881,7 @@ print("=" * 60)
 
 ### Project: Advanced Logic System
 
-Create a comprehensive program called `logic_system.py` that demonstrates mastery of logical operators through real-world scenarios.
+Create a comprehensive program called **logic_system.py** that demonstrates mastery of logical operators through real-world scenarios.
 
 ### Requirements
 
@@ -1056,7 +1056,7 @@ You saved: $25.00
 
 ### Submission Guidelines
 
-- File name: `logic_system.py`
+- File name: **logic_system.py**
 - Must include all 8 systems
 - Professional menu interface
 - Complete input validation
