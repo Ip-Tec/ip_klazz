@@ -7,15 +7,19 @@ Flexbox (Flexible Box Layout) is a powerful CSS layout module designed for one-d
 ## Flexbox Terminology
 
 ### 1. Flex Container
+
 The parent element that holds flex items. You create a flex container by setting 'display: flex' or 'display: inline-flex'.
 
 ### 2. Flex Items
+
 The direct children of a flex container. These items become flexible and can be arranged according to flexbox rules.
 
 ### 3. Main Axis
+
 The primary axis along which flex items are laid out. It can be horizontal or vertical depending on the 'flex-direction'.
 
 ### 4. Cross Axis
+
 The axis perpendicular to the main axis.
 
 ## Creating a Flex Container
@@ -356,6 +360,7 @@ Let's create an interactive example to practice flexbox basics:
 **Objective:** Create a responsive webpage layout using flexbox properties covered today.
 
 **Requirements:**
+
 1. Create a webpage with:
    - A flexbox-based navigation menu
    - A main content area with a flexbox-based card layout
@@ -369,6 +374,7 @@ Let's create an interactive example to practice flexbox basics:
 3. Ensure the layout is responsive and looks good on different screen sizes
 
 **Challenge (Optional):**
+
 - Add a toggle to change the flex direction of the card layout
 - Implement a mobile-friendly hamburger menu using flexbox
 - Add hover effects to navigation items and cards
@@ -670,3 +676,9 @@ Let's create an interactive example to practice flexbox basics:
 ```
 
 This assignment will help you practice creating a complete layout using flexbox. You'll work with flex containers, flex items, and different flex directions to create a responsive design. Pay attention to how the layout changes when you modify the flex direction and how the responsive design adapts to different screen sizes.
+
+---
+
+**Next lesson:** [Flexbox Deep Dive – Alignment, Justify, Grow/Shrink](Flexbox_Advanced)
+
+---

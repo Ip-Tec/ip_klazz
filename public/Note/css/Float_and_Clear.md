@@ -861,3 +861,9 @@ Let's create an interactive example to practice using floats and clears:
 ```
 
 This assignment will help you practice using floats and clears to create a complex layout, demonstrating both their utility and their limitations. While modern CSS layout techniques are preferred for new projects, understanding floats is essential for working with legacy code and for specific use cases like text wrapping around images.
+
+---
+
+**Next lesson:** [Flexbox Basics – Containers, Items, Direction](Flexbox_Basics)
+
+---

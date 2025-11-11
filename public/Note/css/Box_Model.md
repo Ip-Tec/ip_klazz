@@ -5,6 +5,7 @@
 The CSS Box Model is one of the most fundamental concepts in web design and layout. Every element in web design is a rectangular box, and understanding how these boxes work is essential for creating well-structured layouts.
 
 The Box Model consists of four parts that combine to form the total space an element occupies:
+
 1. Content
 2. Padding
 3. Border
@@ -13,6 +14,7 @@ The Box Model consists of four parts that combine to form the total space an ele
 ## Components of the Box Model
 
 ### 1. Content
+
 The content area contains the actual content of the element - text, images, or other media. Its dimensions can be controlled using 'width' and 'height' properties.
 
 ```css
@@ -23,6 +25,7 @@ The content area contains the actual content of the element - text, images, or o
 ```
 
 ### 2. Padding
+
 Padding is the space between the content and the border. It creates internal spacing within an element.
 
 ```css
@@ -34,6 +37,7 @@ Padding is the space between the content and the border. It creates internal spa
 ```
 
 ### 3. Border
+
 The border surrounds the padding (if any) and content. It can be styled with various properties.
 
 ```css
@@ -47,6 +51,7 @@ The border surrounds the padding (if any) and content. It can be styled with var
 ```
 
 ### 4. Margin
+
 Margin is the outermost layer that creates space between elements. It's external spacing outside the border.
 
 ```css
@@ -479,6 +484,7 @@ For each task, add the appropriate CSS rules to complete the challenge. The solu
 **Objective:** Create a product card component that demonstrates your understanding of the CSS Box Model.
 
 **Requirements:**
+
 1. Create a product card with:
    - Product image
    - Product title
@@ -491,6 +497,7 @@ For each task, add the appropriate CSS rules to complete the challenge. The solu
 5. Make the card visually appealing with hover effects
 
 **Challenge (Optional):**
+
 - Create multiple cards in a responsive grid layout
 - Add a sale badge using absolute positioning
 - Implement a color variation based on product category
@@ -617,3 +624,9 @@ For each task, add the appropriate CSS rules to complete the challenge. The solu
 ```
 
 This assignment will help you practice using the box model properties to create a visually appealing and well-structured component. Remember to pay attention to the spacing between elements and how padding and margins affect the overall layout.
+
+---
+
+**Next lesson:** [Display and Visibility – block, inline, none](Display_and_Visibility)
+
+---

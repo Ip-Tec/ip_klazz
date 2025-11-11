@@ -7,6 +7,7 @@ CSS positioning is a fundamental concept that allows you to control the layout o
 ## Positioning Values
 
 ### 1. Static Positioning (Default)
+
 - Elements are positioned according to the normal document flow
 - 'top', 'right', 'bottom', 'left', and 'z-index` properties have no effect
 - This is the default positioning for all elements
@@ -18,6 +19,7 @@ CSS positioning is a fundamental concept that allows you to control the layout o
 ```
 
 ### 2. Relative Positioning
+
 - Elements are positioned relative to their normal position in the document flow
 - The element's original space is preserved in the layout
 - 'top', 'right', 'bottom', and 'left` properties can be used to offset the element
@@ -31,6 +33,7 @@ CSS positioning is a fundamental concept that allows you to control the layout o
 ```
 
 ### 3. Absolute Positioning
+
 - Elements are removed from the normal document flow
 - Positioned relative to their nearest positioned ancestor (any ancestor with a position value other than static)
 - If no positioned ancestor exists, it's positioned relative to the initial containing block (usually the viewport)
@@ -45,6 +48,7 @@ CSS positioning is a fundamental concept that allows you to control the layout o
 ```
 
 ### 4. Fixed Positioning
+
 - Elements are removed from the normal document flow
 - Positioned relative to the viewport (browser window)
 - Stays in the same position even when the page is scrolled
@@ -59,6 +63,7 @@ CSS positioning is a fundamental concept that allows you to control the layout o
 ```
 
 ### 5. Sticky Positioning
+
 - Hybrid of relative and fixed positioning
 - Treated as relatively positioned until it crosses a specified threshold during scrolling
 - Then it becomes "stuck" and behaves like fixed positioning
@@ -72,6 +77,7 @@ CSS positioning is a fundamental concept that allows you to control the layout o
 ```
 
 ### 6. Inherit Positioning
+
 - The element inherits the position value from its parent element
 - Not commonly used but can be helpful in certain situations
 
@@ -436,6 +442,7 @@ Let's create an interactive example to practice CSS positioning:
 **Objective:** Create a webpage that demonstrates your understanding of all CSS positioning techniques.
 
 **Requirements:**
+
 1. Create a webpage with the following elements:
    - A fixed header that stays at the top of the viewport
    - A sidebar with sticky positioning
@@ -450,6 +457,7 @@ Let's create an interactive example to practice CSS positioning:
 3. Make the layout visually appealing with appropriate colors and spacing
 
 **Challenge (Optional):**
+
 - Make the layout responsive using media queries
 - Add interactive elements that change positioning on user interaction
 - Create a modal dialog using fixed positioning
@@ -674,3 +682,9 @@ Let's create an interactive example to practice CSS positioning:
 ```
 
 This assignment will help you practice using all the CSS positioning techniques in a realistic layout scenario. Pay attention to how different positioning values interact with each other and how z-index affects the stacking order of elements.
+
+---
+
+**Next lesson:** [Float and Clear – Legacy Layout Techniques](Float_and_Clear)
+
+---

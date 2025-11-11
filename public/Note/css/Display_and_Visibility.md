@@ -695,4 +695,10 @@ Let's create an interactive example to practice these concepts:
 </html>
 ```
 
-This assignment will help you practice using different display properties to create flexible layouts and understand how they affect the rendering of elements on a web page.
+This assignment will help you practice using different display properties to create flexible layouts and understand how they affect the rendering of elements on a web page
+
+---
+
+**Next lesson:** [Positioning – static, relative, absolute, fixed, sticky](Positioning)
+
+---

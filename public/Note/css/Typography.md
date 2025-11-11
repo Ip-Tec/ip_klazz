@@ -291,6 +291,7 @@ Let's create a simple HTML file to practice typography:
 **Objective:** Create a comprehensive typography style guide for a website.
 
 **Requirements:**
+
 1. Create an HTML file with a well-structured style guide
 2. Use at least two Google Fonts (one for headings, one for body text)
 3. Demonstrate at least:
@@ -303,8 +304,16 @@ Let's create a simple HTML file to practice typography:
 5. Create a color scheme that complements your typography choices
 
 **Challenge (Optional):**
+
 - Add a navigation system that allows jumping to different sections of the style guide
 - Include a "type scale" visualization showing your size progression
 - Create a dark/light mode toggle that changes your color scheme
 
 This assignment will help you understand how to create a cohesive typographic system for a website, which is essential for professional web development.
+
+
+---
+
+**Next lesson:** [Box Model – Margin, Padding, Border, Content](./Box_Model)
+
+---

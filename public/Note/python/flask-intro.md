@@ -335,6 +335,8 @@ In this lesson, you learned:
 
 From here, you can explore more advanced topics like databases, user authentication, and deploying your application to the web.
 
-> **Next lesson:** [Introduction to Flask](flask-intro)
+---
+
+> **Next lesson:** [Introduction to Django](django-intro)
 
 ---

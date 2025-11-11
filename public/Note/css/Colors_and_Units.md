@@ -92,6 +92,7 @@ CSS has two main categories of units: **absolute** and **relative**.
 These are fixed sizes. They will appear as exactly that size, regardless of the device or parent element. They are best used for print stylesheets but can be less flexible for screen-based designs.
 
 - 'px' (Pixels): The most common absolute unit. One pixel is one dot on a screen.
+
   ```css
   .pixel-unit {
     font-size: 16px;
@@ -103,13 +104,13 @@ These are fixed sizes. They will appear as exactly that size, regardless of the 
 
 These units are relative to another length, such as the parent element's font size or the viewport size. They are key to creating flexible and responsive layouts.
 
-1.  **'em':** Relative to the **font-size** of the _parent_ element.
+1. **'em':** Relative to the **font-size** of the _parent_ element.
 
     - If a parent element has' font-size: 20px', then' 1em = 20px' for its children.
     - If used for' font-size' itself, it's relative to the _inherited_ font size.
     - It compounds in nested lists.
 
-2.  **'rem' (Root em):** Relative to the **font-size** of the _root_ element ('<html>'). This provides a consistent reference point and avoids the compounding issue of' em'.
+2. **'rem' (Root em):** Relative to the **font-size** of the _root_ element ('<html>'). This provides a consistent reference point and avoids the compounding issue of' em'.
 
     - The default root' font-size' in most browsers is' 16px', so' 1rem = 16px'.
 
@@ -123,9 +124,10 @@ These units are relative to another length, such as the parent element's font si
     }
     ```
 
-3.  **'%' (Percentage):** Relative to the _same property_ of the parent element.
+3. **'%' (Percentage):** Relative to the _same property_ of the parent element.
     - ' width: 50%;' means half the width of the parent.
     - ' font-size: 120%;' means 120% of the parent's font size.
+
     ```css
     .percentage-unit {
       width: 80%; /* 80% of the parent's width */
@@ -169,18 +171,18 @@ These units are relative to another length, such as the parent element's font si
 
 **Tasks ('practice.css'):**
 
-1.  Set the 'font-size' of the 'html' element to '20px'.
-2.  Style the '.text-box':
+1. Set the 'font-size' of the 'html' element to '20px'.
+2. Style the '.text-box':
     - Give its 'background-color' a value using **HSL**. Choose a color you like.
     - Give its 'color' a value using **RGBA** to make the text color semi-transparent.
     - Set its 'padding' to '1rem'.
-3.  Style the '.btn' class:
+3. Style the '.btn' class:
     - Set its 'border' to 'none'.
     - Set its 'padding' to '0.75em 1.5em'. (Notice how this scales with the button's own font size).
     - Set its 'background-color' using a **HEX** code.
     - Set its 'font-size' to '1rem'.
-4.  Style the '.btn-large' class to have a 'font-size' of '1.5rem'.
-5.  Style the '.nested-box':
+4. Style the '.btn-large' class to have a 'font-size' of '1.5rem'.
+5. Style the '.nested-box':
     - Set its 'font-size' to '1.5em'. (Observe how this compounds because it's nested inside '.container', which might already have a font size).
 
 ---
@@ -191,14 +193,14 @@ These units are relative to another length, such as the parent element's font si
 
 **Instructions:**
 
-1.  Create a new folder with 'pricing.html' and 'pricing.css' files.
-2.  In the HTML, create a structure for a single pricing plan card. Include:
+1. Create a new folder with 'pricing.html' and 'pricing.css' files.
+2. In the HTML, create a structure for a single pricing plan card. Include:
     - A 'div' as the card container.
     - A plan name (e.g., '<h2>Basic</h2>').
     - A monthly price (e.g., '<p class="price">$19</p><span>/mo</span>').
     - A list of features ('<ul>' with 3-4 '<li>' items).
     - A "Sign Up" button ('<a class="button">Sign Up</a>').
-3.  In your CSS, **you must use all of the following:**
+3. In your CSS, **you must use all of the following:**
     - **At least one** 'rgb()' or 'rgba()' color.
     - **At least one** 'hsl()' or 'hsla()' color.
     - **At least one** HEX color.
@@ -210,3 +212,9 @@ These units are relative to another length, such as the parent element's font si
 
 - Add a ':hover' effect to the button. Use 'hsla()' to change the background color to a darker shade of its original color by only changing the Lightness value in the HSL model.
 - Add a subtle shadow to the card using the 'box-shadow' property (e.g., 'box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);'). This uses 'rem' for the blur and 'rgba' for a transparent black.
+
+---
+
+**Next lesson:** [Typography – Fonts, Sizes, Line Height, Font Weight](Typography)
+
+---

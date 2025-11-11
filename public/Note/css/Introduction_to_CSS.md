@@ -246,3 +246,9 @@ h1 {
 - Find a color palette you like online (e.g., on [coolors.co](https://coolors.co/)) and use those colors in your design.
 
 This assignment will test your understanding of linking files, using different selectors appropriately, and applying fundamental CSS properties to create a tangible design. Good luck
+
+---
+
+> **Next lesson:** [Colors and Units – HEX, RGB, HSL, px, em, rem](Colors_and_Units)
+
+---
