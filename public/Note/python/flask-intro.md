@@ -331,9 +331,213 @@ In this lesson, you learned:
 - ✅ How to handle forms.
 - ✅ How to build a simple web application.
 
-**You've taken a huge step in your web development journey!** 🚀
+**You've taken a huge step in your web development journey!**
 
 From here, you can explore more advanced topics like databases, user authentication, and deploying your application to the web.
+
+---
+
+## 6. Databases with Flask-SQLAlchemy
+
+Most web applications need a database to store data. Let's integrate a database into our Todo app using `Flask-SQLAlchemy`.
+
+### Step 1: Install Flask-SQLAlchemy
+
+```bash
+pip install Flask-SQLAlchemy
+```
+
+### Step 2: Configure the Database
+
+Update `app.py` to configure SQLAlchemy:
+
+```python
+from flask import Flask, render_template, request, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todos.db'  # Use SQLite database
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+# Define the Todo model
+class Todo(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    task = db.Column(db.String(200), nullable=False)
+    completed = db.Column(db.Boolean, default=False)
+
+    def __repr__(self):
+        return f'<Todo {self.id}>'
+
+# Create the database tables
+with app.app_context():
+    db.create_all()
+
+@app.route('/')
+def index():
+    todos = Todo.query.all()
+    return render_template('index.html', todos=todos)
+
+@app.route('/add', methods=['POST'])
+def add_todo():
+    new_todo_task = request.form['todo_item']
+    new_todo = Todo(task=new_todo_task)
+    db.session.add(new_todo)
+    db.session.commit()
+    return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+Now your Todo app will store tasks in a database!
+
+---
+
+## 7. User Authentication with Flask-Login
+
+Let's add user authentication to our application.
+
+### Step 1: Install Flask-Login
+
+```bash
+pip install Flask-Login
+```
+
+### Step 2: Set up Flask-Login
+
+You'll need to configure `Flask-Login` and create a `User` model. This is a simplified example. A real application would have password hashing and a registration form.
+
+```python
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
+
+# ... (other imports)
+
+app.config['SECRET_KEY'] = 'your-secret-key'  # Needed for session management
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
+
+class User(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(100), unique=True)
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
+# ... (Todo model and other routes)
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        user = User.query.filter_by(username=username).first()
+        if user:
+            login_user(user)
+            return redirect(url_for('index'))
+    return render_template('login.html')
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
+
+@app.route('/profile')
+@login_required
+def profile():
+    return f'Hello, {current_user.username}!'
+```
+
+You would also need to create a `login.html` template and update your other templates to show user-specific content.
+
+---
+
+## 8. Blueprints for Larger Applications
+
+As your application grows, you can use **Blueprints** to organize your code into smaller, reusable components.
+
+### Example of a Blueprint
+
+Create a new file `auth.py`:
+
+```python
+from flask import Blueprint, render_template
+
+auth_bp = Blueprint('auth', __name__)
+
+@auth_bp.route('/login')
+def login():
+    return render_template('login.html')
+```
+
+Then, in your main `app.py`, you would register this blueprint:
+
+```python
+from auth import auth_bp
+
+app.register_blueprint(auth_bp)
+```
+
+---
+
+## 9. Custom Error Pages
+
+You can create custom pages for HTTP errors like "404 Not Found".
+
+### Handling 404 Errors
+
+In `app.py`:
+
+```python
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('404.html'), 404
+```
+
+Create a `404.html` in your `templates` folder to show a user-friendly message.
+
+---
+
+## 10. Testing Your Application
+
+Testing is crucial for building reliable applications. You can use libraries like `pytest` to test your Flask app.
+
+### Step 1: Install Pytest
+
+```bash
+pip install pytest
+```
+
+### Step 2: Write a Test
+
+Create a `test_app.py` file:
+
+```python
+import pytest
+from app import app
+
+@pytest.fixture
+def client():
+    app.config['TESTING'] = True
+    with app.test_client() as client:
+        yield client
+
+def test_home_page(client):
+    """Test the home page."""
+    rv = client.get('/')
+    assert rv.status_code == 200
+    assert b'Todo App' in rv.data
+```
+
+### Step 3: Run the Tests
+
+In your terminal, run:
+
+```bash
+pytest
+```
 
 ---
 
