@@ -121,7 +121,12 @@ This topic based on teaching beginners
 
 - [Introduction to Flask](./flask-intro.md)
 - [Introduction to Django](./django-intro.md)
+- [Building a Blog with Django](django-blog)
 - [Introduction to FastAPI](./fastapi-intro.md)
+- [Advanced FastAPI with Pydantic](./fastapi-pydantic)
+- [Connecting to Databases](./fastapi-database)
+- [User Authentication with FastAPI](./fastapi-auth)
+- [Structuring Larger FastAPI Applications](./fastapi-structure)
 
 ## Best Practices
 
