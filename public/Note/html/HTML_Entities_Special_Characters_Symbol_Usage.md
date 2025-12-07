@@ -1,13 +1,16 @@
 ### **Chapter 14: Day 14**
+
 **Objectives:** Understand HTML entities and special characters, learn how to properly use symbols in web content, and ensure proper display of reserved characters and special symbols across different browsers and devices.
 
 ---
 
 ### **Lesson: HTML Entities**
+
 **Explanation:**
 HTML entities are codes used to represent characters that have special meaning in HTML or that aren't easily typed on a keyboard. They begin with an ampersand (&) and end with a semicolon (;). Entities are essential for displaying reserved characters like angle brackets, ampersands, and quotes without breaking your HTML code.
 
 **Common HTML Entities:**
+
 - `&lt;` represents the less-than sign (<)
 - `&gt;` represents the greater-than sign (>)
 - `&amp;` represents the ampersand (&)
@@ -17,12 +20,14 @@ HTML entities are codes used to represent characters that have special meaning i
 - `&copy;` represents the copyright symbol (©)
 
 **When to Use Entities:**
+
 1. When you need to display HTML reserved characters
 2. When you need characters that aren't on your keyboard
 3. When you need to ensure consistent display across different browsers
 4. When you need special spacing or formatting
 
 **Code Example:**
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -87,6 +92,7 @@ HTML entities are codes used to represent characters that have special meaning i
 
 **Practice Task:**
 Create a reference page that demonstrates at least 15 different HTML entities including:
+
 1. Reserved characters (<, >, &, ", ')
 2. Mathematical symbols (π, √, ∞, ≈)
 3. Currency symbols (€, £, ¥, ¢)
@@ -96,10 +102,12 @@ Create a reference page that demonstrates at least 15 different HTML entities in
 ---
 
 ### **Lesson: Special Characters**
+
 **Explanation:**
 Special characters include accented letters, currency symbols, mathematical operators, and other characters beyond the basic ASCII set. These are essential for creating content in languages other than English and for technical or scientific writing.
 
 **Types of Special Characters:**
+
 1. **Accented characters:** é, è, ñ, ü, etc.
 2. **Currency symbols:** €, £, ¥, ¢, etc.
 3. **Mathematical operators:** ×, ÷, ±, etc.
@@ -107,11 +115,13 @@ Special characters include accented letters, currency symbols, mathematical oper
 5. **Other symbols:** ♥, ♠, ♣, ♦, etc.
 
 **Using Special Characters:**
+
 1. **Named entities:** &eacute; for é
 2. **Numeric references:** &#233; for é (decimal) or &#x00E9; for é (hexadecimal)
 3. **Direct UTF-8 encoding:** é (if your document is properly encoded)
 
 **Code Example:**
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -214,6 +224,7 @@ Special characters include accented letters, currency symbols, mathematical oper
 
 **Practice Task:**
 Create a multilingual reference page that includes:
+
 1. A table showing at least 10 different accented characters with their entity codes
 2. Examples of currency symbols from different countries
 3. Mathematical operators and their codes
@@ -223,10 +234,12 @@ Create a multilingual reference page that includes:
 ---
 
 ### **Lesson: Symbol Usage**
+
 **Explanation:**
 Symbols are visual representations of concepts, ideas, or actions. In web design, symbols can enhance communication, improve visual appeal, and save space. However, they must be used carefully to ensure they're understood by all users.
 
 **Types of Symbols:**
+
 1. **Common symbols:** ©, ®, ™, etc.
 2. **Arrow symbols:** →, ←, ↑, ↓, etc.
 3. **Mathematical symbols:** ∑, ∫, ∂, etc.
@@ -234,12 +247,14 @@ Symbols are visual representations of concepts, ideas, or actions. In web design
 5. **Emoji symbols:** 😊, ❤️, ★, etc.
 
 **Best Practices for Symbol Usage:**
+
 1. **Accessibility:** Always provide alternative text or explanations
 2. **Consistency:** Use the same symbols for the same concepts throughout your site
 3. **Cultural considerations:** Ensure symbols are appropriate for your audience
 4. **Size and spacing:** Make sure symbols are legible and properly spaced
 
 **Code Example:**
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -393,6 +408,7 @@ Symbols are visual representations of concepts, ideas, or actions. In web design
 
 **Practice Task:**
 Create a symbol reference guide with:
+
 1. A categorized display of at least 20 different symbols
 2. Each symbol should show the visual representation, its name, and its HTML entity code
 3. Examples of proper and improper usage of symbols
@@ -402,6 +418,7 @@ Create a symbol reference guide with:
 ---
 
 ### **Homework:**
+
 Create a comprehensive "Character Reference Guide" website that includes:
 
 1. **Homepage:**

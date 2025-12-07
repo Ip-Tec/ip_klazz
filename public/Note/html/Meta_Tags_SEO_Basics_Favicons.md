@@ -1,13 +1,16 @@
-### **Chapter 15: Day 15**
+# **Chapter 15: Day 15**
+
 **Objectives:** Understand the importance of meta tags for SEO and browser behavior, learn basic SEO principles for HTML, and implement favicons for brand recognition across different devices and platforms.
 
 ---
 
-### **Lesson: Meta Tags**
+## **Lesson: Meta Tags**
+
 **Explanation:**
 Meta tags are HTML elements that provide metadata about a web page. This metadata isn't displayed on the page itself but is machine-readable and used by browsers, search engines, and other web services to understand the content and context of your page.
 
 **Key Types of Meta Tags:**
+
 1. **Charset Declaration:** Defines the character encoding for the page
 2. **Viewport Tag:** Controls how the page is displayed on mobile devices
 3. **Description:** Provides a summary of the page content for search results
@@ -17,6 +20,7 @@ Meta tags are HTML elements that provide metadata about a web page. This metadat
 7. **Twitter Card Tags:** For Twitter-specific sharing previews
 
 **Code Example:**
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -66,6 +70,7 @@ Meta tags are HTML elements that provide metadata about a web page. This metadat
 
 **Practice Task:**
 Create an HTML document with a complete set of meta tags for:
+
 1. A blog post about "10 Best Practices for Responsive Web Design"
 2. Include all essential meta tags (charset, viewport, description, etc.)
 3. Add Open Graph tags for social media sharing
@@ -75,10 +80,12 @@ Create an HTML document with a complete set of meta tags for:
 ---
 
 ### **Lesson: SEO Basics**
+
 **Explanation:**
 Search Engine Optimization (SEO) is the practice of improving your website's visibility in search engine results. While SEO involves many factors, HTML provides the foundation through proper semantic structure, meta information, and accessibility features.
 
 **HTML SEO Best Practices:**
+
 1. **Semantic HTML:** Use appropriate elements (header, nav, main, article, etc.)
 2. **Heading Hierarchy:** Use H1-H6 tags in proper order
 3. **Descriptive Title Tags:** Unique, concise titles for each page
@@ -89,6 +96,7 @@ Search Engine Optimization (SEO) is the practice of improving your website's vis
 8. **Page Speed:** Optimized code and assets
 
 **Code Example:**
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -157,6 +165,7 @@ Search Engine Optimization (SEO) is the practice of improving your website's vis
 
 **Practice Task:**
 Optimize an existing HTML page for SEO by:
+
 1. Adding proper semantic HTML elements
 2. Creating a logical heading hierarchy
 3. Writing compelling meta title and description
@@ -167,10 +176,12 @@ Optimize an existing HTML page for SEO by:
 ---
 
 ### **Lesson: Favicons**
+
 **Explanation:**
 A favicon (favorite icon) is a small image displayed in the browser tab, address bar, bookmarks, and other interfaces. Modern web development requires multiple favicon sizes and formats to support different devices and platforms.
 
 **Favicon Best Practices:**
+
 1. **Multiple Sizes:** Provide icons in various dimensions (16x16, 32x32, 180x180, etc.)
 2. **Multiple Formats:** Use ICO, PNG, and SVG formats for compatibility
 3. **Theme Color:** Define a theme color for mobile browsers
@@ -178,6 +189,7 @@ A favicon (favorite icon) is a small image displayed in the browser tab, address
 5. **Web App Manifest:** For Progressive Web Apps (PWAs)
 
 **Code Example:**
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -221,6 +233,7 @@ A favicon (favorite icon) is a small image displayed in the browser tab, address
 
 **Practice Task:**
 Create a favicon implementation for a website that includes:
+
 1. ICO format favicon for legacy browsers
 2. PNG favicons in multiple sizes
 3. Apple Touch icons for iOS devices
@@ -232,6 +245,7 @@ Create a favicon implementation for a website that includes:
 ---
 
 ### **Homework:**
+
 Create a fully optimized website homepage that implements all the concepts covered in this chapter:
 
 1. **HTML Structure:**
