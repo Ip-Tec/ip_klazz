@@ -1,11 +1,11 @@
 # Python Calculator Project
 
-This project is a simple calculator application built with Python and the `customtkinter` library. It provides a graphical user interface for performing basic arithmetic calculations.
+This project is a simple calculator application built with Python and the **customtkinter** library. It provides a graphical user interface for performing basic arithmetic calculations.
 
 ## How to Run
 
 1. **Install dependencies:**
-    Open a terminal or command prompt in the `Python/calculator` directory and run the following command to install the required libraries:
+    Open a terminal or command prompt in the **Python/calculator** directory and run the following command to install the required libraries:
 
     ```bash
     pip install -r requirements.txt
@@ -20,7 +20,7 @@ This project is a simple calculator application built with Python and the `custo
 
 ## Application Code
 
-The main application is contained in `main.py`.
+The main application is contained in **main.py**.
 
 ```python
 import customtkinter as ctk
@@ -150,13 +150,14 @@ if __name__ == "__main__":
 
 ## Dependencies
 
-The project's dependencies are listed in `requirements.txt`.
+The project's dependencies are listed in **requirements.txt**.
 
-```
+```txt
 customtkinter==5.2.2
 darkdetect==0.8.0
 packaging==25.0
 ```
+
 ---
 
 > **Next lesson:**  [Project 2: To-Do List](project-todo.md)
