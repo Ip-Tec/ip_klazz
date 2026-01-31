@@ -18,37 +18,45 @@ export function extractSections(markdown: string): Section[] {
   let currentNodes: RootContent[] = [];
 
   for (const node of tree.children) {
-    if (node.type === "heading") {
-      const headingNode = node as Heading;
+    try {
+      if (node.type === "heading") {
+        const headingNode = node as Heading;
 
-      if (headingNode.depth === 2) {
-        if (currentTitle && currentNodes.length > 0) {
-          const content = toMarkdown({ type: "root", children: currentNodes });
-          sections.push({
-            title: currentTitle,
-            content: content,
-            slug: currentTitle.toLowerCase().replace(/\s+/g, "-"), // simple slug
-          });
-          currentNodes = [];
+        if (headingNode.depth === 2) {
+          if (currentTitle && currentNodes.length > 0) {
+            const content = toMarkdown({ type: "root", children: currentNodes });
+            sections.push({
+              title: currentTitle,
+              content: content,
+              slug: currentTitle.toLowerCase().replace(/\s+/g, "-"), // simple slug
+            });
+            currentNodes = [];
+          }
+
+          currentTitle = headingNode.children
+            .filter((child): child is Text => child.type === "text")
+            .map((child) => child.value)
+            .join(" ");
         }
-
-        currentTitle = headingNode.children
-          .filter((child): child is Text => child.type === "text")
-          .map((child) => child.value)
-          .join(" ");
+      } else if (currentTitle) {
+        currentNodes.push(node as RootContent);
       }
-    } else if (currentTitle) {
-      currentNodes.push(node as RootContent);
+    } catch (err) {
+      console.error("Error processing node in extractSections:", err);
     }
   }
 
   if (currentTitle && currentNodes.length > 0) {
-    const content = toMarkdown({ type: "root", children: currentNodes });
-    sections.push({
-      title: currentTitle,
-      content: content,
-      slug: currentTitle.toLowerCase().replace(/\s+/g, "-"), // simple slug
-    });
+    try {
+      const content = toMarkdown({ type: "root", children: currentNodes });
+      sections.push({
+        title: currentTitle,
+        content: content,
+        slug: currentTitle.toLowerCase().replace(/\s+/g, "-"), // simple slug
+      });
+    } catch (err) {
+      console.error("Error finalizing section in extractSections:", err);
+    }
   }
 
   return sections;

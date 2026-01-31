@@ -1,28 +1,45 @@
 "use client";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
-import { useState } from "react";
-import { checkUpdate, installUpdate } from "@tauri-apps/api/updater";
-import { ask } from "@tauri-apps/api/dialog";
+import { useState, useEffect } from "react";
+// No static imports for Tauri to avoid build errors in non-Tauri environments
 
 export default function Footer() {
   const [updateStatus, setUpdateStatus] = useState("");
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
 
   async function checkForUpdates() {
+    // Only attempt updates if running in a Tauri environment
+    if (typeof window === "undefined" || !(window as any).__TAURI_INTERNALS__) {
+      setUpdateStatus("Updates only available in the desktop app.");
+      setTimeout(() => setUpdateStatus(""), 3000);
+      return;
+    }
+
     setUpdateStatus("Checking for updates...");
     try {
-      const { shouldUpdate, manifest } = await checkUpdate();
+      // Dynamically import Tauri plugins (requires installation of plugins)
+      // Note: In Tauri 2.0, these are separate packages:
+      // @tauri-apps/plugin-updater and @tauri-apps/plugin-dialog
+      const { check } = await import("@tauri-apps/plugin-updater");
+      const { ask } = await import("@tauri-apps/plugin-dialog");
 
-      if (shouldUpdate) {
-        setUpdateStatus(`Update available: ${manifest?.version}.`);
+      const update = await check();
+
+      if (update?.available) {
+        setUpdateStatus(`Update available: ${update.version}.`);
         const wantsToInstall = await ask("Update available. Install now?", {
           title: "Update Available",
-          type: "info",
+          kind: "info",
         });
 
         if (wantsToInstall) {
           setUpdateStatus("Installing update...");
-          await installUpdate();
+          await update.downloadAndInstall();
           setUpdateStatus("Update installed. Restarting...");
         } else {
           setUpdateStatus("");
@@ -32,8 +49,8 @@ export default function Footer() {
         setTimeout(() => setUpdateStatus(""), 3000);
       }
     } catch (error) {
-      console.error(error);
-      setUpdateStatus("Error checking for updates.");
+      console.error("Update error:", error);
+      setUpdateStatus("Updater plugins not installed/configured.");
       setTimeout(() => setUpdateStatus(""), 3000);
     }
   }
@@ -41,7 +58,7 @@ export default function Footer() {
   return (
     <footer className="w-full border-t mt-8 py-6 bg-gray-200 dark:bg-gray-900 dark:text-gray-300">
       <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="text-sm">© {new Date().getFullYear()} Ip Klazz</div>
+        <div className="text-sm">© {year} Ip Tec (Klazz)</div>
         <div className="flex items-center gap-4 text-sm">
           <Link href="/about" className="hover:underline">
             About

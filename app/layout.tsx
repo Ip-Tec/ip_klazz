@@ -77,20 +77,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-gray-300 text-gray-900 dark:bg-gray-800 dark:text-gray-300`}
       >
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                let theme = localStorage.getItem('theme');
+                let root = document.documentElement;
+                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  root.classList.add('dark');
+                } else {
+                  root.classList.remove('dark');
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
         <Providers>
           <ServiceWorkerRegister />
           <InstallPrompt />
           <IOSInstallHint />
           <UpdateToast />
-          <nav className="p-[1rem] shadow-2xl mb-[-2rem] fixed w-full bg-gray-200 dark:bg-gray-900 dark:text-gray-300 flex items-center justify-between">
+          {/* <nav className="p-[1rem] shadow-2xl mb-[-2rem] fixed w-full bg-gray-200 dark:bg-gray-900 dark:text-gray-300 flex items-center justify-between">
             <Link href="/" className="text-decoration-none">
               <span className="text-orange-400 font-bold">Ip Klazz</span>
             </Link>
-          </nav>
+          </nav> */}
           {children}
 
           {/* Site footer */}

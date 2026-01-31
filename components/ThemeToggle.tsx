@@ -149,17 +149,20 @@ export default function ThemeToggle() {
   function setAndPersist(t: string) {
     try {
       localStorage.setItem(THEME_KEY, t);
+      const root = document.documentElement;
+      if (t === "dark") {
+        root.classList.add("dark");
+      } else if (t === "light") {
+        root.classList.remove("dark");
+      } else {
+        // system
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        root.classList.toggle("dark", prefersDark);
+      }
+      setTheme(t);
     } catch (e) {
       console.warn("Could not persist theme preference", e);
-      /* ignore */
     }
-    // Apply immediately so the DOM updates even before React re-renders
-    try {
-      apply(t);
-    } catch (e) {
-      /* ignore */
-    }
-    setTheme(t);
   }
 
   function cycle() {
