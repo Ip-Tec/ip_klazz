@@ -46,7 +46,7 @@ export default function Breadcrumbs({ lang: propsLang, slug: propsSlug }: Breadc
           <span className="mx-1 shrink-0 hidden sm:inline">/</span>
           {index === slug.length - 1 ? (
             <span className="text-orange-600 font-medium truncate max-w-[150px] sm:max-w-[200px]" title={formatSegment(segment)}>
-              {formatSegment(segment.replace(/\.md$/, ""))}
+              {formatSegment(segment.replace(/\.md$/, "").replace(/_/g, " "))}
             </span>
           ) : (
             <Link
