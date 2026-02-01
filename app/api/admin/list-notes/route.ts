@@ -19,7 +19,7 @@ if (!admin.apps.length) {
          admin.initializeApp({
              credential: admin.credential.cert(serviceAccount),
          });
-       } catch (retryError) {
+       } catch {
          console.error("FIREBASE_SERVICE_ACCOUNT_KEY parsing failed:", error);
          console.warn("Skipping firebase-admin init during build.");
        }

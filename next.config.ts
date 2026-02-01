@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  // Output 'export' only if NOT on Vercel
+  output: process.env.VERCEL || process.env.NEXT_PUBLIC_VERCEL_URL ? undefined : "export",
   images: {
     unoptimized: true,
   },
