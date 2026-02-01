@@ -4,10 +4,15 @@ import path from 'path';
 import admin from 'firebase-admin';
 
 if (!admin.apps.length) {
-  const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY!);
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-  });
+  if (process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
+    const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
+    admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount),
+    });
+  } else {
+    // Warn but don't crash during build
+    console.warn("FIREBASE_SERVICE_ACCOUNT_KEY not set (skipping firebase-admin init)");
+  }
 }
 
 async function getAllMdFiles(dir: string, base: string = ""): Promise<string[]> {

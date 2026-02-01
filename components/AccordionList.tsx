@@ -1,5 +1,6 @@
 // ./components/AccordionList.tsx
 "use client";
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { useState } from "react";
 import Link from "next/link";
@@ -66,31 +67,31 @@ export default function AccordionList({
                   </Link>
                 );
               },
-              ul: ({ node: _node, ...props }) => (
+              ul: ({ node, ...props }) => (
                 <ul
                   {...props}
                   className="list-disc list-inside ml-4 space-y-2 text-gray-700 dark:text-gray-300"
                 />
               ),
-              ol: ({ node: _node, ...props }) => (
+              ol: ({ node, ...props }) => (
                 <ol
                   {...props}
                   className="list-decimal list-inside ml-4 space-y-2 text-gray-700 dark:text-gray-300"
                 />
               ),
-              li: ({ node: _node, ...props }) => (
+              li: ({ node, ...props }) => (
                 <li {...props} className="py-1" />
               ),
-              h1: ({ node: _node, ...props }) => (
+              h1: ({ node, ...props }) => (
                 <h1 {...props} className="font-bold text-2xl my-4 text-gray-900 dark:text-gray-100" />
               ),
-              h2: ({ node: _node, ...props }) => (
+              h2: ({ node, ...props }) => (
                 <h2 {...props} className="font-bold text-xl my-3 text-gray-900 dark:text-gray-100" />
               ),
-              h3: ({ node: _node, ...props }) => (
+              h3: ({ node, ...props }) => (
                 <h3 {...props} className="font-bold text-lg my-2 text-gray-900 dark:text-gray-100" />
               ),
-              p: ({ node: _node, ...props }) => (
+              p: ({ node, ...props }) => (
                 <p {...props} className="my-2 text-gray-700 dark:text-gray-300 leading-relaxed" />
               ),
             }}
