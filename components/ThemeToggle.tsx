@@ -96,7 +96,7 @@ export default function ThemeToggle() {
         localStorage.removeItem(oldKey);
         setTheme(storedOld);
       }
-    } catch (e) {
+    } catch {
       // ignore
     }
   }, []);
@@ -115,7 +115,7 @@ export default function ThemeToggle() {
     try {
       // also set a data attribute so it's easy to inspect the current theme in devtools
       root.dataset.theme = t;
-    } catch (e) {
+    } catch {
       /* ignore */
     }
   }, []);
@@ -175,8 +175,8 @@ export default function ThemeToggle() {
     theme === "light"
       ? "Light theme"
       : theme === "dark"
-      ? "Dark theme"
-      : "System theme";
+        ? "Dark theme"
+        : "System theme";
 
   return (
     <button

@@ -126,7 +126,7 @@ export default async function CatchAllPage({ params }: PageProps) {
         </div>
       </div>
     );
-  } catch (e) {
+  } catch {
     // 2. Try Tutorial View (File Content)
     try {
       const fileContents = await fs.readFile(possibleFilePath, "utf8");
@@ -183,7 +183,7 @@ export default async function CatchAllPage({ params }: PageProps) {
           </div>
         </div>
       );
-    } catch (err) {
+    } catch {
       return (
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center p-8">
@@ -234,7 +234,7 @@ export async function generateStaticParams() {
       slugs.forEach(slug => {
         allParams.push({ lang, slug });
       });
-    } catch (e) {
+    } catch {
       console.warn(`No directory found for ${lang}`);
     }
   }

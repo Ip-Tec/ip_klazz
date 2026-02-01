@@ -21,7 +21,7 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
   const { lang } = await params;
   const notesDirectory = path.join(process.cwd(), "public", "Note");
   const langDirectory = path.join(notesDirectory, lang);
-  const imageDirectory = path.join(process.cwd(), "public", "image");
+
 
   try {
     const items = await fs.readdir(langDirectory, { withFileTypes: true });
@@ -65,7 +65,7 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 <div className="relative h-full bg-white/40 dark:bg-gray-800/40 backdrop-blur-xl p-8 rounded-[3rem] border border-white/20 dark:border-gray-700/30 shadow-2xl transition-all duration-500 hover:scale-[1.03] hover:shadow-orange-500/20 flex flex-col items-center text-center group-hover:bg-white/60 dark:group-hover:bg-gray-800/60">
-                  
+
                   <div className="relative mb-8 p-4">
                     <Image
                       src={getTrackIcon(track, lang)}
@@ -79,9 +79,9 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
                   <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight">
                     {getTrackTitle(track)}
                   </h2>
-                  
+
                   <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-8">
-                    {track === "core" 
+                    {track === "core"
                       ? `The essential foundation of ${lang}. Master the syntax and basic principles.`
                       : `Master ${track.toUpperCase()} development and build professional-grade applications.`}
                   </p>

@@ -65,6 +65,7 @@ export default function ProtectedContent({ lang, path, fileContents, isPremium }
             </Link>
           );
         },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         code({ inline, className, children, ...props }: any) {
           if (inline) {
             return (

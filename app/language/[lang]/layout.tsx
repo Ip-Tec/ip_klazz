@@ -1,9 +1,7 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import Logo from "@/public/image/default.png";
+
 import type { Metadata, Viewport } from "next";
-import Breadcrumbs from "@/components/Breadcrumbs";
+
 
 export const viewport: Viewport = {
   width: "device-width",

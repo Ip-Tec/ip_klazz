@@ -14,7 +14,7 @@ export default function Footer() {
 
   async function checkForUpdates() {
     // Only attempt updates if running in a Tauri environment
-    if (typeof window === "undefined" || !(window as any).__TAURI_INTERNALS__) {
+    if (typeof window === "undefined" || !('__TAURI_INTERNALS__' in window)) {
       setUpdateStatus("Updates only available in the desktop app.");
       setTimeout(() => setUpdateStatus(""), 3000);
       return;

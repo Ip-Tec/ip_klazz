@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState, useEffect, useMemo } from 'react';
 import { Dialog, Combobox, Transition } from '@headlessui/react';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 import { ExclamationCircleIcon } from '@heroicons/react/24/outline';
@@ -35,11 +35,11 @@ export default function SearchModal({ open, setOpen }: SearchModalProps) {
     }, []);
 
     // Initialize Fuse
-    const fuse = new Fuse(searchIndex, {
+    const fuse = useMemo(() => new Fuse(searchIndex, {
         keys: ['title', 'content'],
         threshold: 0.3,
         includeMatches: true,
-    });
+    }), [searchIndex]);
 
     // Handle search
     useEffect(() => {
@@ -49,7 +49,7 @@ export default function SearchModal({ open, setOpen }: SearchModalProps) {
         } else {
             setResults([]);
         }
-    }, [query, searchIndex]); // Correct dependency array
+    }, [query, searchIndex, fuse]); // Correct dependency array
 
     const handleSelect = (item: SearchItem | null) => {
         if (!item) return;
@@ -131,7 +131,7 @@ export default function SearchModal({ open, setOpen }: SearchModalProps) {
                                     <div className="px-6 py-14 text-center text-sm sm:px-14">
                                         <ExclamationCircleIcon className="mx-auto h-6 w-6 text-gray-400" aria-hidden="true" />
                                         <p className="mt-4 font-semibold text-gray-900">No results found</p>
-                                        <p className="mt-2 text-gray-500">We couldn't find anything matching that term. Please try again.</p>
+                                        <p className="mt-2 text-gray-500">We couldn&apos;t find anything matching that term. Please try again.</p>
                                     </div>
                                 )}
                             </Combobox>

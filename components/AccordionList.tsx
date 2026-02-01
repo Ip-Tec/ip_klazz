@@ -39,11 +39,11 @@ export default function AccordionList({
               code: CodeBlock,
               a: ({ href, children }) => {
                 if (!href) return <span>{children}</span>;
-                
+
                 // Handle relative links
                 const cleanHref = href.replace(/^\.\//, "").replace(/\.md$/, "");
                 const isExternal = href.startsWith("http://") || href.startsWith("https://");
-                
+
                 if (isExternal) {
                   return (
                     <a
@@ -56,7 +56,7 @@ export default function AccordionList({
                     </a>
                   );
                 }
-                
+
                 return (
                   <Link
                     href={`/language/${language}/${cleanHref}`}
@@ -66,31 +66,31 @@ export default function AccordionList({
                   </Link>
                 );
               },
-              ul: ({ node, ...props }) => (
+              ul: ({ node: _node, ...props }) => (
                 <ul
                   {...props}
                   className="list-disc list-inside ml-4 space-y-2 text-gray-700 dark:text-gray-300"
                 />
               ),
-              ol: ({ node, ...props }) => (
+              ol: ({ node: _node, ...props }) => (
                 <ol
                   {...props}
                   className="list-decimal list-inside ml-4 space-y-2 text-gray-700 dark:text-gray-300"
                 />
               ),
-              li: ({ node, ...props }) => (
+              li: ({ node: _node, ...props }) => (
                 <li {...props} className="py-1" />
               ),
-              h1: ({ node, ...props }) => (
+              h1: ({ node: _node, ...props }) => (
                 <h1 {...props} className="font-bold text-2xl my-4 text-gray-900 dark:text-gray-100" />
               ),
-              h2: ({ node, ...props }) => (
+              h2: ({ node: _node, ...props }) => (
                 <h2 {...props} className="font-bold text-xl my-3 text-gray-900 dark:text-gray-100" />
               ),
-              h3: ({ node, ...props }) => (
+              h3: ({ node: _node, ...props }) => (
                 <h3 {...props} className="font-bold text-lg my-2 text-gray-900 dark:text-gray-100" />
               ),
-              p: ({ node, ...props }) => (
+              p: ({ node: _node, ...props }) => (
                 <p {...props} className="my-2 text-gray-700 dark:text-gray-300 leading-relaxed" />
               ),
             }}
