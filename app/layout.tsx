@@ -8,6 +8,7 @@ import IOSInstallHint from "@/components/IOSInstallHint";
 import UpdateToast from "@/components/UpdateEventToast";
 import Footer from "@/components/Footer";
 import { Providers } from "./providers";
+import GlobalSearchWrapper from "@/components/GlobalSearchWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -110,6 +111,9 @@ export default function RootLayout({
 
           {/* Site footer */}
           <Footer />
+
+          {/* Global Search */}
+          <GlobalSearchWrapper />
         </Providers>
       </body>
     </html>

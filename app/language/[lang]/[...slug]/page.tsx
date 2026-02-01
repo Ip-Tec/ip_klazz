@@ -11,6 +11,7 @@ import ProtectedContent from "@/components/ProtectedContent";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import type { Metadata } from "next";
 import Image from "next/image";
+import SocialShare from "@/components/SocialShare";
 
 interface PageProps {
   params: Promise<{
@@ -173,6 +174,12 @@ export default async function CatchAllPage({ params }: PageProps) {
                 isPremium={isPremium}
               />
             </div>
+
+            {/* Social Sharing */}
+            <SocialShare
+              title={`${formattedTitle} - Learn ${lang.toUpperCase()} on Ip Klazz`}
+              url={`https://klazz.vercel.app/language/${lang}/${fullSlug}`}
+            />
           </div>
         </div>
       );
