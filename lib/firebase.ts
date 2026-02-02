@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCYCcfqLkXObzEKcdBxB18VjmnMDizpwGo",
-  authDomain: "klazz-1e8a0.firebaseapp.com",
-  projectId: "klazz-1e8a0",
-  storageBucket: "klazz-1e8a0.appspot.com",
-  messagingSenderId: "204778169425",
-  appId: "1:204778169425:web:d0cc59535b930b4de64470"
+  apiKey: process.env.GOOGLE_API_KEY,
+  authDomain: process.env.GOOGLE_AUTH_DOMAIN,
+  projectId: process.env.GOOGLE_PROJECT_ID,
+  storageBucket: process.env.GOOGLE_STORAGE_BUCKET,
+  messagingSenderId: process.env.GOOGLE_MESSAGING_SENDER_ID,
+  appId: process.env.GOOGLE_APP_ID
 };
 
 import { GoogleAuthProvider } from "firebase/auth";
