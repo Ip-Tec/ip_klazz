@@ -1,12 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Link from "next/link";
+
 import "./globals.css";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import InstallPrompt from "@/components/InstallPrompt";
 import IOSInstallHint from "@/components/IOSInstallHint";
 import UpdateToast from "@/components/UpdateEventToast";
 import Footer from "@/components/Footer";
+import { Providers } from "./providers";
+import GlobalSearchWrapper from "@/components/GlobalSearchWrapper";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,23 +79,39 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-gray-300 text-gray-900 dark:bg-gray-800 dark:text-gray-300`}
       >
-        <ServiceWorkerRegister />
-        <InstallPrompt />
-        <IOSInstallHint />
-        <UpdateToast />
-        <nav className="p-[1rem] shadow-2xl mb-[-2rem] fixed w-full bg-gray-200 dark:bg-gray-900 dark:text-gray-300 flex items-center justify-between">
-          <Link href="/" className="text-decoration-none">
-            <span className="text-orange-400 font-bold">Ip Klazz</span>
-          </Link>
-        </nav>
-        {children}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                let theme = localStorage.getItem('theme');
+                let root = document.documentElement;
+                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  root.classList.add('dark');
+                } else {
+                  root.classList.remove('dark');
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
+        <Providers>
+          <ServiceWorkerRegister />
+          <InstallPrompt />
+          <IOSInstallHint />
+          <UpdateToast />
+          <Navbar />
+          {children}
 
-        {/* Site footer */}
-        <Footer />
+          {/* Site footer */}
+          <Footer />
+
+          {/* Global Search */}
+          <GlobalSearchWrapper />
+        </Providers>
       </body>
     </html>
   );

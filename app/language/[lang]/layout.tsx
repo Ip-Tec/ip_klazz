@@ -1,9 +1,7 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import Logo from "@/public/image/default.png";
+
 import type { Metadata, Viewport } from "next";
-import Breadcrumbs from "@/components/Breadcrumbs";
+
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -16,7 +14,7 @@ export const viewport: Viewport = {
 export async function generateMetadata({
   params,
 }: {
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
   const languageName = lang.toUpperCase();
@@ -54,22 +52,22 @@ export default function Layout({
 }): React.ReactNode {
   return (
     <>
-      <nav className="h-p-[1rem] border-b border-gray-300 mb-[2rem] fixed w-full flex justify-between items-center dark:bg-gray-900 overflow-hidden z-50">
+      {/* <nav className="p-[1rem] border-b border-gray-300 fixed w-full flex flex-col md:flex-row justify-between items-start md:items-center dark:bg-gray-900 z-50 bg-white dark:bg-gray-900 gap-2 md:gap-0">
         <Link
           href="/"
-          className="text-blue-500 text-3xl text-left w-full block"
+          className="text-blue-500 text-3xl text-left shrink-0"
         >
           <Image
             src={Logo}
             alt="Ip Klazz"
             className="h-10 w-10 top-0 m-3 rounded-full hover:scale-200 transform scale-[1.6]"
           />
-        </Link>
+        </Link> */}
 
-        {/* Breadcrumbs now handled by client component */}
-        <Breadcrumbs />
-      </nav>
-      <div className="pt-[2rem] w-full">{children}</div>
+      {/* Breadcrumbs now handled by client component */}
+      {/* <Breadcrumbs /> */}
+      {/* </nav > */}
+      <div className="h-auto w-full">{children}</div>
     </>
   );
 }

@@ -23,7 +23,7 @@ Description: Start here to explore HTML tutorials.
 
 - [Day 9: Project Setup, Folder Organization, Using VS Code](./Project_Setup.md)
 - [Day 10: Advanced Forms, File Uploads, Custom Form Styling](./Advanced_Forms_File_Upload.md)
-- [Day 11: Responsive Images, Picture Element, Srcset Attribute](./Responsive_Images_Picture_Element_Srcset%20_Attribute.md)
+- [Day 11: Responsive Images, Picture Element, Srcset Attribute](./Responsive_Images_Picture_Element_Srcset_Attribute.md)
 - [Day 12: Tables with Styling, Merging Cells, Table Accessibility](./Tables_with_Styling.md)
 
 ## Week 4
@@ -31,7 +31,7 @@ Description: Start here to explore HTML tutorials.
 - [Day 13: Advanced Links, Anchor Navigation, Button vs Link](./Advanced_Links_Anchor_Navigation_Button.md)
 - [Day 14: HTML Entities, Special Characters, Symbol Usage](./HTML_Entities_Special_Characters_Symbol_Usage.md)
 - [Day 15: Meta Tags, SEO Basics, Favicons](./Meta_Tags_SEO_Basics_Favicons.md)
-- [Day 16: HTML Comments, Best Practices, HTML Validation](./HTML_Comments_Best_Practices_HTML%20Validation.md)
+- [Day 16: HTML Comments, Best Practices, HTML Validation](./HTML_Comments_Best_Practices_HTML_Validation.md)
 
 ## Week 5
 

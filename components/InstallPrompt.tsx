@@ -1,27 +1,19 @@
-"use client";
+"use client"
 import { useEffect, useState } from "react";
-
-type BIPEvent = Event & {
-  prompt: () => Promise<void>;
-  userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
-};
+import { useInstall } from "@/app/context/InstallContext";
 
 export default function InstallPrompt() {
-  const [deferred, setDeferred] = useState<BIPEvent | null>(null);
+  const { deferredPrompt, showInstallPrompt } = useInstall();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const hasDismissed = localStorage.getItem("installPromptDismissed");
-    if (hasDismissed === "true") return;
-    const handler = (e: Event) => {
-      e.preventDefault();
-      setDeferred(e as BIPEvent);
-      setVisible(true);
-    };
-
-    window.addEventListener("beforeinstallprompt", handler);
-    return () => window.removeEventListener("beforeinstallprompt", handler);
-  }, []);
+    if (deferredPrompt) {
+      const hasDismissed = localStorage.getItem("installPromptDismissed");
+      if (hasDismissed !== "true") {
+        setVisible(true);
+      }
+    }
+  }, [deferredPrompt]);
 
   if (!visible) return null;
 
@@ -35,10 +27,7 @@ export default function InstallPrompt() {
           className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-800 transition"
           onClick={async () => {
             setVisible(false);
-            if (!deferred) return;
-            await deferred.prompt();
-            await deferred.userChoice;
-            setDeferred(null);
+            showInstallPrompt();
           }}
         >
           Install

@@ -1,0 +1,947 @@
+[
+  {
+    "title": "Accessibility in CSS",
+    "content": "Accessibility in CSS Accessibility (A11y) is not just about HTML; CSS plays a huge role in how users perceive and interact with your content. Color Co...",
+    "url": "/language/css/core/Accessibility_in_CSS",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Animations",
+    "content": "Day 17: CSS Animations – @keyframes, Animation Properties Introduction to CSS Animations CSS animations allow you to create complex, multi-step animat...",
+    "url": "/language/css/core/Animations",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Backgrounds",
+    "content": "Day 13: Backgrounds – Images, Gradients, Positioning Introduction to CSS Backgrounds CSS backgrounds are a fundamental aspect of web design that allow...",
+    "url": "/language/css/core/Backgrounds",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Borders_and_Shadows",
+    "content": "Day 14: Borders and Shadows – border-radius, box-shadow Introduction to Borders and Shadows Borders and shadows are essential CSS properties that enha...",
+    "url": "/language/css/core/Borders_and_Shadows",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Box_Model",
+    "content": "Day 4: Box Model – Margin, Padding, Border, Content Introduction to the CSS Box Model The CSS Box Model is one of the most fundamental concepts in web...",
+    "url": "/language/css/core/Box_Model",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Cards_and_Components",
+    "content": "Day 23: Cards and Components – Reusable UI Blocks Introduction Cards and components are fundamental building blocks in modern web design. They allow u...",
+    "url": "/language/css/core/Cards_and_Components",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Colors_and_Units",
+    "content": "Day 2: Colors and Units – The Painter's Palette and Ruler Introduction On Day 1, you learned how to apply basic styles. Today, we'll dive deeper into ...",
+    "url": "/language/css/core/Colors_and_Units",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "CSS_Resets_and_Normalize",
+    "content": "Day 27: CSS Resets and Normalize Introduction CSS resets and Normalize.css are foundational techniques used to handle browser inconsistencies in defau...",
+    "url": "/language/css/core/CSS_Resets_and_Normalize",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Custom_Properties",
+    "content": "Day 20: Unleashing the Power of CSS Custom Properties (Variables) Welcome back, coders! Today we're diving into one of the most powerful and useful fe...",
+    "url": "/language/css/core/Custom_Properties",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Debugging_CSS",
+    "content": "Day 28: Debugging CSS – DevTools, Specificity Introduction Debugging is an essential skill for any web developer. Today we'll explore techniques for i...",
+    "url": "/language/css/core/Debugging_CSS",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Display_and_Visibility",
+    "content": "Day 5: Display and Visibility – block, inline, none Understanding CSS Display and Visibility Properties The CSS 'display' and 'visibility' properties ...",
+    "url": "/language/css/core/Display_and_Visibility",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Flexbox_Advanced",
+    "content": "Day 9: Flexbox Deep Dive – Alignment, Justify, Grow/Shrink Introduction to Advanced Flexbox Properties Flexbox provides powerful alignment and distrib...",
+    "url": "/language/css/core/Flexbox_Advanced",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Flexbox_Basics",
+    "content": "Day 8: Flexbox Basics – Containers, Items, Direction Introduction to Flexbox Flexbox (Flexible Box Layout) is a powerful CSS layout module designed fo...",
+    "url": "/language/css/core/Flexbox_Basics",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Float_and_Clear",
+    "content": "Day 7: Float and Clear – Legacy Layout Techniques Understanding Floats in CSS Floats were originally designed for simple text wrapping around images b...",
+    "url": "/language/css/core/Float_and_Clear",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Forms_Styling",
+    "content": "Day 21: Styling Forms – Inputs, Buttons, Selects Welcome to Day 21 of our CSS tutorial series! Today, we're focusing on a crucial aspect of web develo...",
+    "url": "/language/css/core/Forms_Styling",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Grid_Advanced",
+    "content": "Day 11: CSS Grid Advanced – Areas, Auto-placement, Nesting Introduction to Advanced CSS Grid Concepts Now that you understand the basics of CSS Grid, ...",
+    "url": "/language/css/core/Grid_Advanced",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Grid_Basics",
+    "content": "Day 10: CSS Grid Basics – Rows, Columns, Templates Introduction to CSS Grid CSS Grid is a powerful two-dimensional layout system that allows you to cr...",
+    "url": "/language/css/core/Grid_Basics",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Introduction_to_CSS",
+    "content": "Day 1: Introducing CSS - The Artist's Toolkit 1. What is CSS? If HTML is the skeleton of a web page—defining its structure with elements like headings...",
+    "url": "/language/css/core/Introduction_to_CSS",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Layout_Challenge",
+    "content": "Day 24: Layout Challenge – Build a Responsive Landing Page Introduction Today's challenge focuses on creating a fully responsive landing page using th...",
+    "url": "/language/css/core/Layout_Challenge",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Mini_Project_Blog",
+    "content": "Day 29: Mini Project – Responsive Blog Layout Introduction Today, we'll apply everything we've learned to create a fully responsive blog layout. This ...",
+    "url": "/language/css/core/Mini_Project_Blog",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Mini_Project_Portfolio",
+    "content": "Day 30: Mini Project – Styled Portfolio Homepage Introduction Today, we'll create a professional portfolio homepage that showcases your skills and pro...",
+    "url": "/language/css/core/Mini_Project_Portfolio",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Navigation_Menus",
+    "content": "Day 22: Navigation Menus – Horizontal, Vertical, Dropdowns Introduction Navigation menus are fundamental components of website design that help users ...",
+    "url": "/language/css/core/Navigation_Menus",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Positioning",
+    "content": "Day 6: CSS Positioning – static, relative, absolute, fixed, sticky, inherit Introduction to CSS Positioning CSS positioning is a fundamental concept t...",
+    "url": "/language/css/core/Positioning",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Print_Styles",
+    "content": "Day 26: Print Styles – @media all, screen, print, Hiding Elements Introduction Print styles are an often-overlooked aspect of web development that con...",
+    "url": "/language/css/core/Print_Styles",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Pseudo_Classes",
+    "content": "Day 18: CSS Pseudo-classes – :hover, :focus, :nth-child, etc. Introduction to CSS Pseudo-classes CSS pseudo-classes are keywords added to selectors th...",
+    "url": "/language/css/core/Pseudo_Classes",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Pseudo_Elements",
+    "content": "Day 19: Pseudo-elements – ::before, ::after, etc. Introduction to CSS Pseudo-elements Pseudo-elements are CSS selectors that allow you to style specif...",
+    "url": "/language/css/core/Pseudo_Elements",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Responsive_Design",
+    "content": "Day 12: Responsive Design – Media Queries & Breakpoints What is Responsive Web Design? Responsive Web Design (RWD) ensures your website looks great an...",
+    "url": "/language/css/core/Responsive_Design",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Transforms",
+    "content": "Day 16: CSS Transforms – Scale, Rotate, Translate, Skew Introduction to CSS Transforms CSS transforms allow you to modify the coordinate space of an e...",
+    "url": "/language/css/core/Transforms",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Transitions",
+    "content": "Day 15: CSS Transitions - Timing Functions, Duration Introduction to CSS Transitions CSS transitions allow you to smoothly animate changes to CSS prop...",
+    "url": "/language/css/core/Transitions",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Typography",
+    "content": "Day 3: Typography – Fonts, Sizes, Line Height, Font Weight Introduction to Typography in Web Design Typography is one of the most critical aspects of ...",
+    "url": "/language/css/core/Typography",
+    "lang": "css",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Accessibility_ARIA_Roles",
+    "content": "🧠 Day 7: Making Websites Easy for Everyone to Use 🎯 What You’ll Learn Today By the end of this lesson, you’ll know how to: - Make websites that work...",
+    "url": "/language/html/core/Accessibility_ARIA_Roles",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Accessibility_Testing_Screen_Readers_Contrast_Ratios",
+    "content": "Chapter 23: Day 23 Objectives: Learn to test web accessibility, understand screen reader compatibility, and ensure proper color contrast ratios for ac...",
+    "url": "/language/html/core/Accessibility_Testing_Screen_Readers_Contrast_Ratios",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Advanced_Forms_File_Upload",
+    "content": "Chapter 10: Day 10 Objectives: Master advanced form techniques, learn to handle file uploads, and create custom-styled form elements that enhance user...",
+    "url": "/language/html/core/Advanced_Forms_File_Upload",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Advanced_Links_Anchor_Navigation_Button",
+    "content": "Chapter 13: Day 13 Objectives: Master advanced linking techniques, understand anchor navigation for single-page applications, and learn the appropriat...",
+    "url": "/language/html/core/Advanced_Links_Anchor_Navigation_Button",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Drag_and_Drop_API_ContentEditable_Data_Attributes",
+    "content": "Chapter 19: Day 19 Objectives: Learn to implement drag and drop functionality, understand the contenteditable attribute for in-browser editing, and ma...",
+    "url": "/language/html/core/Drag_and_Drop_API_ContentEditable_Data_Attributes",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Embedding_Media_Canvas_SVG",
+    "content": "Chapter 6: Day 6 Objectives: Learn to embed various media types, understand the basics of the HTML5 Canvas element for drawing graphics, and explore S...",
+    "url": "/language/html/core/Embedding_Media_Canvas_SVG",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Final_Project_Part_1",
+    "content": "Chapter 27: Day 27 Objectives: Begin building your final portfolio website, starting with the homepage and about section, using all the HTML and CSS s...",
+    "url": "/language/html/core/Final_Project_Part_1",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Final_Project_Part_2",
+    "content": "Chapter 28: Day 28 Objectives: Continue building your portfolio website by adding a projects section and contact form, showcasing your work and provid...",
+    "url": "/language/html/core/Final_Project_Part_2",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Final_Project_Part_3",
+    "content": "Day 29 Learning Dashboard I'll create an interactive educational dashboard covering the topics for Day 29 with code examples and practice tasks. html ...",
+    "url": "/language/html/core/Final_Project_Part_3",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Final_Project_Review",
+    "content": "Day 30 Learning Dashboard - Final Review I'll create an interactive educational dashboard for Day 30 with code examples and practice tasks for all the...",
+    "url": "/language/html/core/Final_Project_Review",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Forms",
+    "content": "Chapter 4: Day 4 Objectives: Learn to create interactive web forms, understand the importance of accessibility in forms, and implement basic client-si...",
+    "url": "/language/html/core/Forms",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Forms_with_JavaScript_Interaction_",
+    "content": "Chapter 20: Day 20 Objectives: Learn to create interactive forms with JavaScript, implement real-time validation, and dynamically update content based...",
+    "url": "/language/html/core/Forms_with_JavaScript_Interaction_",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "HTML5_APIs_Geolocation_Web_Storage",
+    "content": "🧠 Chapter 8: Day 8 — Website Superpowers for Beginners 🎯 What You’ll Learn Today We’re unlocking some cool features that make websites feel like app...",
+    "url": "/language/html/core/HTML5_APIs_Geolocation_Web_Storage",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "HTML5_Input_Types_Color_Picker_Date_and_Time_Inputs",
+    "content": "Chapter 18: Day 18 Objectives: Master HTML5 input types, learn to implement color pickers, and understand how to use date and time inputs effectively ...",
+    "url": "/language/html/core/HTML5_Input_Types_Color_Picker_Date_and_Time_Inputs",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "HTML_Comments_Best_Practices_HTML_Validation",
+    "content": "Chapter 16: Day 16 Objectives: Learn to use HTML comments effectively, understand HTML best practices for writing clean and maintainable code, and lea...",
+    "url": "/language/html/core/HTML_Comments_Best_Practices_HTML_Validation",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "HTML_Entities_Special_Characters_Symbol_Usage",
+    "content": "Chapter 14: Day 14 Objectives: Understand HTML entities and special characters, learn how to properly use symbols in web content, and ensure proper di...",
+    "url": "/language/html/core/HTML_Entities_Special_Characters_Symbol_Usage",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "HTML_for_Emails",
+    "content": "...",
+    "url": "/language/html/core/HTML_for_Emails",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "HTML_Mini_Project_1",
+    "content": "Chapter 24: Day 24 Objectives: Apply all HTML knowledge learned so far to build a complete resume webpage, practice project organization, and learn ho...",
+    "url": "/language/html/core/HTML_Mini_Project_1",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "HTML_Mini_Project_2",
+    "content": "Chapter 25: Day 25 Objectives: Create an interactive photo gallery using HTML, CSS, and JavaScript, implement lightbox functionality, and learn how to...",
+    "url": "/language/html/core/HTML_Mini_Project_2",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "HTML_Mini_Project_3",
+    "content": "Chapter 26: Day 26 Objectives: Create a simple blog page using HTML and CSS, implement proper content structure, and learn how to organize and present...",
+    "url": "/language/html/core/HTML_Mini_Project_3",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "HTML_Printing_Print_Styles_Page_Breaks",
+    "content": "Chapter 22: Day 22 Objectives: Learn to create print-friendly web pages, understand print-specific CSS styling, and control page breaks for optimal pr...",
+    "url": "/language/html/core/HTML_Printing_Print_Styles_Page_Breaks",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Iframe_Basics_Embedding_Google_Maps_Security_Considerations",
+    "content": "Chapter 17: Day 17 Objectives: Learn to use iframes for embedding external content, understand how to embed Google Maps, and implement security consid...",
+    "url": "/language/html/core/Iframe_Basics_Embedding_Google_Maps_Security_Considerations",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Image_List_Table",
+    "content": "Chapter 3: Day 3 Objectives: Learn to embed images and other media, organize content using lists, and create structured data tables. --- Lesson: Image...",
+    "url": "/language/html/core/Image_List_Table",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Introduction_to_HTML",
+    "content": "Chapter 1: Day 1 Objectives: Understand what HTML is, learn the essential structure of an HTML document, and use basic tags to create a simple web pag...",
+    "url": "/language/html/core/Introduction_to_HTML",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Meta_Tags_SEO_Basics_Favicons",
+    "content": "Chapter 15: Day 15 Objectives: Understand the importance of meta tags for SEO and browser behavior, learn basic SEO principles for HTML, and implement...",
+    "url": "/language/html/core/Meta_Tags_SEO_Basics_Favicons",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Project_Setup",
+    "content": "Chapter 9: Day 9 Objectives: Learn how to set up a web development project, organize files and folders efficiently, and use VS Code effectively for HT...",
+    "url": "/language/html/core/Project_Setup",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Responsive_Images_Picture_Element_Srcset_Attribute",
+    "content": "Chapter 11: Day 11 Objectives: Learn to implement responsive images using modern HTML techniques, understand when to use different responsive image so...",
+    "url": "/language/html/core/Responsive_Images_Picture_Element_Srcset_Attribute",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Semantic_HTML",
+    "content": "Chapter 5: Day 5 Objectives: Understand the importance of semantic HTML, learn to use HTML5 structural elements, and recognize the benefits of writing...",
+    "url": "/language/html/core/Semantic_HTML",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Tables_with_Styling",
+    "content": "Chapter 12: Day 12 Objectives: Master advanced table techniques, learn to merge cells for complex data presentation, and implement accessibility best ...",
+    "url": "/language/html/core/Tables_with_Styling",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Text_Formatting",
+    "content": "Chapter 2: Day 2 Objectives: Learn to format text within HTML, understand the role of attributes, and master creating links for website navigation. --...",
+    "url": "/language/html/core/Text_Formatting",
+    "lang": "html",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Arrays",
+    "content": "Day 9: Arrays (Creation, Methods, Iteration, Higher-Order Methods) --- 1. What is an Array? An array is a special data type in JavaScript used to stor...",
+    "url": "/language/javascript/core/Arrays",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Arrow_Functions_and_Scope",
+    "content": "Day 8: Arrow Functions, Scope, and Closures --- 1. Arrow Functions Arrow functions are a concise way to write functions introduced in ES6. Syntax js c...",
+    "url": "/language/javascript/core/Arrow_Functions_and_Scope",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Async_Await",
+    "content": "📘 Day 19: Promises & Async/Await --- 1. Introduction to Asynchronous JavaScript JavaScript normally runs synchronously: one line at a time. Sometimes...",
+    "url": "/language/javascript/core/Async_Await",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Canvas_API",
+    "content": "📘 Day 27: Canvas API & Simple Animations --- 1. Introduction The Canvas API allows your wizard code to draw and animate magical scenes directly in th...",
+    "url": "/language/javascript/core/Canvas_API",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Capstone_Project",
+    "content": "📘 Day 29: Major Project – Calculator or Notes App with Local Storage --- 1. Introduction Today’s project combines everything you’ve learned: variable...",
+    "url": "/language/javascript/core/Capstone_Project",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Conditional_Statements",
+    "content": "Day 5: Conditional Statements ('if', 'else', 'switch') --- 1. What are Conditional Statements? Conditional statements allow your program to make decis...",
+    "url": "/language/javascript/core/Conditional_Statements",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "DOM_Events_and_Styling",
+    "content": "📘 Day 14: Changing Content and Styles & Event Handling --- 1. Changing Content - You can update the text of any element dynamically using JavaScript....",
+    "url": "/language/javascript/core/DOM_Events_and_Styling",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "DOM_Introduction",
+    "content": "📘 Day 13: Introduction to the DOM & Selecting Elements --- 1. What is the DOM? - DOM = Document Object Model. - Think of it as the magic blueprint of...",
+    "url": "/language/javascript/core/DOM_Introduction",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "DOM_Manipulation",
+    "content": "📘 Day 15: Creating & Removing Elements, DOM Traversal --- 1. Creating Elements - You can create new HTML elements dynamically using JavaScript. - Thi...",
+    "url": "/language/javascript/core/DOM_Manipulation",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Error_Handling",
+    "content": "📘 Day 23: Error Handling (try…catch, Async Errors) --- 1. Introduction to Error Handling - Sometimes spells fail, or APIs don’t respond — errors happ...",
+    "url": "/language/javascript/core/Error_Handling",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "ES6_Syntax",
+    "content": "📘 Day 17: Template Literals, Destructuring, Spread & Rest Operators --- 1. Template Literals - Template literals use backticks (\\) instead of quotes....",
+    "url": "/language/javascript/core/ES6_Syntax",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Event_Loop_and_Callbacks",
+    "content": "📘 Day 21: Event Loop, Callbacks, and Higher-Order Functions --- 1. Introduction to the Event Loop JavaScript is single-threaded, meaning it can do on...",
+    "url": "/language/javascript/core/Event_Loop_and_Callbacks",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Fetch_and_AJAX",
+    "content": "📘 Day 26: Fetch API & AJAX Requests --- 1. Introduction - The Fetch API allows your wizard code to summon data from external magical realms (servers)...",
+    "url": "/language/javascript/core/Fetch_and_AJAX",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Final_Showcase",
+    "content": "📘 Day 30: Final Project Showcase & Next Steps (Intro to Node.js & Frameworks) --- 1. Introduction - Congratulations! 🎉 You’ve reached Day 30 of Java...",
+    "url": "/language/javascript/core/Final_Showcase",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Functional_Programming",
+    "content": "📘 Day 22: Functional Programming Concepts --- 1. Introduction to Functional Programming (FP) Functional programming is a paradigm where we write code...",
+    "url": "/language/javascript/core/Functional_Programming",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Functions",
+    "content": "📘 Day 7: Functions (Definition, Parameters, Return Values) 🔹 What is a Function? A function in JavaScript is a block of code designed to perform a p...",
+    "url": "/language/javascript/core/Functions",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Intro_to_JavaScript",
+    "content": "Day 1: Introduction to JavaScript, History, Setup, and First Script --- 1. What is JavaScript? JavaScript is a high-level, interpreted programming lan...",
+    "url": "/language/javascript/core/Intro_to_JavaScript",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "JSON_and_APIs",
+    "content": "📘 Day 11: JSON (Working with API Data) – Enhanced Version --- 🔹 What is JSON? Imagine JSON as a magic envelope 📬: You write some information (like ...",
+    "url": "/language/javascript/core/JSON_and_APIs",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Loops",
+    "content": "Day 6: Loops in JavaScript ('for', 'while', 'do…while', 'for…of', 'for…in') --- 1. What are Loops? Loops allow you to repeat a block of code multiple ...",
+    "url": "/language/javascript/core/Loops",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Modules_and_Classes",
+    "content": "Perfect! Let’s make Day 18: Modules (Import & Export), Classes and OOP Basics detailed, practical, and engaging, including examples, mini-projects, cl...",
+    "url": "/language/javascript/core/Modules_and_Classes",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Objects",
+    "content": "Day 10: Objects (Properties, Methods, 'this', Constructors, Classes, Prototypes) --- 1. What is an Object? An object is a collection of key–value pair...",
+    "url": "/language/javascript/core/Objects",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Operators",
+    "content": "Day 3: Operators in JavaScript (Arithmetic, Comparison, Logical, Assignment) --- 1. What are Operators? Operators are symbols that perform operations ...",
+    "url": "/language/javascript/core/Operators",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Performance_Best_Practices",
+    "content": "📘 Day 24: JavaScript Memory & Performance Best Practices --- 1. Introduction - JavaScript automatically manages memory using garbage collection. - Me...",
+    "url": "/language/javascript/core/Performance_Best_Practices",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Quiz_Game_Project",
+    "content": "📘 Day 28: Mini Project – Quiz Game --- 1. Introduction - Today, we combine everything learned so far: variables, arrays, loops, functions, DOM, event...",
+    "url": "/language/javascript/core/Quiz_Game_Project",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Sets_and_Maps",
+    "content": "📘 Day 12: Sets and Maps in JavaScript --- 1. What is a Set? A Set is a collection of unique values — no duplicates allowed. Think of it as a magic ba...",
+    "url": "/language/javascript/core/Sets_and_Maps",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Storage_APIs",
+    "content": "📘 Day 25: Local Storage & Session Storage --- 1. Introduction - Browsers allow wizards (developers) to store data locally on a user’s computer. - Two...",
+    "url": "/language/javascript/core/Storage_APIs",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Strings_and_Numbers",
+    "content": "Day 4: Strings & Numbers (Methods, Math Object, Type Conversion) --- 1. Strings in JavaScript A string is a sequence of characters enclosed in quotes ...",
+    "url": "/language/javascript/core/Strings_and_Numbers",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "To_Do_List_Project",
+    "content": "📘 Day 16: Mini Project – Interactive To-Do List (Extended Version) --- 1. Objective Build a dynamic To-Do list using JavaScript. Users should be able...",
+    "url": "/language/javascript/core/To_Do_List_Project",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Variables_and_Data_Types",
+    "content": "Day 2: Variables, Constants (var, let, const), and Data Types --- 1. What are Variables? A variable is like a container that stores data. Think of it ...",
+    "url": "/language/javascript/core/Variables_and_Data_Types",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Weather_App_Project",
+    "content": "📘 Day 20: Mini Project – Weather App (API + Async/Await) --- 1. Objective Build a dynamic weather app that fetches weather data from a public API. Us...",
+    "url": "/language/javascript/core/Weather_App_Project",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "JSX and Rendering Elements",
+    "content": "JSX and Rendering Elements In React, we describe what we want to see on the screen using a syntax called JSX. What is JSX? JSX stands for JavaScript X...",
+    "url": "/language/javascript/react/JSX_and_Rendering",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Introduction to React",
+    "content": "Introduction to React React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs...",
+    "url": "/language/javascript/react/React_Introduction",
+    "lang": "javascript",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Arithmetic Operators",
+    "content": "Arithmetic Operators Arithmetic operators are used to perform mathematical operations in Python. They're essential for calculations, data processing, ...",
+    "url": "/language/python/core/arithmetic-operators",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Assignment Operators",
+    "content": "Assignment Operators Assignment operators are used to assign values to variables and perform operations at the same time. They provide a shorthand way...",
+    "url": "/language/python/core/assignment-operators",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Boolean Logic",
+    "content": "Boolean Logic Boolean logic is the foundation of decision-making in programming. Understanding how boolean values work and how to combine them is esse...",
+    "url": "/language/python/core/boolean-logic",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Break Continue",
+    "content": "Break and Continue Break and continue statements give you fine control over loop execution. They allow you to exit loops early or skip specific iterat...",
+    "url": "/language/python/core/break-continue",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Comments",
+    "content": "Comments and Documentation Comments are notes in your code that Python ignores when running your program. They help you and others understand what you...",
+    "url": "/language/python/core/comments",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Comparison Operators",
+    "content": "Comparison Operators Comparison operators are used to compare values and return boolean results (True or False). They're essential for making decision...",
+    "url": "/language/python/core/comparison-operators",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Conditionals",
+    "content": "If, Elif, and Else Statements Conditional statements allow your program to make decisions and execute different code based on conditions. They're fund...",
+    "url": "/language/python/core/conditionals",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Csv Files",
+    "content": "Working with CSV Files in Python Ever seen a spreadsheet? A CSV (Comma-Separated Values) file is basically a simple version of that. It's a plain text...",
+    "url": "/language/python/core/csv-files",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Dict Comprehensions",
+    "content": "Dictionary Comprehensions What is a Dictionary Comprehension? A dictionary comprehension is a concise way to create a new dictionary by processing ite...",
+    "url": "/language/python/core/dict-comprehensions",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Dictionaries",
+    "content": "Dictionaries What is a Dictionary? A dictionary is a collection of key-value pairs. Instead of accessing items by position like lists, you access them...",
+    "url": "/language/python/core/dictionaries",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "File Modes",
+    "content": "File Modes and Methods in Python When working with files in Python, the open() function is your starting point. It takes two main arguments: the file ...",
+    "url": "/language/python/core/file-modes",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "File Paths",
+    "content": "File Paths and Directories in Python When you're working with files, you need to know how to tell Python where to find them. This is where file paths ...",
+    "url": "/language/python/core/file-paths",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "First Program",
+    "content": "Your First Python Program Now that Python is installed, it's time to write your first real program! In this lesson, you'll learn how to create and run...",
+    "url": "/language/python/core/first-program",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "For Loops",
+    "content": "For Loops For loops allow you to iterate over sequences (like lists, strings, ranges) and execute code for each item. They're perfect when you know ho...",
+    "url": "/language/python/core/for-loops",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Function Parameters",
+    "content": "Function Parameters and Arguments Parameters vs Arguments These terms are often confused but they mean different things: - Parameters — Variables in t...",
+    "url": "/language/python/core/function-parameters",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Functions Basics",
+    "content": "Defining Functions What is a Function? A function is a reusable block of code that performs a specific task. Instead of writing the same code over and...",
+    "url": "/language/python/core/functions-basics",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Ides Editors",
+    "content": "Python IDEs and Text Editors Choosing the right development environment can make your Python programming experience much better. In this lesson, we'll...",
+    "url": "/language/python/core/ides-editors",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Input Output",
+    "content": "User Input and Output Communication between your program and users is essential. In this lesson, you'll learn how to get input from users and display ...",
+    "url": "/language/python/core/input-output",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Installation",
+    "content": "Installing Python Before you can start writing Python code, you need to install Python on your computer. This guide will walk you through the installa...",
+    "url": "/language/python/core/installation",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Intro",
+    "content": "Introduction to Python Welcome to Python programming! Whether you're completely new to coding or coming from another language, you're about to learn o...",
+    "url": "/language/python/core/intro",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Json Files",
+    "content": "Working with JSON Files in Python JSON (JavaScript Object Notation) is a popular format for storing and exchanging data. It's lightweight, easy for hu...",
+    "url": "/language/python/core/json-files",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Lambda Functions",
+    "content": "Lambda Functions What is a Lambda Function? A lambda function is a small, anonymous function without a name. It's a quick way to create a simple funct...",
+    "url": "/language/python/core/lambda-functions",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "List Comprehensions",
+    "content": "List Comprehensions List comprehensions provide a concise way to create lists. They're more readable and often faster than traditional loops for creat...",
+    "url": "/language/python/core/list-comprehensions",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Lists",
+    "content": "Lists and List Methods Lists are one of the most important data structures in Python. They store multiple items in a single variable, are ordered, cha...",
+    "url": "/language/python/core/lists",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Logical Operators",
+    "content": "Logical Operators Logical operators are used to combine multiple conditions and create complex boolean expressions. They allow you to make sophisticat...",
+    "url": "/language/python/core/logical-operators",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Nested Structures",
+    "content": "Nested Data Structures What Are Nested Data Structures? Nested data structures are collections inside collections. You can put lists inside lists, dic...",
+    "url": "/language/python/core/nested-structures",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Numbers",
+    "content": "Numbers (Integers and Floats) Numbers are fundamental to programming. In Python, we work with two main types of numbers: integers (whole numbers) and ...",
+    "url": "/language/python/core/numbers",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Pass Statement",
+    "content": "Pass Statement The pass statement is a null operation - it does nothing when executed. It serves as a placeholder where Python syntax requires a state...",
+    "url": "/language/python/core/pass-statement",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Project Scraper",
+    "content": "...",
+    "url": "/language/python/core/project-scraper",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Project Todo",
+    "content": "python import customtkinter as ctk class TodoApp(ctk.CTk): def __init__(self): super().__init__() self.title(\"Todo List\") self.geometry(\"400x500\") sel...",
+    "url": "/language/python/core/project-todo",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Reading Files",
+    "content": "Reading Files in Python Reading from files is a common task in programming. Python provides several ways to read file content. Using open() and read()...",
+    "url": "/language/python/core/reading-files",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Return Values",
+    "content": "Return Values What is a Return Value? A return value is the result that a function sends back to the code that called it. When a function completes it...",
+    "url": "/language/python/core/return-values",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Scope",
+    "content": "Scope and Global Variables in Python In Python, the scope of a variable refers to the region of the code where the variable is accessible. Understandi...",
+    "url": "/language/python/core/scope",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Sets",
+    "content": "Sets What is a Set? A set is a collection of unique items with no order. Sets are useful when you want to store multiple values but don't care about t...",
+    "url": "/language/python/core/sets",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Strings",
+    "content": "Strings and String Methods Strings are one of the most important data types in Python. They represent text and are used in almost every program. Let's...",
+    "url": "/language/python/core/strings",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Tuples",
+    "content": "Tuples What is a Tuple? A tuple is a collection of items, similar to a list. The main difference is that tuples are immutable, meaning you cannot chan...",
+    "url": "/language/python/core/tuples",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Type Conversion",
+    "content": "Type Conversion Type conversion (also called type casting) is the process of converting a value from one data type to another. Understanding type conv...",
+    "url": "/language/python/core/type-conversion",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Understanding Errors",
+    "content": "Understanding Errors in Python Errors are a normal part of programming. They happen to everyone, from beginners to experts. The key is to understand w...",
+    "url": "/language/python/core/understanding-errors",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Variables Datatypes",
+    "content": "Variables and Data Types Variables are containers that store data in your programs. Understanding variables and data types is fundamental to programmi...",
+    "url": "/language/python/core/variables-datatypes",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "While Loops",
+    "content": "While Loops While loops allow you to repeat code as long as a condition is true. They're essential for creating programs that need to perform repetiti...",
+    "url": "/language/python/core/while-loops",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Writing Files",
+    "content": "Writing to Files in Python Just as you can read from files, you can also write to them. Python makes it simple to create new files or modify existing ...",
+    "url": "/language/python/core/writing-files",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "Introduction to FastAPI",
+    "content": "Introduction to FastAPI FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.8+ based on standard Python type h...",
+    "url": "/language/python/fastapi/FastAPI_Introduction",
+    "lang": "python",
+    "type": "Tutorial"
+  },
+  {
+    "title": "First Steps and Installation",
+    "content": "First Steps and Installation > [!IMPORTANT] > This is a Premium lesson. Thank you for supporting Ip Klazz! To start building with FastAPI, you need to...",
+    "url": "/language/python/fastapi/First_Steps",
+    "lang": "python",
+    "type": "Tutorial"
+  }
+]

@@ -1,7 +1,9 @@
 // ./components/AccordionList.tsx
 "use client";
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { useState } from "react";
+import Link from "next/link";
 import Accordion from "@/components/Accordion";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -24,7 +26,7 @@ export default function AccordionList({
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <>
+    <div className="space-y-3">
       {sections.map(({ title, content }, index) => (
         <Accordion
           key={index}
@@ -36,32 +38,61 @@ export default function AccordionList({
             remarkPlugins={[remarkGfm]}
             components={{
               code: CodeBlock,
-              a: ({ href, children }) => (
-                <a
-                  href={`${language}/${href && href.replace(".md", "")}`}
-                  className="block text-gray-600 hover:text-gray-200 hover:bg-gray-500 dark:text-gray-300 dark:hover:text-gray-300 dark:hover:bg-gray-700 p-2 rounded-md transition duration-200"
-                >
-                  {children}
-                </a>
-              ),
+              a: ({ href, children }) => {
+                if (!href) return <span>{children}</span>;
+
+                // Handle relative links
+                const cleanHref = href.replace(/^\.\//, "").replace(/\.md$/, "");
+                const isExternal = href.startsWith("http://") || href.startsWith("https://");
+
+                if (isExternal) {
+                  return (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline hover:underline-offset-2 transition-colors"
+                    >
+                      {children}
+                    </a>
+                  );
+                }
+
+                return (
+                  <Link
+                    href={`/language/${language}/${cleanHref}`}
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline hover:underline-offset-2 transition-colors"
+                  >
+                    {children}
+                  </Link>
+                );
+              },
               ul: ({ node, ...props }) => (
                 <ul
                   {...props}
-                  
-                  className="block list-outside bg-gray-200 dark:bg-gray-900 dark:text-gray-300 rounded-md p-2"
+                  className="list-disc list-inside ml-4 space-y-2 text-gray-700 dark:text-gray-300"
                 />
               ),
-
-              li: ({ node, ...props }) => (
-                // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                <li {...props} className="block my-2" />
+              ol: ({ node, ...props }) => (
+                <ol
+                  {...props}
+                  className="list-decimal list-inside ml-4 space-y-2 text-gray-700 dark:text-gray-300"
+                />
               ),
-
+              li: ({ node, ...props }) => (
+                <li {...props} className="py-1" />
+              ),
               h1: ({ node, ...props }) => (
-                <h1 {...props} className="font-bold text-2xl my-4" />
+                <h1 {...props} className="font-bold text-2xl my-4 text-gray-900 dark:text-gray-100" />
               ),
               h2: ({ node, ...props }) => (
-                <h2 {...props} className="font-bold text-xl my-4" />
+                <h2 {...props} className="font-bold text-xl my-3 text-gray-900 dark:text-gray-100" />
+              ),
+              h3: ({ node, ...props }) => (
+                <h3 {...props} className="font-bold text-lg my-2 text-gray-900 dark:text-gray-100" />
+              ),
+              p: ({ node, ...props }) => (
+                <p {...props} className="my-2 text-gray-700 dark:text-gray-300 leading-relaxed" />
               ),
             }}
           >
@@ -69,6 +100,6 @@ export default function AccordionList({
           </ReactMarkdown>
         </Accordion>
       ))}
-    </>
+    </div>
   );
 }

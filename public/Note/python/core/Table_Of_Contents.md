@@ -54,6 +54,8 @@ This topic based on teaching beginners
 - [Defining Functions](./functions-basics.md)
 - [Function Parameters, Default Parameters, *args and **kwargs and Scope and Global Variables](./function-parameters.md)
 - [Return Values](./return-values.md)
+- [Default Parameters](./default-parameters.md)
+- [*args and **kwargs](./args-kwargs.md)
 - [Lambda Functions](./lambda-functions.md)
 - [Scope and Global Variables](./scope.md)
 
@@ -115,41 +117,4 @@ This topic based on teaching beginners
 - [Introduction to Matplotlib](./matplotlib-intro.md)
 - [Introduction to Requests](./requests-intro.md)
 
-## Python for Web
 
-- [Introduction to Flask](./flask-intro.md)
-- [Introduction to Django](./django-intro.md)
-- [Building a Blog with Django](django-blog)
-- [Introduction to FastAPI](./fastapi-intro.md)
-- [Advanced FastAPI with Pydantic](./fastapi-pydantic)
-- [Connecting to Databases](./fastapi-database)
-- [User Authentication with FastAPI](./fastapi-auth)
-- [Structuring Larger FastAPI Applications](./fastapi-structure)
-
-## Best Practices
-
-- [PEP 8 Style Guide](./pep8.md)
-- [Writing Clean Code](./clean-code.md)
-- [Debugging Techniques](./debugging.md)
-- [Testing Your Code](./testing.md)
-- [Virtual Environments Best Practices](./venv-best-practices.md)
-
-## Projects and Practice
-
-- [Project 1: Calculator](./project-calculator.md)
-- [Project 2: To-Do List](./project-todo.md)
-- [Project 3: Web Scraper](./project-scraper.md)
-- [Project 4: File Organizer](./project-file-organizer.md)
-- [Project 5: Simple API](./project-api.md)
-
-## Data Analytics
-
-- [Python Data Analytics breff introduction](./data-analytics.md)
-- [Shopping Store Analytics - Complete Example](./shopping-store-analytics.md)
-
-## Resources
-
-- [Python Documentation](./resources-docs.md)
-- [Useful Python Libraries](./resources-libraries.md)
-- [Learning Resources](./resources-learning.md)
-- [Python Community](./resources-community.md)
