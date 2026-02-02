@@ -12,6 +12,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import type { Metadata } from "next";
 import Image from "next/image";
 import SocialShare from "@/components/SocialShare";
+import CompletionButton from "@/components/CompletionButton";
 
 interface PageProps {
   params: Promise<{
@@ -173,6 +174,11 @@ export default async function CatchAllPage({ params }: PageProps) {
                 fileContents={markdownBody}
                 isPremium={isPremium}
               />
+            </div>
+
+            {/* Completion Button */}
+            <div className="mt-8 mb-4 border-t border-gray-200 dark:border-gray-800 pt-8 flex justify-center">
+              <CompletionButton tutorialId={`${lang}/${fullSlug}`} />
             </div>
 
             {/* Social Sharing */}

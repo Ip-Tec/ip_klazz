@@ -2,15 +2,85 @@
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 import { useState, useEffect } from "react";
-// No static imports for Tauri to avoid build errors in non-Tauri environments
+import { useInstall } from "@/app/context/InstallContext";
 
 export default function Footer() {
   const [updateStatus, setUpdateStatus] = useState("");
   const [year, setYear] = useState(new Date().getFullYear());
+  const [os, setOs] = useState<"android" | "windows" | "macos" | "other">("other");
+  const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
+  const { showInstallPrompt } = useInstall();
 
   useEffect(() => {
     setYear(new Date().getFullYear());
+
+    // Simple OS detection
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.includes("android")) {
+      setOs("android");
+    } else if (userAgent.includes("win")) {
+      setOs("windows");
+    } else if (userAgent.includes("mac")) {
+      setOs("macos");
+    }
   }, []);
+
+  // Fetch the latest release download URL from GitHub
+  useEffect(() => {
+    const fetchDownloadUrl = async () => {
+      try {
+        const response = await fetch(
+          "https://api.github.com/repos/ip-tec/klazz/releases/latest"
+        );
+        if (!response.ok) return;
+
+        const data = await response.json();
+        const assets = data.assets || [];
+
+        // Find the appropriate asset based on OS
+        let asset;
+        if (os === "windows") {
+          // Look for .msi or .exe file
+          asset = assets.find((a: any) =>
+            a.name.endsWith(".msi") || a.name.endsWith(".exe")
+          );
+        } else if (os === "macos") {
+          // Look for .dmg or .app.tar.gz file
+          asset = assets.find((a: any) =>
+            a.name.endsWith(".dmg") || a.name.endsWith(".app.tar.gz")
+          );
+        }
+
+        if (asset?.browser_download_url) {
+          setDownloadUrl(asset.browser_download_url);
+        }
+      } catch (error) {
+        console.error("Failed to fetch download URL:", error);
+      }
+    };
+
+    if (os === "windows" || os === "macos") {
+      fetchDownloadUrl();
+    }
+  }, [os]);
+
+  const handleInstallClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (os === "android") {
+      showInstallPrompt();
+    } else if (os === "windows" || os === "macos") {
+      if (downloadUrl) {
+        // Use the dynamically fetched download URL
+        window.open(downloadUrl, "_blank");
+      } else {
+        // Fallback to releases page if URL hasn't been fetched yet
+        window.open("https://github.com/ip-tec/klazz/releases/latest", "_blank");
+      }
+    } else {
+      // Fallback for other OS
+      showInstallPrompt();
+    }
+  };
 
   async function checkForUpdates() {
     // Only attempt updates if running in a Tauri environment
@@ -66,9 +136,9 @@ export default function Footer() {
           <Link href="/privacy" className="hover:underline">
             Privacy
           </Link>
-          <a href="/manifest.json" className="hover:underline">
-            Install
-          </a>
+          <button onClick={handleInstallClick} className="hover:underline">
+            {os === "windows" ? "Install Windows App" : os === "macos" ? "Install Mac App" : "Install App"}
+          </button>
           <button onClick={checkForUpdates} className="hover:underline">
             Check for Updates
           </button>

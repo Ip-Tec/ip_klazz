@@ -9,6 +9,7 @@ import UpdateToast from "@/components/UpdateEventToast";
 import Footer from "@/components/Footer";
 import { Providers } from "./providers";
 import GlobalSearchWrapper from "@/components/GlobalSearchWrapper";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -102,11 +103,7 @@ export default function RootLayout({
           <InstallPrompt />
           <IOSInstallHint />
           <UpdateToast />
-          {/* <nav className="p-[1rem] shadow-2xl mb-[-2rem] fixed w-full bg-gray-200 dark:bg-gray-900 dark:text-gray-300 flex items-center justify-between">
-            <Link href="/" className="text-decoration-none">
-              <span className="text-orange-400 font-bold">Ip Klazz</span>
-            </Link>
-          </nav> */}
+          <Navbar />
           {children}
 
           {/* Site footer */}

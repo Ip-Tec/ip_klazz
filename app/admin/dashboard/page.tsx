@@ -11,14 +11,17 @@ import {
   ChevronRightIcon,
   ArrowPathIcon,
   CheckIcon,
-  ExclamationCircleIcon
+  ExclamationCircleIcon,
+  UserGroupIcon
 } from '@heroicons/react/24/outline';
+import AdminUserList from '@/components/AdminUserList';
 
 export default function AdminDashboard() {
   const { user, isAdmin, loading: authLoading } = useAuth();
   const router = useRouter();
 
   const [files, setFiles] = useState<string[]>([]);
+  const [activeView, setActiveView] = useState<'files' | 'students'>('files');
   const [selectedFile, setSelectedFile] = useState<string | null>(null);
   const [content, setContent] = useState('');
   const [isSaving, setIsSaving] = useState(false);
@@ -104,28 +107,54 @@ export default function AdminDashboard() {
       <div className="flex flex-1 overflow-hidden h-[calc(100vh-64px)]">
         {/* Sidebar */}
         <div className="w-80 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 overflow-y-auto p-4">
-          <h2 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Markdown Files</h2>
-          <div className="space-y-1">
-            {files.map(file => (
-              <button
-                key={file}
-                onClick={() => loadFile(file)}
-                className={`w-full text-left px-3 py-2 rounded-lg text-sm flex items-center gap-2 transition-all ${selectedFile === file
-                    ? 'bg-orange-400/10 text-orange-500 border border-orange-400/20'
-                    : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
-                  }`}
-              >
-                <DocumentTextIcon className="w-4 h-4 flex-shrink-0" />
-                <span className="truncate">{file}</span>
-                {selectedFile === file && <ChevronRightIcon className="w-3 h-3 ml-auto text-orange-400" />}
-              </button>
-            ))}
+          <div className="flex gap-2 mb-6">
+            <button
+              onClick={() => setActiveView('files')}
+              className={`flex-1 py-1.5 px-3 rounded-lg text-sm font-bold transition-all ${activeView === 'files' ? 'bg-orange-500 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-500'}`}
+            >
+              Files
+            </button>
+            <button
+              onClick={() => setActiveView('students')}
+              className={`flex-1 py-1.5 px-3 rounded-lg text-sm font-bold transition-all ${activeView === 'students' ? 'bg-orange-500 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-500'}`}
+            >
+              Students
+            </button>
           </div>
+
+          {activeView === 'files' ? (
+            <>
+              <h2 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Markdown Files</h2>
+              <div className="space-y-1">
+                {files.map(file => (
+                  <button
+                    key={file}
+                    onClick={() => loadFile(file)}
+                    className={`w-full text-left px-3 py-2 rounded-lg text-sm flex items-center gap-2 transition-all ${selectedFile === file
+                      ? 'bg-orange-400/10 text-orange-500 border border-orange-400/20'
+                      : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+                      }`}
+                  >
+                    <DocumentTextIcon className="w-4 h-4 flex-shrink-0" />
+                    <span className="truncate">{file}</span>
+                    {selectedFile === file && <ChevronRightIcon className="w-3 h-3 ml-auto text-orange-400" />}
+                  </button>
+                ))}
+              </div>
+            </>
+          ) : (
+            <div className="text-center p-4 text-gray-500">
+              <UserGroupIcon className="w-10 h-10 mx-auto mb-2 text-gray-300" />
+              <p className="text-sm">Select Student monitoring to see active users.</p>
+            </div>
+          )}
         </div>
 
-        {/* Editor Area */}
+        {/* Editor or Student Area */}
         <div className="flex-1 flex flex-col bg-gray-50 dark:bg-gray-950 p-6 overflow-hidden">
-          {selectedFile ? (
+          {activeView === 'students' ? (
+            <AdminUserList />
+          ) : selectedFile ? (
             <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl flex-1 flex flex-col overflow-hidden border border-gray-200 dark:border-gray-800">
               <div className="px-6 py-4 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center bg-gray-50 dark:bg-gray-900/50">
                 <div>
