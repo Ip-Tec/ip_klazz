@@ -7,114 +7,60 @@ Description: Start here to explore Python tutorials.
 
 This topic based on teaching beginners
 
-## Getting Started
+# Python Topics (8-Week Fast Track)
 
-- [Introduction to Python](./intro.md)
-- [Installing Python](./installation.md)
-- [Your First Python Program](./first-program.md)
-- [Python IDEs and Text Editors](./ides-editors.md)
+## Week 1: Python Foundations
 
-## Python Basics
+- [Day 1: Intro to Python & Installation](./intro.md)
+- [Day 2: First Program & IDEs](./first-program.md)
+- [Day 3: Variables, Data Types & Numbers](./variables-datatypes.md)
+- [Day 4: Strings & User Input/Output](./strings.md)
 
-- [Variables and Data Types](./variables-datatypes.md)
-- [Numbers (Integers and Floats)](./numbers.md)
-- [Strings and String Methods](./strings.md)
-- [Type Conversion](./type-conversion.md)
-- [User Input and Output](./input-output.md)
-- [Comments and Documentation](./comments.md)
+## Week 2: Logic and Control Flow
 
-## Operators
+- [Day 5: Operators (Arithmetic, Comparison, Logical)](./arithmetic-operators.md)
+- [Day 6: Boolean Logic & Conditionals](./boolean-logic.md)
+- [Day 7: While Loops & For Loops](./while-loops.md)
+- [Day 8: Break, Continue & Pass](./break-continue.md)
 
-- [Arithmetic Operators](./arithmetic-operators.md)
-- [Comparison Operators](./comparison-operators.md)
-- [Logical Operators](./logical-operators.md)
-- [Assignment Operators](./assignment-operators.md)
+## Week 3: Mastering Data Structures
 
-## Control Flow
+- [Day 9: Lists & List Comprehensions](./lists.md)
+- [Day 10: Tuples & Sets](./tuples.md)
+- [Day 11: Dictionaries & Dict Comprehensions](./dictionaries.md)
+- [Day 12: Mini Project: Simple Expense Tracker](./project-todo.md)
 
-- [If, Elif, and Else Statements](./conditionals.md)
-- [Boolean Logic](./boolean-logic.md)
-- [While Loops](./while-loops.md)
-- [For Loops](./for-loops.md)
-- [Break and Continue](./break-continue.md)
-- [Pass Statement](./pass-statement.md)
+## Week 4: Functions and Modules
 
-## Data Structures
+- [Day 13: Defining Functions & Return Values](./functions-basics.md)
+- [Day 14: Parameters, \*args & \*\*kwargs](./function-parameters.md)
+- [Day 15: Lambda Functions & Scope](./lambda-functions.md)
+- [Day 16: Importing & Creating Modules](../importing-modules.md)
 
-- [Lists and List Methods](./lists.md)
-- [List Comprehensions](./list-comprehensions.md)
-- [Tuples](./tuples.md)
-- [Sets](./sets.md)
-- [Dictionaries](./dictionaries.md)
-- [Dictionary Comprehensions](./dict-comprehensions.md)
-- [Nested Data Structures](./nested-structures.md)
+## Week 5: Intermediate Python & Error Handling
 
-## Functions
+- [Day 17: File Handling (TXT, CSV, JSON)](./reading-files.md)
+- [Day 18: File Paths & Directories](./file-paths.md)
+- [Day 19: Error Handling (Try-Except-Finally)](../try-except.md)
+- [Day 20: Raising Exceptions & Packages](../raising-exceptions.md)
 
-- [Defining Functions](./functions-basics.md)
-- [Function Parameters, Default Parameters, *args and **kwargs and Scope and Global Variables](./function-parameters.md)
-- [Return Values](./return-values.md)
-- [Default Parameters](./default-parameters.md)
-- [*args and **kwargs](./args-kwargs.md)
-- [Lambda Functions](./lambda-functions.md)
-- [Scope and Global Variables](./scope.md)
+## Week 6: Object-Oriented Programming (OOP)
 
-## Working with Files
+- [Day 21: Classes, Objects & Attributes](../classes-objects.md)
+- [Day 22: Methods & The **init** Method](../init-method.md)
+- [Day 23: Inheritance & Polymorphism](../inheritance.md)
+- [Day 24: Mini Project: Library Management](../project-calculator.md)
 
-- [Reading Files](./reading-files.md)
-- [Writing to Files](./writing-files.md)
-- [File Modes and Methods](./file-modes.md)
-- [Working with CSV Files](./csv-files.md)
-- [Working with JSON Files](./json-files.md)
-- [File Paths and Directories](./file-paths.md)
+## Week 7: Advanced Concepts & Data Handling
 
-## Error Handling
+- [Day 25: Decorators, Generators & Iterators](../decorators.md)
+- [Day 26: Regular Expressions (Regex)](../regex.md)
+- [Day 27: Working with APIs](../apis.md)
+- [Day 28: Data Serialization](../serialization.md)
 
-- [Understanding Errors](./understanding-errors.md)
-- [Try and Except](./try-except.md)
-- [Multiple Exceptions](./multiple-exceptions.md)
-- [Finally and Else](./finally-else.md)
-- [Raising Exceptions](./raising-exceptions.md)
+## Week 8: Popular Libraries & Capstone Project
 
-## Modules and Packages
-
-- [Importing Modules](./importing-modules.md)
-- [Creating Your Own Modules](./creating-modules.md)
-- [Standard Library Overview](./standard-library.md)
-- [pip and Installing Packages](./pip-packages.md)
-- [Virtual Environments](./virtual-environments.md)
-
-## Object-Oriented Programming (OOP)
-
-- [Introduction to OOP](./oop-intro.md)
-- [Classes and Objects](./classes-objects.md)
-- [Attributes and Methods](./attributes-methods.md)
-- [The __init__ Method](./init-method.md)
-- [Inheritance](./inheritance.md)
-- [Polymorphism](./polymorphism.md)
-- [Encapsulation](./encapsulation.md)
-- [Magic Methods](./magic-methods.md)
-
-## Advanced Topics
-
-- [Decorators](./decorators.md)
-- [Generators and Iterators](./generators-iterators.md)
-- [Regular Expressions (Regex)](./regex.md)
-- [Working with Dates and Times](./datetime.md)
-- [Understanding *args and **kwargs](./advanced-args-kwargs.md)
-
-## Working with Data
-
-- [String Formatting](./string-formatting.md)
-- [Working with APIs](./apis.md)
-- [Data Serialization](./serialization.md)
-- [List Sorting and Filtering](./sorting-filtering.md)
-
-## Popular Python Libraries
-
-- [Introduction to NumPy](./numpy-intro.md)
-- [Introduction to Pandas](./pandas-intro.md)
-- [Introduction to Matplotlib](./matplotlib-intro.md)
-- [Introduction to Requests](./requests-intro.md)
-
-
+- [Day 29: NumPy & Pandas Basics](../numpy-intro.md)
+- [Day 30: Data Visualization with Matplotlib](../matplotlib-intro.md)
+- [Day 31: Capstone Project: Automated Scraper](./project-scraper.md)
+- [Day 32: Final Review & Publishing](./intro.md)

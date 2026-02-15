@@ -202,9 +202,9 @@ Create a reusable card component that can display blog posts. The card should in
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        transition: transform var(--transition-speed) ease, box-shadow var(
-              --transition-speed
-            ) ease;
+        transition:
+          transform var(--transition-speed) ease,
+          box-shadow var(--transition-speed) ease;
       }
 
       /* --- Hover & Focus States --- */
@@ -459,6 +459,26 @@ For an admin dashboard including:
 - Use semantic HTML elements
 - Organize CSS with comments and logical structure
 
+## Building Navigation & Form Components
+
+### **1. Navigation Menus**
+
+Navigation bars are typically built using a `<nav>` element containing a `<ul>` list of links.
+
+- Use `display: flex` to align items horizontally.
+- Remove default list styles with `list-style: none`.
+- Add hover effects to the links for better UX.
+
+### **2. Styled Forms**
+
+Forms should be clean and accessible.
+
+- Use `display: block` on labels to stack them above inputs.
+- Add `padding`, `border-radius`, and `border` to inputs.
+- Style the `focus` state of inputs to provide visual feedback.
+
+---
+
 ## Key Takeaways
 
 1. Cards are versatile containers for content that help organize information
@@ -470,6 +490,7 @@ For an admin dashboard including:
 ```html
 
 ```
+
 Well-designed cards and components create cohesive user experiences while reducing development time through reusability. By mastering these UI building blocks, you'll be able to create professional, consistent interfaces more efficiently.
 
 ## Additional Resources

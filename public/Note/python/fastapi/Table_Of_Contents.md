@@ -5,25 +5,32 @@ Description: Learn how to build production-ready APIs with Python and FastAPI.
 
 # FastAPI Course Topics
 
-## Module 1: Getting Started
+# FastAPI Topics (1-Month Intensive)
 
-- [Introduction to FastAPI](./FastAPI_Introduction.md)
-- [First Steps and Installation](./First_Steps.md)
-- [Path Parameters](./Path_Parameters.md)
+## Week 1: Core FastAPI Concepts
 
-## Module 2: Request Data
+- [Day 1: Intro to FastAPI & Installation](./Day1_Introduction.md)
+- [Day 2: Pydantic Models & Validation](./Day2_Pydantic_Models.md)
+- [Day 3: Path & Query Parameters](./Day3_Parameters.md)
+- [Day 4: Request Body & Response Models](./Day4_Response_Models.md)
 
-- [Query Parameters](./Query_Parameters.md)
-- [Request Body and Pydantic Models](./Request_Body.md)
-- [Query Parameters and String Validations](./Query_Validations.md)
+## Week 2: Database Integration
 
-## Module 3: Advanced Features (Premium)
+- [Day 5: Intro to SQLModel/SQLAlchemy](./Day5_Databases_Intro.md)
+- [Day 6: CRUD Operations with Databases](./Day6_CRUD_Operations.md)
+- [Day 7: Dependency Injection Concept](./Day7_Dependency_Injection.md)
+- [Day 8: Configuration & Env Variables](./Day8_Config_Env.md)
 
-- [Dependency Injection](./Dependency_Injection.md)
-- [Security and OAuth2](./Security.md)
-- [Database Integration (SQLModel)](./Databases.md)
+## Week 3: Authentication & Security
 
-## Module 4: Deployment
+- [Day 9: OAuth2 & Password Hashing](./Day9_Auth_Basics.md)
+- [Day 10: JWT Token Verification](./Day10_JWT_Tokens.md)
+- [Day 11: Secure Routes & User Registration](./Day11_User_Registration.md)
+- [Day 12: Middleware & CORS Security](./Day12_Middleware_CORS.md)
 
-- [Dockerizing FastAPI](./Docker.md)
-- [Deploying to Render/Vercel](./Deployment.md)
+## Week 4: Deployment & Final Project
+
+- [Day 13: Swagger & API Documentation](./Day13_Documentation.md)
+- [Day 14: Background Tasks Overview](./Day14_Background_Tasks.md)
+- [Day 15: Mini Project: Simple REST API](./Day15_Mini_Project.md)
+- [Day 16: Deployment Basics](./Day16_Deployment.md)

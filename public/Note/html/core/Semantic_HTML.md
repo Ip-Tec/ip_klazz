@@ -201,3 +201,24 @@ Analyze the website structure you built in the previous practice task.
 2.  Refactor the HTML of the homepage (`index.html`) to use the correct HTML5 semantic elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`, etc.) instead of generic `<div>`s.
 3.  In a comment at the top of the refactored file, list the three most important benefits you think this change brings to your website and explain why for each.
 4.  Ensure your navigation is inside a `<nav>` element and your main content is inside `<main>`.
+
+---
+
+### **Lesson: ARIA Roles & Accessibility**
+
+**Explanation:**
+While semantic HTML handles most accessibility, sometimes you need extra attributes to help screen readers. These are called **ARIA (Accessible Rich Internet Applications)** roles and attributes.
+
+**Key Concepts:**
+
+- **`role="button"`**: Tells screen readers a non-button element (like a `<div>`) acts as a button.
+- **`aria-label="Close"`**: Provides a text description for elements that only have icons.
+- **`aria-hidden="true"`**: Hides decorative elements from screen readers.
+- **`aria-expanded="false"`**: Tells the user if a menu or section is currently open or closed.
+
+**Accessibility Tips:**
+
+1. **Focus States**: Ensure links and buttons have visible focus styles for keyboard users.
+2. **Alt Text**: Always include `alt` attributes on images.
+3. **Contrast**: Use text colors that stand out clearly against the background.
+4. **Heading Hierarchy**: Use headings (`h1`-`h6`) in logical order.

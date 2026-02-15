@@ -5,57 +5,30 @@ Description: Start here to explore CSS tutorials.
 
 # CSS Topics
 
-## Week 1
+## Week 1: The Basics
 
-- [Day 1: Introduction to CSS, Selectors, Linking Stylesheets](./Introduction_to_CSS.md)
-- [Day 2: Colors and Units – HEX, RGB, HSL, px, em, rem](./Colors_and_Units.md)
-- [Day 3: Typography – Fonts, Sizes, Line Height, Font Weight](./Typography.md)
-- [Day 4: Box Model – Margin, Padding, Border, Content](./Box_Model.md)
+- [Day 1: Intro, Selectors & Colors/Units](./Introduction_to_CSS.md)
+- [Day 2: Typography & Google Fonts](./Typography.md)
+- [Day 3: Box Model (Margin, Padding, Border)](./Box_Model.md)
+- [Day 4: Display & Visibility](./Display_and_Visibility.md)
 
-## Week 2
+## Week 2: Layout Systems
 
-- [Day 5: Display and Visibility – block, inline, none](./Display_and_Visibility.md)
-- [Day 6: Positioning – static, relative, absolute, fixed, sticky](./Positioning.md)
-- [Day 7: Float and Clear – Legacy Layout Techniques](./Float_and_Clear.md)
-- [Day 8: Flexbox Basics – Containers, Items, Direction](./Flexbox_Basics.md)
+- [Day 5: Positioning & Floats](./Positioning.md)
+- [Day 6: Flexbox Basics & Layouts](./Flexbox_Basics.md)
+- [Day 7: Grid Basics & Areas](./Grid_Basics.md)
+- [Day 8: Responsive Design & Media Queries](./Responsive_Design.md)
 
-## Week 3
+## Week 3: Advanced Interactivity
 
-- [Day 9: Flexbox Deep Dive – Alignment, Justify, Grow/Shrink](./Flexbox_Advanced.md)
-- [Day 10: Grid Basics – Rows, Columns, Templates](./Grid_Basics.md)
-- [Day 11: Grid Advanced – Areas, Auto-placement, Nesting](./Grid_Advanced.md)
-- [Day 12: Responsive Design – Media Queries, Breakpoints](./Responsive_Design.md)
+- [Day 9: Backgrounds, Borders & Shadows](./Backgrounds.md)
+- [Day 10: Transitions & Transforms](./Transitions.md)
+- [Day 11: Animations & Variable Settings](./Animations.md)
+- [Day 12: Pseudo-classes & Pseudo-elements](./Pseudo_Classes.md)
 
-## Week 4
+## Week 4: Components & Projects
 
-- [Day 13: Backgrounds – Images, Gradients, Positioning](./Backgrounds.md)
-- [Day 14: Borders and Shadows – border-radius, box-shadow](./Borders_and_Shadows.md)
-- [Day 15: Transitions – Timing Functions, Duration](./Transitions.md)
-- [Day 16: Transforms – Scale, Rotate, Translate, Skew](./Transforms.md)
-
-## Week 5
-
-- [Day 17: Animations – @keyframes, Animation Properties](./Animations.md)
-- [Day 18: Pseudo-classes – :hover, :focus, :nth-child](./Pseudo_Classes.md)
-- [Day 19: Pseudo-elements – ::before, ::after](./Pseudo_Elements.md)
-- [Day 20: Custom Properties – CSS Variables](./Custom_Properties.md)
-
-## Week 6
-
-- [Day 21: Styling Forms – Inputs, Buttons, Selects](./Forms_Styling.md)
-- [Day 22: Navigation Menus – Horizontal, Vertical, Dropdowns](./Navigation_Menus.md)
-- [Day 23: Cards and Components – Reusable UI Blocks](./Cards_and_Components.md)
-- [Day 24: Layout Challenge – Build a Responsive Landing Page](./Layout_Challenge.md)
-
-## Week 7
-
-- [Day 25: Accessibility in CSS – Focus Styles, Contrast](./Accessibility_in_CSS.md)
-- [Day 26: Print Styles – @media print, Hiding Elements](./Print_Styles.md)
-- [Day 27: CSS Resets and Normalize](./CSS_Resets_and_Normalize.md)
-- [Day 28: Debugging CSS – DevTools, Specificity](./Debugging_CSS.md)
-
-## Week 8
-
-- [Day 29: Mini Project – Responsive Blog Layout](./Mini_Project_Blog.md)
-- [Day 30: Mini Project – Styled Portfolio Homepage](./Mini_Project_Portfolio.md)
-- [Day 31: Final Project Part 1 – E-commerce Product Page](./Final_Project_Part_1.md)
+- [Day 13: Building UI Components (Forms, Navs, Cards)](./Cards_and_Components.md)
+- [Day 14: Mini Project – Responsive Blog Layout](./Mini_Project_Blog.md)
+- [Day 15: Mini Project – Styled Portfolio Homepage](./Mini_Project_Portfolio.md)
+- [Day 16: Final Project Part 1 – E-commerce Product Page](./Final_Project_Part_1.md)
