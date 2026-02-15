@@ -1,9 +1,8 @@
-'use client';
+"use client";
 
-import { AuthProvider } from '@/app/context/AuthContext';
-import { ReactNode } from 'react';
+import { AuthProvider } from "@/app/context/AuthContext";
 
-import UserTracker from '@/components/UserTracker';
+import UserTracker from "@/components/UserTracker";
 
 import { InstallProvider } from "./context/InstallContext";
 

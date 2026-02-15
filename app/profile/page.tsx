@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { UserCircleIcon, ComputerDesktopIcon, CalendarIcon, ArrowRightStartOnRectangleIcon, BookOpenIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface UserData {
     lastLogin?: Timestamp;
@@ -68,7 +69,14 @@ export default function ProfilePage() {
 
                         <div className="flex items-center gap-4 mb-8">
                             {user.photoURL ? (
-                                <img className="h-16 w-16 rounded-full" src={user.photoURL} alt={user.displayName || "User"} />
+                                <Image 
+                                    className="h-16 w-16 rounded-full" 
+                                    src={user.photoURL} 
+                                    alt={user.displayName || "User"} 
+                                    width={64} 
+                                    height={64}
+                                    unoptimized // For external Firebase URLs
+                                />
                             ) : (
                                 <div className="h-16 w-16 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-500 text-2xl font-bold">
                                     {user.email?.charAt(0).toUpperCase()}

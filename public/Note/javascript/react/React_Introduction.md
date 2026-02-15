@@ -39,3 +39,4 @@ JSX is a syntax extension to JavaScript. It is used with React to describe what 
 const name = 'Josh Perez';
 const element = <h1>Hello, {name}</h1>;
 ```
+

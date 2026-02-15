@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, updateProfile } from 'firebase/auth';
 import { auth, googleProvider } from '@/lib/firebase';
+import { FirebaseError } from 'firebase/app';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/app/context/AuthContext';
@@ -24,15 +25,18 @@ export default function LoginPage() {
         }
     }, [user, loading, router]);
 
-    const getErrorMessage = (error: any) => {
-        const code = error.code || '';
-        if (code === 'auth/operation-not-allowed') {
-            return 'This sign-in method is not enabled. Please enable Email/Password and Google in the Firebase Console.';
+    const getErrorMessage = (error: unknown) => {
+        if (error instanceof FirebaseError) {
+            const code = error.code;
+            if (code === 'auth/operation-not-allowed') {
+                return 'This sign-in method is not enabled. Please enable Email/Password and Google in the Firebase Console.';
+            }
+            if (code === 'auth/email-already-in-use') {
+                return 'This email is already in use. Please sign in instead.';
+            }
+            return error.message.replace('Firebase: ', '');
         }
-        if (code === 'auth/email-already-in-use') {
-            return 'This email is already in use. Please sign in instead.';
-        }
-        return error.message.replace('Firebase: ', '');
+        return error instanceof Error ? error.message : 'An unknown error occurred';
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -50,8 +54,12 @@ export default function LoginPage() {
                 await signInWithEmailAndPassword(auth, email, password);
             }
             router.push('/profile');
-        } catch (error: any) {
-            setError(error.message.replace('Firebase: ', ''));
+        } catch (error) {
+            if (error instanceof FirebaseError) {
+                setError(error.message.replace('Firebase: ', ''));
+            } else {
+                setError(error instanceof Error ? error.message : 'An unknown error occurred');
+            }
         } finally {
             setLoading(false);
         }
@@ -63,7 +71,7 @@ export default function LoginPage() {
         try {
             await signInWithPopup(auth, googleProvider);
             router.push('/profile');
-        } catch (error: any) {
+        } catch (error) {
             setError(getErrorMessage(error));
         } finally {
             setLoading(false);

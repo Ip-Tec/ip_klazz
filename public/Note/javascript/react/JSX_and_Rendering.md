@@ -46,3 +46,4 @@ const element = (
 console.log("Rendering element...");
 // In a real app, you'd use root.render(element);
 ```
+

@@ -4,6 +4,11 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { useState, useEffect } from "react";
 import { useInstall } from "@/app/context/InstallContext";
 
+interface GitHubAsset {
+  name: string;
+  browser_download_url: string;
+}
+
 export default function Footer() {
   const [updateStatus, setUpdateStatus] = useState("");
   const [year, setYear] = useState(new Date().getFullYear());
@@ -41,12 +46,12 @@ export default function Footer() {
         let asset;
         if (os === "windows") {
           // Look for .msi or .exe file
-          asset = assets.find((a: any) =>
+          asset = assets.find((a: GitHubAsset) =>
             a.name.endsWith(".msi") || a.name.endsWith(".exe")
           );
         } else if (os === "macos") {
           // Look for .dmg or .app.tar.gz file
-          asset = assets.find((a: any) =>
+          asset = assets.find((a: GitHubAsset) =>
             a.name.endsWith(".dmg") || a.name.endsWith(".app.tar.gz")
           );
         }

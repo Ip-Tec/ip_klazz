@@ -79,7 +79,7 @@ export default function UserTracker() {
         return () => {
             clearInterval(interval);
         };
-    }, [user]); // Run when user changes (login)
+    }, [user, pathname]); // Run when user or path changes
 
     // 4. Path Tracker (Immediate on route change)
     useEffect(() => {
