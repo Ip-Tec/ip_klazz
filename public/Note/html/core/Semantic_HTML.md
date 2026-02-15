@@ -11,8 +11,8 @@ Semantic HTML means using HTML tags that convey meaning about the content they c
 
 - **What is Semantics?** In language, semantics is the study of meaning. In HTML, it's about using elements that describe their purpose clearly.
 - **Semantic vs. Non-Semantic:**
-  - **Non-Semantic:** `<div>` and `<span>` tell us nothing about their content. They are generic containers used for styling or JavaScript hooks.
-  - **Semantic:** `<article>`, `<form>`, `<table>`, and `<img>` clearly describe what kind of content is inside them.
+  - **Non-Semantic:** '<div>' and '<span>' tell us nothing about their content. They are generic containers used for styling or JavaScript hooks.
+  - **Semantic:** '<article>', '<form>', '<table>', and '<img>' clearly describe what kind of content is inside them.
 - **Why it Matters:** Using semantic elements makes your code more readable for developers and more understandable for browsers and assistive technologies like screen readers.
 
 **Code Example:**
@@ -68,17 +68,17 @@ Take the following non-semantic HTML and rewrite it using semantic elements. Thi
 ### **Lesson: HTML5 Structural Elements**
 
 **Explanation:**
-HTML5 introduced a set of specific semantic elements designed to define the structure of a document more clearly. These elements replace the generic `<div>` tags that were previously used with IDs like `div id="header"`.
+HTML5 introduced a set of specific semantic elements designed to define the structure of a document more clearly. These elements replace the generic '<div>' tags that were previously used with IDs like 'div id="header"'.
 
 **Key Structural Elements:**
 
-- **`<header>`:** Represents introductory content, typically a group of navigational aids. It often contains a logo, heading, and navigation. A page can have multiple `<header>` elements.
-- **`<nav>`:** Defines a section of navigation links.
-- **`<main>`:** Specifies the main, unique content of the document. There should be only one `<main>` element per page.
-- **`<article>`:** Defines self-contained, reusable content that could be distributed independently (e.g., blog post, news story, forum post).
-- **`<section>`:** Defines a thematic grouping of content, usually with a heading. It's a generic section of a document.
-- **`<aside>`:** Defines content that is tangentially related to the main content (e.g., sidebars, pull quotes, advertising).
-- **`<footer>`:** Represents the footer for its nearest sectioning content or root element. It often contains copyright info, related documents, and links.
+- **'<header>':** Represents introductory content, typically a group of navigational aids. It often contains a logo, heading, and navigation. A page can have multiple '<header>' elements.
+- **'<nav>':** Defines a section of navigation links.
+- **'<main>':** Specifies the main, unique content of the document. There should be only one '<main>' element per page.
+- **'<article>':** Defines self-contained, reusable content that could be distributed independently (e.g., blog post, news story, forum post).
+- **'<section>':** Defines a thematic grouping of content, usually with a heading. It's a generic section of a document.
+- **'<aside>':** Defines content that is tangentially related to the main content (e.g., sidebars, pull quotes, advertising).
+- **'<footer>':** Represents the footer for its nearest sectioning content or root element. It often contains copyright info, related documents, and links.
 
 **Code Example:**
 
@@ -126,12 +126,12 @@ HTML5 introduced a set of specific semantic elements designed to define the stru
 **Practice Task:**
 Create the basic structure for a blog post page using the correct HTML5 structural elements.
 
-1.  Include a `<header>` with the site title and a `<nav>` with two links.
-2.  The `<main>` content should contain one `<article>`.
-3.  The article should have its own `<header>` with a title and publication date.
-4.  Split the article's content into two `<section>` elements, each with its own heading.
-5.  Add an `<aside>` next to the article with author bio information.
-6.  Finish with a `<footer>` containing a copyright notice.
+1.  Include a '<header>' with the site title and a '<nav>' with two links.
+2.  The '<main>' content should contain one '<article>'.
+3.  The article should have its own '<header>' with a title and publication date.
+4.  Split the article's content into two '<section>' elements, each with its own heading.
+5.  Add an '<aside>' next to the article with author bio information.
+6.  Finish with a '<footer>' containing a copyright notice.
 
 ---
 
@@ -142,9 +142,9 @@ Using semantic HTML isn't just a "best practice"—it provides concrete, signifi
 
 **Key Benefits:**
 
-1.  **Accessibility:** Screen readers and other assistive technologies rely on semantic cues to navigate and interpret pages. A `<nav>` element tells a visually impaired user "this is navigation," while a `<div>` with a class of "nav" does not.
-2.  **Search Engine Optimization (SEO):** Search engines like Google give higher priority to well-structured content. Using `<article>`, `<section>`, and proper heading tags helps search engines understand your content's context and relevance, potentially improving your rankings.
-3.  **Maintainability:** Code is read far more often than it is written. Semantic HTML is self-documenting. `<footer>` is instantly understandable to any developer, while `<div id="footer">` requires them to read the ID and infer its purpose. This makes code easier to debug, update, and hand over to another developer.
+1.  **Accessibility:** Screen readers and other assistive technologies rely on semantic cues to navigate and interpret pages. A '<nav>' element tells a visually impaired user "this is navigation," while a '<div>' with a class of "nav" does not.
+2.  **Search Engine Optimization (SEO):** Search engines like Google give higher priority to well-structured content. Using '<article>', '<section>', and proper heading tags helps search engines understand your content's context and relevance, potentially improving your rankings.
+3.  **Maintainability:** Code is read far more often than it is written. Semantic HTML is self-documenting. '<footer>' is instantly understandable to any developer, while '<div id="footer">' requires them to read the ID and infer its purpose. This makes code easier to debug, update, and hand over to another developer.
 4.  **Interoperability:** Using standard elements ensures your content will be displayed correctly across different browsers and devices. It also makes it easier for other systems (like news aggregators) to parse and use your content.
 
 **Code Example:**
@@ -188,8 +188,8 @@ Using semantic HTML isn't just a "best practice"—it provides concrete, signifi
 **Practice Task:**
 Analyze the website structure you built in the previous practice task.
 
-1.  Write a short paragraph explaining how each semantic element you used (e.g., `<nav>`, `<article>`) improves one of the four key benefits (Accessibility, SEO, Maintainability, Interoperability).
-2.  Add an `aria-label` to the `<nav>` element to improve its accessibility for screen readers.
+1.  Write a short paragraph explaining how each semantic element you used (e.g., '<nav>', '<article>') improves one of the four key benefits (Accessibility, SEO, Maintainability, Interoperability).
+2.  Add an 'aria-label' to the '<nav>' element to improve its accessibility for screen readers.
 
 ---
 
@@ -198,9 +198,9 @@ Analyze the website structure you built in the previous practice task.
 **Refactor and Analyze:**
 
 1.  Choose one of the multi-page websites you created in previous chapters (e.g., the Travel Blog or Portfolio).
-2.  Refactor the HTML of the homepage (`index.html`) to use the correct HTML5 semantic elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`, etc.) instead of generic `<div>`s.
+2.  Refactor the HTML of the homepage ('index.html') to use the correct HTML5 semantic elements ('<header>', '<nav>', '<main>', '<section>', '<footer>', etc.) instead of generic '<div>'s.
 3.  In a comment at the top of the refactored file, list the three most important benefits you think this change brings to your website and explain why for each.
-4.  Ensure your navigation is inside a `<nav>` element and your main content is inside `<main>`.
+4.  Ensure your navigation is inside a '<nav>' element and your main content is inside '<main>'.
 
 ---
 
@@ -211,14 +211,14 @@ While semantic HTML handles most accessibility, sometimes you need extra attribu
 
 **Key Concepts:**
 
-- **`role="button"`**: Tells screen readers a non-button element (like a `<div>`) acts as a button.
-- **`aria-label="Close"`**: Provides a text description for elements that only have icons.
-- **`aria-hidden="true"`**: Hides decorative elements from screen readers.
-- **`aria-expanded="false"`**: Tells the user if a menu or section is currently open or closed.
+- **'role="button"'**: Tells screen readers a non-button element (like a '<div>') acts as a button.
+- **'aria-label="Close"'**: Provides a text description for elements that only have icons.
+- **'aria-hidden="true"'**: Hides decorative elements from screen readers.
+- **'aria-expanded="false"'**: Tells the user if a menu or section is currently open or closed.
 
 **Accessibility Tips:**
 
 1. **Focus States**: Ensure links and buttons have visible focus styles for keyboard users.
-2. **Alt Text**: Always include `alt` attributes on images.
+2. **Alt Text**: Always include 'alt' attributes on images.
 3. **Contrast**: Use text colors that stand out clearly against the background.
-4. **Heading Hierarchy**: Use headings (`h1`-`h6`) in logical order.
+4. **Heading Hierarchy**: Use headings ('h1'-'h6') in logical order.
